@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="200dp"
+	android:background="#fff" >
+	<LinearLayout
+		android:id="@+id/lin"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/linButton"
+		android:orientation="vertical" >
+		<TextView
+			android:id="@+id/txtTitleOnlineDialog"
+			android:layout_width="fill_parent"
+			android:layout_height="@dimen/heigth_title_dialog"
+			android:gravity="center_vertical"
+			android:paddingLeft="@dimen/activity_vertical_margin"
+			android:paddingRight="@dimen/activity_vertical_margin"
+			android:text="@string/title_dialog_assignment"
+			android:textColor="#48a8a7"
+			android:textSize="@dimen/text_size_title" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="@dimen/view_size_title"
+			android:background="@color/color_view_title" />
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+			android:gravity="center_vertical"
+			android:orientation="horizontal" >
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="@dimen/button_height"
+				android:background="@drawable/background_lin_menu"
+				android:gravity="center_vertical"
+				android:paddingLeft="@dimen/activity_vertical_margin"
+				android:paddingRight="@dimen/activity_vertical_margin"
+				android:text="@string/text_dialog_assignment_1"
+				android:textColor="#000"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txtDialogDate"
+				android:layout_width="fill_parent"
+				android:layout_height="@dimen/button_height"
+				android:layout_marginRight="@dimen/activity_vertical_margin"
+				android:background="@drawable/edittext"
+				android:gravity="center_vertical"
+				android:paddingLeft="@dimen/activity_vertical_margin"
+				android:paddingRight="@dimen/activity_vertical_margin"
+				android:text="@string/text_dialog_assignment_1"
+				android:textColor="#000"
+				android:textSize="@dimen/text_size_nomal" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/linButton"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="@dimen/margin_text_1"
+		android:layout_marginLeft="@dimen/activity_vertical_margin"
+		android:layout_marginRight="@dimen/activity_vertical_margin"
+		android:layout_marginTop="@dimen/margin_text_1"
+		android:orientation="horizontal" >
+		<Button
+			android:id="@+id/btnDialogAssginmentOk"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/button_height"
+			android:layout_marginRight="@dimen/margin_text_1"
+			android:layout_weight="1"
+			android:background="@drawable/background_button_green"
+			android:text="@string/buttonOk"
+			android:textColor="#fff"
+			android:textSize="@dimen/text_size_nomal" />
+		<Button
+			android:id="@+id/btnDialogAssginmentCancel"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/button_height"
+			android:layout_marginLeft="@dimen/margin_text_1"
+			android:layout_weight="1"
+			android:background="@drawable/background_button_green"
+			android:text="@string/buttonCancel"
+			android:textColor="#fff"
+			android:textSize="@dimen/text_size_nomal" />
+	</LinearLayout>
+</RelativeLayout>

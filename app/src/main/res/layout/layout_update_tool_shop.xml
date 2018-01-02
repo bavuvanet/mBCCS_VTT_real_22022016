@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lv_ListUpdateToolShop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSaveToolShop"
+        android:layout_alignParentTop="true"
+        android:cacheColorHint="@android:color/transparent" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btnSaveToolShop"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/padding_bottom"
+        android:layout_marginTop="@dimen/padding_top"
+
+        android:text="@string/btnUpdate"
+        android:textSize="@dimen/text_size_content"
+        android:textColor="#fff" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context="com.viettel.bss.viettelpos.v4.connecttionService.activity.FragmentUpdateImageMonth"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:id="@+id/llHeaderUIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/WizardPageTitle" 
+            android:text="@string/capnhathinhanhhangthang"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/dividerHorizontal" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/lvdsdbUpdateImageMonth"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_weight="1.47"
+        android:scrollbars="vertical" >
+    </ExpandableListView>
+
+    <LinearLayout
+        android:id="@+id/lnbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnhuymonth"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/line_button_color" />
+
+
+
+        <Button
+            android:id="@+id/btncapnhatmonth"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/button_update"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+    </LinearLayout>
+
+</LinearLayout>

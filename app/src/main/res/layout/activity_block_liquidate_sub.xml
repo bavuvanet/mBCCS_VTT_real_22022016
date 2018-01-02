@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:text="@string/dichvu"
+                android:textSize="@dimen/text_size_14" />
+
+            <Spinner
+                android:id="@+id/spnService"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_item_menu"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:text="@string/txt_account"
+                android:textSize="@dimen/text_size_14" />
+
+            <EditText
+                android:id="@+id/edt_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="4"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_view" />
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:visibility="gone"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_view" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Thông tin account "
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_header"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textDialogTitle"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lvCus"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:visibility="visible" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/lnItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_top"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Danh sách hàng hóa "
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textDialogTitle" />
+
+            <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+                android:id="@+id/lvItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:scrollbars="none" >
+            </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textDialogTitle" />
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lnthuhoi"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:text="@string/lydothuhoi"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Spinner
+                    android:id="@+id/spn_reason_thuhoi"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_item_menu"
+                    android:layout_gravity="center"
+                    android:layout_weight="4" />
+
+                <ProgressBar
+                    android:id="@+id/prbreasonthuhoi"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:text="@string/lydothanhly"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Spinner
+                    android:id="@+id/spn_reason_fail"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_item_menu"
+                    android:layout_gravity="center"
+                    android:layout_weight="4" />
+
+                <ProgressBar
+                    android:id="@+id/prbreason"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lncheckcharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_checkcharge"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/checkcharge"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_collectioncharge"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/collectioncharge"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lncharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_apply"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/btn_apply"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/btn_cancel"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

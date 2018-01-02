@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_perm_18px"
+        android:drawablePadding="@dimen/margin_10"
+        android:hint="Mã nhân viên"
+        android:text="Trần Văn Hưng"
+        android:textColor="@color/gray_omi"
+        android:textSize="@dimen/text_size_15" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_date_range_18px"
+        android:drawablePadding="@dimen/margin_10"
+        android:textColor="@color/gray_omi"
+        android:hint="Ngày sinh"
+        android:text="12/8/1991"
+        android:textSize="@dimen/text_size_15" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_featured_18px"
+        android:drawablePadding="@dimen/margin_10"
+        android:textColor="@color/gray_omi"
+        android:hint="CMT"
+        android:text="123 21312 213"
+        android:textSize="@dimen/text_size_15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:drawablePadding="@dimen/margin_10"
+            android:drawableRight="@drawable/ic_date_range_18px"
+            android:textColor="@color/gray_omi"
+            android:hint="Ngày cấp"
+            android:text="12/8/1991"
+            android:textSize="@dimen/text_size_15" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="6" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_location_on_18px"
+        android:drawablePadding="@dimen/margin_10"
+        android:textColor="@color/gray_omi"
+        android:hint="Nơi sinh"
+        android:text="xóm 9 Hải Ninh, Hải Hậu, Nam Định"
+        android:textSize="@dimen/text_size_15" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_phone_18px"
+        android:drawablePadding="@dimen/margin_10"
+        android:textColor="@color/gray_omi"
+        android:hint="Điện thoại"
+        android:textSize="@dimen/text_size_15"
+        android:text="0912 123 123" />
+
+    <Button
+        android:id="@id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/rouder_common_button"
+        android:text="Lưu Lại"
+        android:textColor="@color/background"
+        android:textSize="@dimen/text_size_15" />
+</LinearLayout>

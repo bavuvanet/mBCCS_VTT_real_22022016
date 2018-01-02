@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/lncus"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:text="@string/info_customer"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_13"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:ems="5"
+                android:text="@string/loaikhmobile" />
+
+            <EditText
+                android:id="@+id/edtloaikh"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0.18"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="2dp"
+                android:editable="false"
+                android:ems="10"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:hint="@string/chonloaiKH"
+                android:longClickable="false"
+                android:textColor="@color/list_background_pressed_vt"
+                android:textSize="@dimen/text_size_content" />
+
+            <ProgressBar
+                android:id="@+id/prbCustType"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnRefreshCustType"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/ic_menu_refresh"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnsogiayto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/typegiayto" />
+
+            <Spinner
+                android:id="@+id/spinner_type_giay_to"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4" />
+
+            <ProgressBar
+                android:id="@+id/prbGiayto"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnRefreshGiayto"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/ic_menu_refresh"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCMT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtsogiayto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/sogiaytoCD" />
+
+            <EditText
+                android:id="@+id/edit_sogiayto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+                android:maxLength="20" />
+
+            <Button
+                android:id="@+id/btnkiemtra"
+                android:layout_width="@dimen/height_button_1_phan_2"
+                android:layout_height="@dimen/height_button_1_phan_2"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/search_c"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_content"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnedit"
+                android:layout_width="@dimen/height_button_1_phan_2"
+                android:layout_height="@dimen/height_button_1_phan_2"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/edits"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnGiaytodaidien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/lntax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/tax_code" />
+
+                <EditText
+                    android:id="@+id/edit_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:maxLength="120" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/tenkhang" />
+
+                <EditText
+                    android:id="@+id/edit_tenKH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:maxLength="120" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/nsinhtl" />
+
+                <EditText
+                    android:id="@+id/edit_ngaysinh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/sexMobile" />
+
+                <Spinner
+                    android:id="@+id/spinner_gioitinh"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnngaycap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/ngaycap_mobile" />
+
+                <EditText
+                    android:id="@+id/edit_ngaycap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnngayhethan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ngayhethan" />
+
+                <EditText
+                    android:id="@+id/edit_ngayhethan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnnoicap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/noicap_mobile" />
+
+                <EditText
+                    android:id="@+id/edit_noicap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:maxLength="50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnquoctich"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/tv_quoc_tich" />
+
+                <Spinner
+                    android:id="@+id/spinner_quoctich"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/note" />
+
+                <EditText
+                    android:id="@+id/edit_note"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:maxLength="120" >
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:ems="5"
+                    android:text="@string/dcmobile" />
+
+                <EditText
+                    android:id="@+id/edtdiachilapdat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:maxLength="100"
+                    android:text="@string/sellect_address"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_lydosuakh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/lydosuakh" />
+
+                <Spinner
+                    android:id="@+id/spinner_reasonkh"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+
+                <ProgressBar
+                    android:id="@+id/prbreasonkh"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical|center_horizontal" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lnttinphikh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_1"
+                    android:layout_marginTop="@dimen/margin_text_1"
+                    android:text="@string/ttinphikh"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_nomal"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_size"
+                    android:background="@color/color_view" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_select_profile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/edt_capcha"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/captcha_hint"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_content" />
+
+                <ImageView
+                    android:id="@+id/imgCapcha"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnotpds"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btnSendOTP"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical"
+                        android:text="@string/sendOTP"
+                        android:textColor="@color/white"
+                        android:background="@color/bg_tv_vt"
+                        android:textSize="@dimen/text_size_content" >
+                    </Button>
+
+                    <ProgressBar
+                        android:id="@+id/prbotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnotp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ems="5"
+                        android:text="@string/sootp" />
+
+                    <EditText
+                        android:id="@+id/editotp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="2dp"
+                        android:inputType="text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btndoisim"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:background="@color/bg_tv_vt"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/capnhat"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_title" />
+
+                <Button
+                    android:id="@+id/btncancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_weight="1"
+
+                    android:text="@string/cancel"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_title"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

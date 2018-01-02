@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <TextView
+            android:id="@+id/txtinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:text="Danh sách  gói cước"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <View
+            android:id="@+id/viewhead"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="@string/nhomkh" />
+            <Spinner
+                android:id="@+id/spnnhomkh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--<EditText-->
+                <!--android:id="@+id/edtnhomkh"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginLeft="2dp"-->
+                <!--android:layout_weight="0.18"-->
+                <!--android:clickable="true"-->
+                <!--android:cursorVisible="false"-->
+                <!--android:drawablePadding="2dp"-->
+                <!--android:editable="false"-->
+                <!--android:focusableInTouchMode="false"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:hint="Chọn nhóm KH"-->
+                <!--android:longClickable="false"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/list_background_pressed_vt"-->
+                <!--android:textSize="@dimen/text_size_content" />-->
+
+            <ProgressBar
+                android:id="@+id/prbnhomkh"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnnhomkh"
+                android:layout_width="35dp"
+                android:visibility="gone"
+                android:layout_height="35dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/ic_menu_refresh" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="@string/loaikh" />
+            <EditText
+                android:id="@+id/edtsearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_left"
+                android:drawableLeft="@drawable/search_c"
+                android:layout_weight="1"
+                android:hint="Nhập tên gói cước để tìm kiếm"
+                android:textSize="@dimen/text_size_13" />
+
+            <Button
+                android:id="@+id/btnRefreshStreetBlock"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/ic_menu_refresh" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lstpakage"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

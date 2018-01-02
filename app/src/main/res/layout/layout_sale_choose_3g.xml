@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_padding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_search_return_good" />
+
+        <LinearLayout
+            android:id="@+id/btn_search"
+            android:layout_width="@dimen/button_height"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_normal_background"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:layout_width="@dimen/icon_inner_width"
+                android:layout_height="@dimen/icon_inner_width"
+                android:layout_gravity="right|center_horizontal|center_vertical"
+                android:background="@drawable/search_c"
+                android:scaleType="fitXY"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvStockModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_lv" >
+    </ListView>
+
+</LinearLayout>

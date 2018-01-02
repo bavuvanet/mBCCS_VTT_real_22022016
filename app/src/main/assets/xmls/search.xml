@@ -1,0 +1,1322 @@
+<return>
+    <errorCode>0</errorCode>
+    <isCheckPrduct>false</isCheckPrduct>
+    <isMoreThan>false</isMoreThan>
+    <isCompany>0</isCompany>
+    <refuseCollect>false</refuseCollect>
+    <idNo />
+    <accountOrIsdn />
+    <isCVT>false</isCVT>
+    <isPSenTdO>false</isPSenTdO>
+    <lstSubscriberDTOExt>
+        <accountId>10002002169</accountId>
+        <actStatus>000</actStatus>
+        <checkDebit>false</checkDebit>
+        <custId>9622540419</custId>
+        <existIdNo>false</existIdNo>
+        <isdn>h004_ftth_thaott6</isdn>
+        <offerId>400004567</offerId>
+        <payType>1</payType>
+        <productCode>FTTHECO</productCode>
+        <promotionCode>027</promotionCode>
+        <status>2</status>
+        <subId>60000013990</subId>
+        <telecomServiceId>28</telecomServiceId>
+        <accountDTO>
+            <address>001 002, Tổ 1, Yên Hòa Cầu Giấy Hà Nội</address>
+            <areaCode>H004007002001</areaCode>
+            <district>007</district>
+            <home>001</home>
+            <precinct>002</precinct>
+            <province>H004</province>
+            <streetBlock>001</streetBlock>
+            <streetName>002</streetName>
+            <accountBank />
+            <accountId>10002002169</accountId>
+            <accountNo>10002002169/VT/11012016</accountNo>
+            <billCycleId>1</billCycleId>
+            <createDatetime>2016-01-11T14:48:22+07:00</createDatetime>
+            <createUser>PRODUCT</createUser>
+            <custContact />
+            <custId>9622540419</custId>
+            <effectDate>2016-01-11T17:30:42+07:00</effectDate>
+            <isChecked>false</isChecked>
+            <isDestAcc>false</isDestAcc>
+            <isSelected>false</isSelected>
+            <isdn>h004183852387ntv12</isdn>
+            <noticeCharge>4</noticeCharge>
+            <numSubscriber>0</numSubscriber>
+            <oldAccount>false</oldAccount>
+            <payMethod>00</payMethod>
+            <printContractInfo>false</printContractInfo>
+            <printMethod>3</printMethod>
+            <refCustomer>
+                <keySet />
+                <checkDebit>true</checkDebit>
+                <coppy>false</coppy>
+                <custAdd>
+                    <keySet>-481023933</keySet>
+                    <address2FirstLevel />
+                    <areaCode />
+                    <district>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </district>
+                    <fullAddress />
+                    <isEnteredManually>false</isEnteredManually>
+                    <number />
+                    <precinct>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </precinct>
+                    <province>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </province>
+                    <street />
+                    <streetBlock>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </streetBlock>
+                </custAdd>
+                <custContactDTO />
+                <custContactDTODCOM />
+                <custTypeDTO />
+                <isNewCustomer>true</isNewCustomer>
+                <isPCProduct>false</isPCProduct>
+                <mustValidateOldCust>false</mustValidateOldCust>
+                <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                <newRepCustomer>true</newRepCustomer>
+                <repCust>false</repCust>
+                <typeCustomer />
+                <updateCustIdentity>true</updateCustIdentity>
+            </refCustomer>
+            <showCheckBox>true</showCheckBox>
+            <signDate>2016-01-11T07:47:12+07:00</signDate>
+            <split>false</split>
+            <status>2</status>
+            <subId>60000013993</subId>
+            <telMobile>32323232323</telMobile>
+            <totalDepositSub>0</totalDepositSub>
+            <updateDatetime>2016-02-20T10:39:22+07:00</updateDatetime>
+            <updateUser>PRODUCT</updateUser>
+        </accountDTO>
+        <accountDTOForInput>
+            <accountBank />
+            <custContact />
+            <isChecked>false</isChecked>
+            <isDestAcc>false</isDestAcc>
+            <isSelected>false</isSelected>
+            <numSubscriber>0</numSubscriber>
+            <oldAccount>false</oldAccount>
+            <printContractInfo>false</printContractInfo>
+            <refCustomer>
+                <keySet />
+                <checkDebit>true</checkDebit>
+                <coppy>false</coppy>
+                <custAdd>
+                    <keySet>-366211339</keySet>
+                    <address2FirstLevel />
+                    <areaCode />
+                    <district>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </district>
+                    <fullAddress />
+                    <isEnteredManually>false</isEnteredManually>
+                    <number />
+                    <precinct>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </precinct>
+                    <province>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </province>
+                    <street />
+                    <streetBlock>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </streetBlock>
+                </custAdd>
+                <custContactDTO />
+                <custContactDTODCOM />
+                <custTypeDTO />
+                <isNewCustomer>true</isNewCustomer>
+                <isPCProduct>false</isPCProduct>
+                <mustValidateOldCust>false</mustValidateOldCust>
+                <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                <newRepCustomer>true</newRepCustomer>
+                <repCust>false</repCust>
+                <typeCustomer />
+                <updateCustIdentity>true</updateCustIdentity>
+            </refCustomer>
+            <showCheckBox>true</showCheckBox>
+            <split>false</split>
+            <totalDepositSub>0</totalDepositSub>
+        </accountDTOForInput>
+        <actStatusText>Bình thường</actStatusText>
+        <activeDatetime>2016-01-14T15:31:32+07:00</activeDatetime>
+        <addDeployInfo>false</addDeployInfo>
+        <autoActive900>false</autoActive900>
+        <blockSuccess>false</blockSuccess>
+        <businessAccepted>false</businessAccepted>
+        <changeAddress>false</changeAddress>
+        <chargesAvg />
+        <chargesMonthly />
+        <connectedExtraService>false</connectedExtraService>
+        <contractDTOInput />
+        <contractId>10002002169</contractId>
+        <createDatetime>2016-01-14T15:31:32+07:00</createDatetime>
+        <createUser>PRODUCT</createUser>
+        <currentPrepaidMonthBO />
+        <customLabel>h004_ftth_thaott6 | FTTH | Cáp quang</customLabel>
+        <customerDTO>
+            <keySet>9622540419KH Doanh Nghiệp Liên Test</keySet>
+            <address>12345 Cầu Giấy, Tổ 1, D?ch V?ng Cầu Giấy Hà Nội</address>
+            <areaCode>H004007004001</areaCode>
+            <district>007</district>
+            <home>12345</home>
+            <precinct>004</precinct>
+            <province>H004</province>
+            <streetBlock>001</streetBlock>
+            <streetBlockName>Tổ 1</streetBlockName>
+            <streetName>Cầu Giấy</streetName>
+            <birthDate>2000-04-09T00:00:00+07:00</birthDate>
+            <checkDebit>true</checkDebit>
+            <coppy>false</coppy>
+            <createDatetime>2016-01-08T15:49:41+07:00</createDatetime>
+            <createUser>PRODUCT</createUser>
+            <custAdd>
+                <keySet>1474239404</keySet>
+                <address2FirstLevel />
+                <areaCode />
+                <district>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </district>
+                <fullAddress />
+                <isEnteredManually>false</isEnteredManually>
+                <number />
+                <precinct>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </precinct>
+                <province>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </province>
+                <street />
+                <streetBlock>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </streetBlock>
+            </custAdd>
+            <custContactDTO />
+            <custContactDTODCOM />
+            <custId>9622540419</custId>
+            <custType>VIE</custType>
+            <custTypeDTO>
+                <createDatetime>2015-04-15T08:54:30+07:00</createDatetime>
+                <createUser>MIGRATE</createUser>
+                <custType>VIE</custType>
+                <groupType>1</groupType>
+                <name>Tu nhan trong nuoc</name>
+                <status>1</status>
+                <tax>10</tax>
+                <updateDatetime>2015-04-15T08:54:30+07:00</updateDatetime>
+                <updateUser>MIGRATE</updateUser>
+            </custTypeDTO>
+            <description>lientm test sửa sai</description>
+            <isNewCustomer>true</isNewCustomer>
+            <isPCProduct>false</isPCProduct>
+            <listCustIdentity>
+                <keySet>9622540419-1232342343-ID</keySet>
+                <createDatetime>2015-04-03T16:23:11+07:00</createDatetime>
+                <createUser>MIGRATE</createUser>
+                <custId>9622540419</custId>
+                <custIdentityId>6029045</custIdentityId>
+                <customer>
+                    <keySet />
+                    <checkDebit>true</checkDebit>
+                    <coppy>false</coppy>
+                    <custAdd>
+                        <keySet>-517464866</keySet>
+                        <address2FirstLevel />
+                        <areaCode />
+                        <district>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </district>
+                        <fullAddress />
+                        <isEnteredManually>false</isEnteredManually>
+                        <number />
+                        <precinct>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </precinct>
+                        <province>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </province>
+                        <street />
+                        <streetBlock>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </streetBlock>
+                    </custAdd>
+                    <custContactDTO />
+                    <custContactDTODCOM />
+                    <custTypeDTO />
+                    <isNewCustomer>true</isNewCustomer>
+                    <isPCProduct>false</isPCProduct>
+                    <mustValidateOldCust>false</mustValidateOldCust>
+                    <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                    <newRepCustomer>true</newRepCustomer>
+                    <repCust>false</repCust>
+                    <typeCustomer />
+                    <updateCustIdentity>true</updateCustIdentity>
+                </customer>
+                <disableConfig>false</disableConfig>
+                <expireDateEditable>false</expireDateEditable>
+                <flagConfig>false</flagConfig>
+                <idIssueDate>2004-11-23T00:00:00+07:00</idIssueDate>
+                <idIssuePlace>Vũng Tàu</idIssuePlace>
+                <idNo>1232342343</idNo>
+                <idNoEditable>false</idNoEditable>
+                <idType>ID</idType>
+                <idTypeEditable>false</idTypeEditable>
+                <idTypeName>CMT</idTypeName>
+                <issueDateEditable>false</issueDateEditable>
+                <issuePlaceEditable>false</issuePlaceEditable>
+                <maxLength>12</maxLength>
+                <minLength>9</minLength>
+                <minQueryLength>9</minQueryLength>
+                <required>false</required>
+                <requiredMessage>[SALE11443]Thiếu thông tin trường CMT</requiredMessage>
+                <status>1</status>
+                <updateDatetime>2015-04-03T16:23:11+07:00</updateDatetime>
+                <updateUser>MIGRATE</updateUser>
+                <validateMessage>[SALE11444]CMT phải có 9 hoặc 12 kí tự</validateMessage>
+            </listCustIdentity>
+            <mustValidateOldCust>false</mustValidateOldCust>
+            <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+            <name>KH Doanh Nghiệp Liên Test</name>
+            <nationality>Việt Nam</nationality>
+            <newRepCustomer>true</newRepCustomer>
+            <repCust>false</repCust>
+            <representativeCust>
+                <keySet>20611151930Thao Tran</keySet>
+                <address>Chương Dương Độ Hoàn Kiếm Hà Nội</address>
+                <areaCode>H004002001010</areaCode>
+                <district>002</district>
+                <precinct>001</precinct>
+                <province>H004</province>
+                <streetBlock>010</streetBlock>
+                <birthDate>2010-02-10T00:00:00+07:00</birthDate>
+                <checkDebit>true</checkDebit>
+                <coppy>false</coppy>
+                <createDatetime>2015-06-13T16:35:53+07:00</createDatetime>
+                <createUser>PRODUCT</createUser>
+                <custAdd>
+                    <keySet>-995439820</keySet>
+                    <address2FirstLevel />
+                    <areaCode />
+                    <district>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </district>
+                    <fullAddress />
+                    <isEnteredManually>false</isEnteredManually>
+                    <number />
+                    <precinct>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </precinct>
+                    <province>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </province>
+                    <street />
+                    <streetBlock>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </streetBlock>
+                </custAdd>
+                <custContactDTO />
+                <custContactDTODCOM />
+                <custId>20611151930</custId>
+                <custType>VIE</custType>
+                <custTypeDTO />
+                <isNewCustomer>true</isNewCustomer>
+                <isPCProduct>false</isPCProduct>
+                <listCustIdentity>
+                    <keySet>20611151930-183802355-ID</keySet>
+                    <createDatetime>2015-06-13T16:35:53+07:00</createDatetime>
+                    <createUser>PRODUCT</createUser>
+                    <custId>20611151930</custId>
+                    <custIdentityId>36718680</custIdentityId>
+                    <customer>
+                        <keySet />
+                        <checkDebit>true</checkDebit>
+                        <coppy>false</coppy>
+                        <custAdd>
+                            <keySet>-1163364623</keySet>
+                            <address2FirstLevel />
+                            <areaCode />
+                            <district>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </district>
+                            <fullAddress />
+                            <isEnteredManually>false</isEnteredManually>
+                            <number />
+                            <precinct>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </precinct>
+                            <province>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </province>
+                            <street />
+                            <streetBlock>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </streetBlock>
+                        </custAdd>
+                        <custContactDTO />
+                        <custContactDTODCOM />
+                        <custTypeDTO />
+                        <isNewCustomer>true</isNewCustomer>
+                        <isPCProduct>false</isPCProduct>
+                        <mustValidateOldCust>false</mustValidateOldCust>
+                        <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                        <newRepCustomer>true</newRepCustomer>
+                        <repCust>false</repCust>
+                        <typeCustomer />
+                        <updateCustIdentity>true</updateCustIdentity>
+                    </customer>
+                    <disableConfig>false</disableConfig>
+                    <expireDateEditable>false</expireDateEditable>
+                    <flagConfig>false</flagConfig>
+                    <idIssueDate>2007-08-15T00:00:00+07:00</idIssueDate>
+                    <idIssuePlace>Ha Noi</idIssuePlace>
+                    <idNo>183802355</idNo>
+                    <idNoEditable>false</idNoEditable>
+                    <idType>ID</idType>
+                    <idTypeEditable>false</idTypeEditable>
+                    <idTypeName>CMT</idTypeName>
+                    <issueDateEditable>false</issueDateEditable>
+                    <issuePlaceEditable>false</issuePlaceEditable>
+                    <maxLength>12</maxLength>
+                    <minLength>9</minLength>
+                    <minQueryLength>9</minQueryLength>
+                    <required>false</required>
+                    <requiredMessage>[SALE11443]Thiếu thông tin trường CMT</requiredMessage>
+                    <status>1</status>
+                    <updateDatetime>2015-06-13T16:35:53+07:00</updateDatetime>
+                    <updateUser>PRODUCT</updateUser>
+                    <validateMessage>[SALE11444]CMT phải có 9 hoặc 12 kí tự</validateMessage>
+                </listCustIdentity>
+                <mustValidateOldCust>false</mustValidateOldCust>
+                <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                <name>Thao Tran</name>
+                <nationality>Việt Nam</nationality>
+                <newRepCustomer>true</newRepCustomer>
+                <repCust>false</repCust>
+                <sex>F</sex>
+                <status>1</status>
+                <typeCustomer />
+                <updateCustIdentity>true</updateCustIdentity>
+                <updateDatetime>2015-06-13T16:35:53+07:00</updateDatetime>
+                <updateUser>PRODUCT</updateUser>
+            </representativeCust>
+            <status>1</status>
+            <typeCustomer />
+            <updateCustIdentity>true</updateCustIdentity>
+            <updateDatetime>2016-08-22T16:21:04+07:00</updateDatetime>
+            <updateUser>vtt1</updateUser>
+        </customerDTO>
+        <customerDTOInput>
+            <keySet />
+            <checkDebit>true</checkDebit>
+            <coppy>false</coppy>
+            <custAdd>
+                <keySet>926877335</keySet>
+                <address2FirstLevel />
+                <areaCode />
+                <district>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </district>
+                <fullAddress />
+                <isEnteredManually>false</isEnteredManually>
+                <number />
+                <precinct>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </precinct>
+                <province>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </province>
+                <street />
+                <streetBlock>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </streetBlock>
+            </custAdd>
+            <custContactDTO />
+            <custContactDTODCOM />
+            <custTypeDTO />
+            <isNewCustomer>true</isNewCustomer>
+            <isPCProduct>false</isPCProduct>
+            <mustValidateOldCust>false</mustValidateOldCust>
+            <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+            <newRepCustomer>true</newRepCustomer>
+            <repCust>false</repCust>
+            <typeCustomer />
+            <updateCustIdentity>true</updateCustIdentity>
+        </customerDTOInput>
+        <customerOrderDetailDTO>
+            <enableAsign>true</enableAsign>
+            <disableCancel>true</disableCancel>
+            <chooseSubExit>false</chooseSubExit>
+            <needRetake>false</needRetake>
+            <userSelectedISDNBefore>false</userSelectedISDNBefore>
+            <isMoveAPAttach>false</isMoveAPAttach>
+            <moveAllLine>false</moveAllLine>
+            <selectedRow>false</selectedRow>
+            <selectedInfoDeploy>false</selectedInfoDeploy>
+            <renderCommandLink>false</renderCommandLink>
+            <isConnectNA>false</isConnectNA>
+        </customerOrderDetailDTO>
+        <deposit>0</deposit>
+        <directChangePromotion>false</directChangePromotion>
+        <disableItem>false</disableItem>
+        <disableOwner>false</disableOwner>
+        <eligibleToJoinGroup>false</eligibleToJoinGroup>
+        <errorOCS>false</errorOCS>
+        <firstConnect>2016-01-14T15:42:22+07:00</firstConnect>
+        <gotoReqMng>false</gotoReqMng>
+        <hasVerifiedOwner>false</hasVerifiedOwner>
+        <hasVerifiedOwnerOld>false</hasVerifiedOwnerOld>
+        <haveCommmitment>false</haveCommmitment>
+        <inGroup>false</inGroup>
+        <isChecked>false</isChecked>
+        <isOpenSub>false</isOpenSub>
+        <isProvince>false</isProvince>
+        <isSelected>false</isSelected>
+        <isSmartSIM>false</isSmartSIM>
+        <isSpecialProduct>false</isSpecialProduct>
+        <localPricePlanDTO>
+            <otherPrice>false</otherPrice>
+        </localPricePlanDTO>
+        <lstSubInfrastructureDTO>
+            <address>0 Liên Thôn, Tổ 1 Yên Hòa Cầu Giấy Hà Nội</address>
+            <areaCode>H004007002001</areaCode>
+            <district>007</district>
+            <home>0</home>
+            <precinct>002</precinct>
+            <province>H004</province>
+            <streetBlock>001</streetBlock>
+            <streetName>Liên Thôn</streetName>
+            <actionId>104</actionId>
+            <cableBoxCode>O01-HNI0339/011A</cableBoxCode>
+            <cableBoxId>5391</cableBoxId>
+            <chooseSubExit>false</chooseSubExit>
+            <createDate>2016-02-29T19:25:44+07:00</createDate>
+            <progress>2</progress>
+            <radiusCust>500</radiusCust>
+            <reqDatetime>2016-02-29T19:25:44+07:00</reqDatetime>
+            <sourceId>1</sourceId>
+            <stationCode>HNI0339</stationCode>
+            <status>1</status>
+            <subId>60000013990</subId>
+            <subInfrastructureId>9315205345</subInfrastructureId>
+            <teamCode>HNI09</teamCode>
+            <technology>3</technology>
+            <telMobile>123654789</telMobile>
+            <updateDatetime>2016-04-28T17:37:10+07:00</updateDatetime>
+            <updaterUserId>9999999993</updaterUserId>
+            <userUsing>Trần Thị Thảo >.&lt;123</userUsing>
+            <validateImport>false</validateImport>
+        </lstSubInfrastructureDTO>
+        <markNotOwner>false</markNotOwner>
+        <moveAllLine>false</moveAllLine>
+        <newSerialEq>false</newSerialEq>
+        <noCheckLockIsdn>false</noCheckLockIsdn>
+        <normalIsdn>false</normalIsdn>
+        <orgProductCode>FAST10</orgProductCode>
+        <password>WJJSVM</password>
+        <policySpec>false</policySpec>
+        <policySpecInfoDTO>
+            <keySet />
+            <disableInput>false</disableInput>
+        </policySpecInfoDTO>
+        <prepaidMonthBO />
+        <pricePlanDTO>
+            <otherPrice>false</otherPrice>
+        </pricePlanDTO>
+        <priceRetail />
+        <printProfile>false</printProfile>
+        <productEligible>false</productEligible>
+        <productName>FTTH ECO</productName>
+        <productSpecInfoDTO>
+            <hsProduct>false</hsProduct>
+            <showProdSpecInfo>false</showProdSpecInfo>
+        </productSpecInfoDTO>
+        <quotaItemDTO />
+        <reasonDTO />
+        <regTypeId>303149</regTypeId>
+        <renderChild>false</renderChild>
+        <renderUplinkInfo>true</renderUplinkInfo>
+        <renderedPrepaidDes>false</renderedPrepaidDes>
+        <repairMode>false</repairMode>
+        <reqZoneRec>false</reqZoneRec>
+        <responseHLR />
+        <responseOCS />
+        <roleSaveDeposit>false</roleSaveDeposit>
+        <saleServicesCode />
+        <selectedMainMember>true</selectedMainMember>
+        <selectedRow>false</selectedRow>
+        <sendVts>true</sendVts>
+        <shopCode>VT</shopCode>
+        <shopStaffName />
+        <sim4G>false</sim4G>
+        <smartSIM>false</smartSIM>
+        <specialProduct>false</specialProduct>
+        <staDatetime>2016-01-14T15:41:18+07:00</staDatetime>
+        <statusActive900 />
+        <statusView>Đang hoạt động</statusView>
+        <subCommitmentDTO />
+        <subImeiDTO>
+            <subId>0</subId>
+        </subImeiDTO>
+        <subLimitUsageDTO />
+        <subType>ACP</subType>
+        <supportActive900>false</supportActive900>
+        <technology>3</technology>
+        <technologyText>Cáp quang</technologyText>
+        <telecomServiceAlias>F</telecomServiceAlias>
+        <telecomServiceName>FTTH</telecomServiceName>
+        <totalFee>0</totalFee>
+        <transSign>false</transSign>
+        <updateDatetime>2016-12-08T14:54:27+07:00</updateDatetime>
+        <updateUser>SYSTEM</updateUser>
+        <validIdNo>false</validIdNo>
+    </lstSubscriberDTOExt>
+    <lstSubscriberDTOExt>
+        <isCusExisted>true</isCusExisted>
+        <accountId>10002002169</accountId>
+        <actStatus>000</actStatus>
+        <checkDebit>false</checkDebit>
+        <custId>9622540419</custId>
+        <existIdNo>false</existIdNo>
+        <isdn>h004_ftth_thaott6</isdn>
+        <offerId>400004567</offerId>
+        <payType>1</payType>
+        <productCode>FTTHECO</productCode>
+        <promotionCode>027</promotionCode>
+        <status>2</status>
+        <subId>60000013990</subId>
+        <telecomServiceId>28</telecomServiceId>
+        <accountDTO>
+            <address>001 002, Tổ 1, Yên Hòa Cầu Giấy Hà Nội</address>
+            <areaCode>H004007002001</areaCode>
+            <district>007</district>
+            <home>001</home>
+            <precinct>002</precinct>
+            <province>H004</province>
+            <streetBlock>001</streetBlock>
+            <streetName>002</streetName>
+            <accountBank />
+            <accountId>10002002169</accountId>
+            <accountNo>10002002169/VT/11012016</accountNo>
+            <billCycleId>1</billCycleId>
+            <createDatetime>2016-01-11T14:48:22+07:00</createDatetime>
+            <createUser>PRODUCT</createUser>
+            <custContact />
+            <custId>9622540419</custId>
+            <effectDate>2016-01-11T17:30:42+07:00</effectDate>
+            <isChecked>false</isChecked>
+            <isDestAcc>false</isDestAcc>
+            <isSelected>false</isSelected>
+            <isdn>h004183852387ntv12</isdn>
+            <noticeCharge>4</noticeCharge>
+            <numSubscriber>0</numSubscriber>
+            <oldAccount>false</oldAccount>
+            <payMethod>00</payMethod>
+            <printContractInfo>false</printContractInfo>
+            <printMethod>3</printMethod>
+            <refCustomer>
+                <keySet />
+                <checkDebit>true</checkDebit>
+                <coppy>false</coppy>
+                <custAdd>
+                    <keySet>-481023933</keySet>
+                    <address2FirstLevel />
+                    <areaCode />
+                    <district>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </district>
+                    <fullAddress />
+                    <isEnteredManually>false</isEnteredManually>
+                    <number />
+                    <precinct>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </precinct>
+                    <province>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </province>
+                    <street />
+                    <streetBlock>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </streetBlock>
+                </custAdd>
+                <custContactDTO />
+                <custContactDTODCOM />
+                <custTypeDTO />
+                <isNewCustomer>true</isNewCustomer>
+                <isPCProduct>false</isPCProduct>
+                <mustValidateOldCust>false</mustValidateOldCust>
+                <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                <newRepCustomer>true</newRepCustomer>
+                <repCust>false</repCust>
+                <typeCustomer />
+                <updateCustIdentity>true</updateCustIdentity>
+            </refCustomer>
+            <showCheckBox>true</showCheckBox>
+            <signDate>2016-01-11T07:47:12+07:00</signDate>
+            <split>false</split>
+            <status>2</status>
+            <subId>60000013993</subId>
+            <telMobile>32323232323</telMobile>
+            <totalDepositSub>0</totalDepositSub>
+            <updateDatetime>2016-02-20T10:39:22+07:00</updateDatetime>
+            <updateUser>PRODUCT</updateUser>
+        </accountDTO>
+        <accountDTOForInput>
+            <accountBank />
+            <custContact />
+            <isChecked>false</isChecked>
+            <isDestAcc>false</isDestAcc>
+            <isSelected>false</isSelected>
+            <numSubscriber>0</numSubscriber>
+            <oldAccount>false</oldAccount>
+            <printContractInfo>false</printContractInfo>
+            <refCustomer>
+                <keySet />
+                <checkDebit>true</checkDebit>
+                <coppy>false</coppy>
+                <custAdd>
+                    <keySet>-366211339</keySet>
+                    <address2FirstLevel />
+                    <areaCode />
+                    <district>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </district>
+                    <fullAddress />
+                    <isEnteredManually>false</isEnteredManually>
+                    <number />
+                    <precinct>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </precinct>
+                    <province>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </province>
+                    <street />
+                    <streetBlock>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </streetBlock>
+                </custAdd>
+                <custContactDTO />
+                <custContactDTODCOM />
+                <custTypeDTO />
+                <isNewCustomer>true</isNewCustomer>
+                <isPCProduct>false</isPCProduct>
+                <mustValidateOldCust>false</mustValidateOldCust>
+                <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                <newRepCustomer>true</newRepCustomer>
+                <repCust>false</repCust>
+                <typeCustomer />
+                <updateCustIdentity>true</updateCustIdentity>
+            </refCustomer>
+            <showCheckBox>true</showCheckBox>
+            <split>false</split>
+            <totalDepositSub>0</totalDepositSub>
+        </accountDTOForInput>
+        <actStatusText>Bình thường</actStatusText>
+        <activeDatetime>2016-01-14T15:31:32+07:00</activeDatetime>
+        <addDeployInfo>false</addDeployInfo>
+        <autoActive900>false</autoActive900>
+        <blockSuccess>false</blockSuccess>
+        <businessAccepted>false</businessAccepted>
+        <changeAddress>false</changeAddress>
+        <chargesAvg />
+        <chargesMonthly />
+        <connectedExtraService>false</connectedExtraService>
+        <contractDTOInput />
+        <contractId>10002002169</contractId>
+        <createDatetime>2016-01-14T15:31:32+07:00</createDatetime>
+        <createUser>PRODUCT</createUser>
+        <currentPrepaidMonthBO />
+        <customLabel>h004_ftth_thaott6 | FTTH | Cáp quang</customLabel>
+        <customerDTO>
+            <keySet>9622540419KH Doanh Nghiệp Liên Test</keySet>
+            <address>12345 Cầu Giấy, Tổ 1, D?ch V?ng Cầu Giấy Hà Nội</address>
+            <areaCode>H004007004001</areaCode>
+            <district>007</district>
+            <home>12345</home>
+            <precinct>004</precinct>
+            <province>H004</province>
+            <streetBlock>001</streetBlock>
+            <streetBlockName>Tổ 1</streetBlockName>
+            <streetName>Cầu Giấy</streetName>
+            <birthDate>2000-04-09T00:00:00+07:00</birthDate>
+            <checkDebit>true</checkDebit>
+            <coppy>false</coppy>
+            <createDatetime>2016-01-08T15:49:41+07:00</createDatetime>
+            <createUser>PRODUCT</createUser>
+            <custAdd>
+                <keySet>1474239404</keySet>
+                <address2FirstLevel />
+                <areaCode />
+                <district>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </district>
+                <fullAddress />
+                <isEnteredManually>false</isEnteredManually>
+                <number />
+                <precinct>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </precinct>
+                <province>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </province>
+                <street />
+                <streetBlock>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </streetBlock>
+            </custAdd>
+            <custContactDTO />
+            <custContactDTODCOM />
+            <custId>9622540419</custId>
+            <custType>VIE</custType>
+            <custTypeDTO>
+                <createDatetime>2015-04-15T08:54:30+07:00</createDatetime>
+                <createUser>MIGRATE</createUser>
+                <custType>VIE</custType>
+                <groupType>1</groupType>
+                <name>Tu nhan trong nuoc</name>
+                <status>1</status>
+                <tax>10</tax>
+                <updateDatetime>2015-04-15T08:54:30+07:00</updateDatetime>
+                <updateUser>MIGRATE</updateUser>
+            </custTypeDTO>
+            <description>lientm test sửa sai</description>
+            <isNewCustomer>true</isNewCustomer>
+            <isPCProduct>false</isPCProduct>
+            <listCustIdentity>
+                <keySet>9622540419-1232342343-ID</keySet>
+                <createDatetime>2015-04-03T16:23:11+07:00</createDatetime>
+                <createUser>MIGRATE</createUser>
+                <custId>9622540419</custId>
+                <custIdentityId>6029045</custIdentityId>
+                <customer>
+                    <keySet />
+                    <checkDebit>true</checkDebit>
+                    <coppy>false</coppy>
+                    <custAdd>
+                        <keySet>-517464866</keySet>
+                        <address2FirstLevel />
+                        <areaCode />
+                        <district>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </district>
+                        <fullAddress />
+                        <isEnteredManually>false</isEnteredManually>
+                        <number />
+                        <precinct>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </precinct>
+                        <province>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </province>
+                        <street />
+                        <streetBlock>
+                            <keySet />
+                            <code />
+                            <label />
+                            <name />
+                        </streetBlock>
+                    </custAdd>
+                    <custContactDTO />
+                    <custContactDTODCOM />
+                    <custTypeDTO />
+                    <isNewCustomer>true</isNewCustomer>
+                    <isPCProduct>false</isPCProduct>
+                    <mustValidateOldCust>false</mustValidateOldCust>
+                    <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                    <newRepCustomer>true</newRepCustomer>
+                    <repCust>false</repCust>
+                    <typeCustomer />
+                    <updateCustIdentity>true</updateCustIdentity>
+                </customer>
+                <disableConfig>false</disableConfig>
+                <expireDateEditable>false</expireDateEditable>
+                <flagConfig>false</flagConfig>
+                <idIssueDate>2004-11-23T00:00:00+07:00</idIssueDate>
+                <idIssuePlace>Vũng Tàu</idIssuePlace>
+                <idNo>1232342343</idNo>
+                <idNoEditable>false</idNoEditable>
+                <idType>ID</idType>
+                <idTypeEditable>false</idTypeEditable>
+                <idTypeName>CMT</idTypeName>
+                <issueDateEditable>false</issueDateEditable>
+                <issuePlaceEditable>false</issuePlaceEditable>
+                <maxLength>12</maxLength>
+                <minLength>9</minLength>
+                <minQueryLength>9</minQueryLength>
+                <required>false</required>
+                <requiredMessage>[SALE11443]Thiếu thông tin trường CMT</requiredMessage>
+                <status>1</status>
+                <updateDatetime>2015-04-03T16:23:11+07:00</updateDatetime>
+                <updateUser>MIGRATE</updateUser>
+                <validateMessage>[SALE11444]CMT phải có 9 hoặc 12 kí tự</validateMessage>
+            </listCustIdentity>
+            <mustValidateOldCust>false</mustValidateOldCust>
+            <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+            <name>KH Doanh Nghiệp Liên Test</name>
+            <nationality>Việt Nam</nationality>
+            <newRepCustomer>true</newRepCustomer>
+            <repCust>false</repCust>
+            <representativeCust>
+                <keySet>20611151930Thao Tran</keySet>
+                <address>Chương Dương Độ Hoàn Kiếm Hà Nội</address>
+                <areaCode>H004002001010</areaCode>
+                <district>002</district>
+                <precinct>001</precinct>
+                <province>H004</province>
+                <streetBlock>010</streetBlock>
+                <birthDate>2010-02-10T00:00:00+07:00</birthDate>
+                <checkDebit>true</checkDebit>
+                <coppy>false</coppy>
+                <createDatetime>2015-06-13T16:35:53+07:00</createDatetime>
+                <createUser>PRODUCT</createUser>
+                <custAdd>
+                    <keySet>-995439820</keySet>
+                    <address2FirstLevel />
+                    <areaCode />
+                    <district>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </district>
+                    <fullAddress />
+                    <isEnteredManually>false</isEnteredManually>
+                    <number />
+                    <precinct>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </precinct>
+                    <province>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </province>
+                    <street />
+                    <streetBlock>
+                        <keySet />
+                        <code />
+                        <label />
+                        <name />
+                    </streetBlock>
+                </custAdd>
+                <custContactDTO />
+                <custContactDTODCOM />
+                <custId>20611151930</custId>
+                <custType>VIE</custType>
+                <custTypeDTO />
+                <isNewCustomer>true</isNewCustomer>
+                <isPCProduct>false</isPCProduct>
+                <listCustIdentity>
+                    <keySet>20611151930-183802355-ID</keySet>
+                    <createDatetime>2015-06-13T16:35:53+07:00</createDatetime>
+                    <createUser>PRODUCT</createUser>
+                    <custId>20611151930</custId>
+                    <custIdentityId>36718680</custIdentityId>
+                    <customer>
+                        <keySet />
+                        <checkDebit>true</checkDebit>
+                        <coppy>false</coppy>
+                        <custAdd>
+                            <keySet>-1163364623</keySet>
+                            <address2FirstLevel />
+                            <areaCode />
+                            <district>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </district>
+                            <fullAddress />
+                            <isEnteredManually>false</isEnteredManually>
+                            <number />
+                            <precinct>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </precinct>
+                            <province>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </province>
+                            <street />
+                            <streetBlock>
+                                <keySet />
+                                <code />
+                                <label />
+                                <name />
+                            </streetBlock>
+                        </custAdd>
+                        <custContactDTO />
+                        <custContactDTODCOM />
+                        <custTypeDTO />
+                        <isNewCustomer>true</isNewCustomer>
+                        <isPCProduct>false</isPCProduct>
+                        <mustValidateOldCust>false</mustValidateOldCust>
+                        <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                        <newRepCustomer>true</newRepCustomer>
+                        <repCust>false</repCust>
+                        <typeCustomer />
+                        <updateCustIdentity>true</updateCustIdentity>
+                    </customer>
+                    <disableConfig>false</disableConfig>
+                    <expireDateEditable>false</expireDateEditable>
+                    <flagConfig>false</flagConfig>
+                    <idIssueDate>2007-08-15T00:00:00+07:00</idIssueDate>
+                    <idIssuePlace>Ha Noi</idIssuePlace>
+                    <idNo>183802355</idNo>
+                    <idNoEditable>false</idNoEditable>
+                    <idType>ID</idType>
+                    <idTypeEditable>false</idTypeEditable>
+                    <idTypeName>CMT</idTypeName>
+                    <issueDateEditable>false</issueDateEditable>
+                    <issuePlaceEditable>false</issuePlaceEditable>
+                    <maxLength>12</maxLength>
+                    <minLength>9</minLength>
+                    <minQueryLength>9</minQueryLength>
+                    <required>false</required>
+                    <requiredMessage>[SALE11443]Thiếu thông tin trường CMT</requiredMessage>
+                    <status>1</status>
+                    <updateDatetime>2015-06-13T16:35:53+07:00</updateDatetime>
+                    <updateUser>PRODUCT</updateUser>
+                    <validateMessage>[SALE11444]CMT phải có 9 hoặc 12 kí tự</validateMessage>
+                </listCustIdentity>
+                <mustValidateOldCust>false</mustValidateOldCust>
+                <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+                <name>Thao Tran</name>
+                <nationality>Việt Nam</nationality>
+                <newRepCustomer>true</newRepCustomer>
+                <repCust>false</repCust>
+                <sex>F</sex>
+                <status>1</status>
+                <typeCustomer />
+                <updateCustIdentity>true</updateCustIdentity>
+                <updateDatetime>2015-06-13T16:35:53+07:00</updateDatetime>
+                <updateUser>PRODUCT</updateUser>
+            </representativeCust>
+            <status>1</status>
+            <typeCustomer />
+            <updateCustIdentity>true</updateCustIdentity>
+            <updateDatetime>2016-08-22T16:21:04+07:00</updateDatetime>
+            <updateUser>vtt1</updateUser>
+        </customerDTO>
+        <customerDTOInput>
+            <keySet />
+            <checkDebit>true</checkDebit>
+            <coppy>false</coppy>
+            <custAdd>
+                <keySet>926877335</keySet>
+                <address2FirstLevel />
+                <areaCode />
+                <district>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </district>
+                <fullAddress />
+                <isEnteredManually>false</isEnteredManually>
+                <number />
+                <precinct>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </precinct>
+                <province>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </province>
+                <street />
+                <streetBlock>
+                    <keySet />
+                    <code />
+                    <label />
+                    <name />
+                </streetBlock>
+            </custAdd>
+            <custContactDTO />
+            <custContactDTODCOM />
+            <custTypeDTO />
+            <isNewCustomer>true</isNewCustomer>
+            <isPCProduct>false</isPCProduct>
+            <mustValidateOldCust>false</mustValidateOldCust>
+            <mustValidateWhenLoadOldCust>true</mustValidateWhenLoadOldCust>
+            <newRepCustomer>true</newRepCustomer>
+            <repCust>false</repCust>
+            <typeCustomer />
+            <updateCustIdentity>true</updateCustIdentity>
+        </customerDTOInput>
+        <customerOrderDetailDTO>
+            <enableAsign>true</enableAsign>
+            <disableCancel>true</disableCancel>
+            <chooseSubExit>false</chooseSubExit>
+            <needRetake>false</needRetake>
+            <userSelectedISDNBefore>false</userSelectedISDNBefore>
+            <isMoveAPAttach>false</isMoveAPAttach>
+            <moveAllLine>false</moveAllLine>
+            <selectedRow>false</selectedRow>
+            <selectedInfoDeploy>false</selectedInfoDeploy>
+            <renderCommandLink>false</renderCommandLink>
+            <isConnectNA>false</isConnectNA>
+        </customerOrderDetailDTO>
+        <deposit>0</deposit>
+        <directChangePromotion>false</directChangePromotion>
+        <disableItem>false</disableItem>
+        <disableOwner>false</disableOwner>
+        <eligibleToJoinGroup>false</eligibleToJoinGroup>
+        <errorOCS>false</errorOCS>
+        <firstConnect>2016-01-14T15:42:22+07:00</firstConnect>
+        <gotoReqMng>false</gotoReqMng>
+        <hasVerifiedOwner>false</hasVerifiedOwner>
+        <hasVerifiedOwnerOld>false</hasVerifiedOwnerOld>
+        <haveCommmitment>false</haveCommmitment>
+        <inGroup>false</inGroup>
+        <isChecked>false</isChecked>
+        <isOpenSub>false</isOpenSub>
+        <isProvince>false</isProvince>
+        <isSelected>false</isSelected>
+        <isSmartSIM>false</isSmartSIM>
+        <isSpecialProduct>false</isSpecialProduct>
+        <localPricePlanDTO>
+            <otherPrice>false</otherPrice>
+        </localPricePlanDTO>
+        <lstSubInfrastructureDTO>
+            <address>0 Liên Thôn, Tổ 1 Yên Hòa Cầu Giấy Hà Nội</address>
+            <areaCode>H004007002001</areaCode>
+            <district>007</district>
+            <home>0</home>
+            <precinct>002</precinct>
+            <province>H004</province>
+            <streetBlock>001</streetBlock>
+            <streetName>Liên Thôn</streetName>
+            <actionId>104</actionId>
+            <cableBoxCode>O01-HNI0339/011A</cableBoxCode>
+            <cableBoxId>5391</cableBoxId>
+            <chooseSubExit>false</chooseSubExit>
+            <createDate>2016-02-29T19:25:44+07:00</createDate>
+            <progress>2</progress>
+            <radiusCust>500</radiusCust>
+            <reqDatetime>2016-02-29T19:25:44+07:00</reqDatetime>
+            <sourceId>1</sourceId>
+            <stationCode>HNI0339</stationCode>
+            <status>1</status>
+            <subId>60000013990</subId>
+            <subInfrastructureId>9315205345</subInfrastructureId>
+            <teamCode>HNI09</teamCode>
+            <technology>3</technology>
+            <telMobile>123654789</telMobile>
+            <updateDatetime>2016-04-28T17:37:10+07:00</updateDatetime>
+            <updaterUserId>9999999993</updaterUserId>
+            <userUsing>Trần Thị Thảo >.&lt;123</userUsing>
+            <validateImport>false</validateImport>
+        </lstSubInfrastructureDTO>
+        <markNotOwner>false</markNotOwner>
+        <moveAllLine>false</moveAllLine>
+        <newSerialEq>false</newSerialEq>
+        <noCheckLockIsdn>false</noCheckLockIsdn>
+        <normalIsdn>false</normalIsdn>
+        <orgProductCode>FAST10</orgProductCode>
+        <password>WJJSVM</password>
+        <policySpec>false</policySpec>
+        <policySpecInfoDTO>
+            <keySet />
+            <disableInput>false</disableInput>
+        </policySpecInfoDTO>
+        <prepaidMonthBO />
+        <pricePlanDTO>
+            <otherPrice>false</otherPrice>
+        </pricePlanDTO>
+        <priceRetail />
+        <printProfile>false</printProfile>
+        <productEligible>false</productEligible>
+        <productName>FTTH ECO</productName>
+        <productSpecInfoDTO>
+            <hsProduct>false</hsProduct>
+            <showProdSpecInfo>false</showProdSpecInfo>
+        </productSpecInfoDTO>
+        <quotaItemDTO />
+        <reasonDTO />
+        <regTypeId>303149</regTypeId>
+        <renderChild>false</renderChild>
+        <renderUplinkInfo>true</renderUplinkInfo>
+        <renderedPrepaidDes>false</renderedPrepaidDes>
+        <repairMode>false</repairMode>
+        <reqZoneRec>false</reqZoneRec>
+        <responseHLR />
+        <responseOCS />
+        <roleSaveDeposit>false</roleSaveDeposit>
+        <saleServicesCode />
+        <selectedMainMember>true</selectedMainMember>
+        <selectedRow>false</selectedRow>
+        <sendVts>true</sendVts>
+        <shopCode>VT</shopCode>
+        <shopStaffName />
+        <sim4G>false</sim4G>
+        <smartSIM>false</smartSIM>
+        <specialProduct>false</specialProduct>
+        <staDatetime>2016-01-14T15:41:18+07:00</staDatetime>
+        <statusActive900 />
+        <statusView>Đang hoạt động</statusView>
+        <subCommitmentDTO />
+        <subImeiDTO>
+            <subId>0</subId>
+        </subImeiDTO>
+        <subLimitUsageDTO />
+        <subType>ACP</subType>
+        <supportActive900>false</supportActive900>
+        <technology>3</technology>
+        <technologyText>Cáp quang</technologyText>
+        <telecomServiceAlias>F</telecomServiceAlias>
+        <telecomServiceName>FTTH</telecomServiceName>
+        <totalFee>0</totalFee>
+        <transSign>false</transSign>
+        <updateDatetime>2016-12-08T14:54:27+07:00</updateDatetime>
+        <updateUser>SYSTEM</updateUser>
+        <validIdNo>false</validIdNo>
+    </lstSubscriberDTOExt>
+</return>

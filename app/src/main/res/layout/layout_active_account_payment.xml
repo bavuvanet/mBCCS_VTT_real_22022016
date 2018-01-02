@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7" >
+
+            <TextView
+                android:id="@+id/txtChanelDistribution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_normal_background"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/chanel_distribution"
+                android:textColor="#11A9AA"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" >
+
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:filterTouchesWhenObscured="true"
+                android:text="@string/check"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvIsdn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/radioHaveSim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/active_has_sim" />
+
+        <RadioButton
+            android:id="@+id/radioNotSim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/active_not_sim" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtSerialSim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/input_code_serial_sim"
+        android:inputType="number"
+        android:maxLength="15"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvHelpActiveOrSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red"
+        android:visibility="gone" >
+    </TextView>
+
+    <Button
+        android:id="@+id/btnActive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:filterTouchesWhenObscured="true"
+        android:text="@string/btn_active"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_content"
+        android:visibility="gone" />
+
+</LinearLayout>

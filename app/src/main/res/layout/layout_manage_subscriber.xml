@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/d5"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/sogt"
+            android:textSize="@dimen/text_size_content" />
+
+        <com.viettel.bss.viettelpos.v4.customview.InstantAutoComplete
+                android:lines="1"
+                android:id="@+id/edt_idno"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp50"
+                android:layout_weight="1.5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/d5"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/isdn_or_account"
+            android:textSize="@dimen/text_size_content" />
+
+        <com.viettel.bss.viettelpos.v4.customview.InstantAutoComplete
+                android:lines="1"
+                android:id="@+id/edt_isdnAccount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_searchAccount"
+        android:layout_width="@dimen/button_width_extra"
+        android:layout_height="@dimen/button_height_litter"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_nomal1"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/lv_accountList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

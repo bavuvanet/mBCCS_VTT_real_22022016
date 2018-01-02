@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context="com.viettel.bss.viettelpos.v4.connecttionService.activity.FragmentUpLoadImage"
+    tools:ignore="MergeRootFrame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="0.75"
+            android:ems="6"
+            android:text="@string/ngayscan" />
+
+        <EditText
+            android:id="@+id/edtngayscan"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:ems="6"
+            android:focusableInTouchMode="false"
+            android:inputType="number"
+            android:maxLength="50"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/upload_image"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lnUploadImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btncapnhat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/button_update"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/line_button_color" />
+
+        <Button
+            android:id="@+id/btnhuy"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+</LinearLayout>

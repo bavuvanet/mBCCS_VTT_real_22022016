@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/subscriberInfo"
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header"
+                android:visibility="visible" />
+
+            <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+                android:id="@+id/lv_subscriberInfos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:scrollbars="none" >
+            </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="@string/createTaskForTeam"
+                    android:textSize="@dimen/text_size_content" />
+
+                <CheckBox
+                    android:id="@+id/cb_createTaskForTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/subGoodsList"
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header"
+                android:visibility="visible" />
+
+            <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+                android:id="@+id/lv_subscriberEquipments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:scrollbars="none" >
+            </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="@string/reruire_reason"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spinner_reason"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/addGoodsList"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_header"
+            android:visibility="visible" />
+
+        <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+            android:id="@+id/lv_addGoods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:scrollbars="none" >
+        </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+
+        <Button
+            android:id="@+id/btn_changeEquipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_button"
+            android:text="@string/changeEquipment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_nomal1"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</ScrollView>

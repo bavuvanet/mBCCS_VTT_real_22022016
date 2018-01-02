@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/provinceMobile" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edtprovince"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:singleLine="true"
+            android:layout_weight="@integer/d4"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/search_c"
+            android:hint="Chọn Tỉnh/TP"
+            android:completionThreshold="1"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/districtMobile" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edtdistrict"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/search_c"
+            android:completionThreshold="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Chọn Quận/Huyện"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/precintMobile" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edtprecinct"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/search_c"
+            android:singleLine="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:completionThreshold="1"
+            android:hint="Chọn Phường/Xã"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <!-- Them moi ToThong, Duong dang code -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/tv_to_thon_creat_address" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="@integer/d4"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/edtStreetBlock"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d5"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/search_c"
+                android:singleLine="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:completionThreshold="1"
+                android:hint="Chọn Tổ/Thôn"
+                android:textSize="@dimen/text_size_content" />
+
+            <Button
+                android:id="@+id/btnRefreshStreetBlock"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/ic_menu_refresh" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/d5"
+            android:gravity="center_vertical"
+            android:text="@string/duongConnect"
+            android:textSize="@dimen/text_size_content" />
+
+        <EditText
+            android:id="@+id/edt_streetName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:drawablePadding="2dp"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:hint="Nhập tên đường"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/d5"
+            android:gravity="center_vertical"
+            android:text="@string/sonhaConnect"
+            android:textSize="@dimen/text_size_content" />
+
+        <EditText
+            android:id="@+id/edtHomeNumber"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:drawablePadding="2dp"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:hint="Nhập số nhà"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="@integer/d5"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="@string/loFullAddress"-->
+            <!--android:textSize="@dimen/text_size_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txtFullAddr"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="@dimen/button_height"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:layout_weight="@integer/d4"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMediumInverse"-->
+            <!--android:background="?android:attr/editTextBackground"-->
+            <!--android:textColor="?android:attr/editTextColor"-->
+            <!--android:textSize="@dimen/text_size_content" />-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_s"
+            android:layout_weight="1"
+
+            android:text="@string/chon"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_s"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_weight="1"
+
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+</LinearLayout>

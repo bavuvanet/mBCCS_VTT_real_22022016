@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        android:id="@+id/tvTotCharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_amount"
+        android:textSize="@dimen/text_size_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvVerifyStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/state_payment"
+        android:textSize="@dimen/text_size_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvVerifyDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ver_date"
+        android:textSize="@dimen/text_size_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvXpos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/xPos"
+        android:textSize="@dimen/text_size_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvYpos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/yPos"
+        android:textSize="@dimen/text_size_content"
+        android:textStyle="bold" />
+
+</LinearLayout>

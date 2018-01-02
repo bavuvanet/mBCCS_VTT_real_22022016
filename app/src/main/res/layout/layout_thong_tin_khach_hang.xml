@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:paddingLeft="@dimen/padding_left"
+            android:paddingRight="@dimen/padding_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_left"
+            android:paddingRight="@dimen/padding_right" >
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal" >-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical|center_horizontal"-->
+                    <!--android:text="@string/nhomkh" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/edtnhomkh"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="@dimen/button_height"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:layout_marginLeft="2dp"-->
+                    <!--android:layout_weight="@integer/d4"-->
+                    <!--android:clickable="true"-->
+                    <!--android:cursorVisible="false"-->
+                    <!--android:drawablePadding="2dp"-->
+                    <!--android:editable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:hint="Chọn nhóm KH"-->
+                    <!--android:longClickable="false"-->
+                    <!--android:text=""-->
+                    <!--android:textColor="@color/list_background_pressed_vt"-->
+                    <!--android:textSize="@dimen/text_size_content" >-->
+                <!--</EditText>-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnRefreshCustGroup"-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_marginLeft="2dp"-->
+                    <!--android:background="@drawable/ic_menu_refresh" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:text="@string/loaikh" />
+
+                <EditText
+                    android:id="@+id/edtloaikh"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.23"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint="Chọn loại KH"
+                    android:longClickable="false"
+                    android:text=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_content" />
+
+                <ProgressBar
+                    android:id="@+id/prbCustType"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <Button
+                    android:id="@+id/btnRefreshCustType"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_menu_refresh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnsogiayto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/typegiayto" />
+
+                <Spinner
+                    android:id="@+id/spinner_type_giay_to"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/sogiayto" />
+
+                <EditText
+                    android:id="@+id/edit_sogiayto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:maxLength="60" >
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal" >-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_weight="@integer/d5"-->
+                    <!--android:text="@string/tenkhang" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/edit_tenKH"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:layout_marginLeft="2dp"-->
+                    <!--android:layout_weight="@integer/d4"-->
+                    <!--android:maxLength="60" >-->
+
+                    <!--<requestFocus />-->
+                <!--</EditText>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/lngioitinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/sexMobile" />
+
+                <Spinner
+                    android:id="@+id/spinner_gioitinh"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCMT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/socmnd" />
+
+                <EditText
+                    android:id="@+id/edit_socmnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearsoGPKD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/soGPKDorQDTL" />
+
+                <EditText
+                    android:id="@+id/edit_soGQ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:maxLength="200" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnmasothue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/mstcd" />
+
+                <EditText
+                    android:id="@+id/edit_masothue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:maxLength="200" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ngaysinh_mobile" />
+
+                <EditText
+                    android:id="@+id/edit_ngaysinhCus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ngaycap_mobile" />
+
+                <EditText
+                    android:id="@+id/edit_ngaycap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnngayhethan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ngayhethan" />
+
+                <EditText
+                    android:id="@+id/edit_ngayhethan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/noicap_mobile" />
+
+                <EditText
+                    android:id="@+id/edtnoicap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:maxLength="200" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/d5"
+                    android:gravity="center_vertical"
+                    android:text="@string/diachi"
+                    android:textSize="@dimen/text_size_content" />
+
+                <TextView
+                    android:id="@+id/txtDiaChiKS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_lin_layout_channel_manager"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnthemmoi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_s"
+                android:layout_weight="1"
+
+                android:text="@string/themmoi"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_s"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_weight="1"
+
+                android:text="@string/cancel"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

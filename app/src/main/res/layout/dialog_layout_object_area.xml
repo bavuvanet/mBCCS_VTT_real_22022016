@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/task_update_area"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_18" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/textDialogTitle" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lnValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <EditText
+            android:id="@+id/edtValue"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_item_menu"
+            android:layout_weight="8"
+            android:hint=""
+            android:visibility="visible" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+
+            android:text="+"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnSpnValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/spnValue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_item_menu"
+            android:background="@drawable/background_spinner"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/text_size_nomal"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/btnSave"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+    </ListView>
+
+</LinearLayout>

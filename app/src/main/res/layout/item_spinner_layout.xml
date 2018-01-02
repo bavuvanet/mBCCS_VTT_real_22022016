@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtItemSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical|center_horizontal|left"
+            android:paddingLeft="@dimen/margin_text_5"
+            android:singleLine="false"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/txtserial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_text_5"
+            android:singleLine="false"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_title"
+            android:visibility="gone" />
+
+   
+
+</LinearLayout>

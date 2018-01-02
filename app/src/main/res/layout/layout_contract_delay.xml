@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/isdn_or_account"
+            android:textSize="@dimen/text_size_content" />
+
+        <EditText
+            android:id="@+id/edt_isdn_account"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_weight="1"
+            android:text="" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_searchContract"
+        android:layout_width="@dimen/button_width_extra"
+        android:layout_height="@dimen/button_height_litter"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_nomal1"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_contractInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@+id/lv_contractList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edt_fromDate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:longClickable="false"
+                android:text="10/10/2015"
+                android:textSize="@dimen/text_size_content" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/icon_2muiten"
+                android:contentDescription="arrowfffffffffffffffffffffffffffffff" />
+
+            <EditText
+                android:id="@+id/edt_toDate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:text="20/10/2015"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="@string/description"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edt_description"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/height_spinner"
+                android:layout_weight="1"
+                android:inputType="text|textMultiLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="@string/txt_reason"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spn_reason"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bootom_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_addDelay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@color/colorPrimary"
+                android:text="@string/addDelay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_content"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

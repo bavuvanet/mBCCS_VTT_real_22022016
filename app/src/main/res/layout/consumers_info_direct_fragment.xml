@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_3"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_margin="3dp"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/tvAdvisoryHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/bg_view"
+                    android:gravity="start|top"
+                    android:textStyle="bold"
+                    android:text="@string/advisory_customers_direct_text"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/btChangeShet"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/clock_image"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/tbDataMoney"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_1">
+                <TableRow
+                    android:layout_margin="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@color/gray_3"
+                        android:gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:textStyle="bold"
+                        android:text="@string/advisory_direct_use_text"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tvMonthOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1.1"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="Tháng 4"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvMonthTwo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1.1"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="Tháng 5"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvMonthThree"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1.1"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="Tháng 6"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="0.48"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="BĐ"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_7"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_phone_in_text"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+
+                    <TextView
+                        android:id="@+id/tvMonthOnePhoneIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+
+                    <TextView
+                        android:id="@+id/tvMonthTwoPhoneIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreePhoneIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbPhoneIn"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_8"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_weight="1.5"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_phone_out_text"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+
+                    <TextView
+                        android:id="@+id/tvMonthOnePhoneOut"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+
+                    <TextView
+                        android:id="@+id/tvMonthTwoPhoneOut"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+
+                    <TextView
+                        android:id="@+id/tvMonthThreePhoneOut"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbPhoneOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_7"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_phone_global_text"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+
+                    <TextView
+                        android:id="@+id/tvMonthOnePhoneGlobal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoPhoneGlobal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreePhoneGlobal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbPhoneGlobal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_8"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_sms_in_text"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthOneSMSIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoSMSIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreeSMSIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbSmsIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_7"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_sms_out_text"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthOneSMSOut"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoSMSOut"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreeSMSOut"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbSmsOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_8"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_sms_global_text"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthOneSMSGlobal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoSMSGlobal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreeSMSGlobal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbSmsGlobal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_7"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_data_text"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthOneData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreeData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_8"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_vas_text"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthOneVas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoVas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreeVas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbVas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray_7"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_weight="1.5"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_total_text"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+
+                    <TextView
+                        android:id="@+id/tvMonthOneTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <TextView
+                        android:id="@+id/tvMonthThreeTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="67.000"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="1dp"
+                        android:background="@color/gray_1" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cbTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/advisory_unit_vnd_text"
+                        android:textSize="12sp"
+                        android:textStyle="italic" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tbDataFlow"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_1">
+                <TableRow
+                    android:layout_margin="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@color/gray_3"
+                        android:gravity="start|center"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:textStyle="bold"
+                        android:text="@string/advisory_direct_use_text"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tvMonthOneFlow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1.1"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="Tháng 4"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvMonthTwoFlow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1.1"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="Tháng 5"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvMonthThreeFlow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1.1"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="Tháng 6"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="0.48"
+                        android:background="@color/gray_3"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="ĐV"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llChartOnce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/gray_3"/>
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_margin="3dp"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/tvAdvisoryHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/bg_view"
+                    android:gravity="start|top"
+                    android:textStyle="bold"
+                    android:text="@string/advisory_chart_customers_direct_text"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/btChangeChart"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bar_chart"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llChartTwo"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/gray_3"/>
+
+            <TextView
+                android:id="@+id/tvTitlePieChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bg_view"
+                android:gravity="start"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:text="@string/advisory_chart_rate_direct_div_toltal_text"
+                android:textSize="14sp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

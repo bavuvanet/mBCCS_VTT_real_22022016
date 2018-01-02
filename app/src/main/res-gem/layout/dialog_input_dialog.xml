@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/standard.spacing_medium">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Nhập giá trị"
+        android:textColor="#000000"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard.spacing_medium"
+        android:gravity="center_vertical"
+        android:hint="Nhập giá trị"
+        android:inputType="number"
+        android:padding="@dimen/standard.spacing_medium"
+        android:textColor="#000000"
+        android:textSize="@dimen/text_survey_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard.spacing_medium"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard.spacing_medium"
+            android:layout_marginRight="@dimen/standard.spacing_medium"
+            android:layout_weight="1"
+            android:background="@drawable/bg_custom_collect_cancel"
+            android:text="Hủy" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/standard.spacing_medium"
+            android:layout_weight="1"
+            android:background="@drawable/bg_custom_collect_add"
+            android:text="OK" />
+
+    </LinearLayout>
+</LinearLayout>

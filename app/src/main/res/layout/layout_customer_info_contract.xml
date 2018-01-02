@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="6"
+                android:text="@string/number_contract_auto_gen" />
+
+            <TextView
+                android:id="@+id/tv_number_contract_gen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/number_contract_auto_gen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="6"
+                android:text="@string/number_contract_print" />
+
+            <EditText
+                android:id="@+id/edt_number_contract_print"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:text="@string/persoon_payment" />
+
+            <TextView
+                android:id="@+id/tv_persoon_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/persoon_payment" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:text="@string/customer_contract_type" />
+
+            <EditText
+                android:id="@+id/tv_customer_contract_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="6"
+                android:gravity="center_vertical"
+                android:text="@string/date_signal"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edt_from_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:longClickable="false"
+                android:text=""
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="6"
+                android:gravity="center_vertical"
+                android:text="@string/date_effective"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edt_effective_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:longClickable="false"
+                android:text=""
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="6"
+                android:gravity="center_vertical"
+                android:text="@string/date_expiration"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edt_expiration_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:longClickable="false"
+                android:text=""
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>

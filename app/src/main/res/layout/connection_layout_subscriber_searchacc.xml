@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Begin Tìm kiếm thuê bao cùng địa chỉ -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:text="@string/manager_customer_connecttion_info"
+                android:textColor="@color/siLabel"
+                android:textSize="@dimen/text_size_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/sogiayto" />
+
+                <EditText
+                    android:id="@+id/editsogiayto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:inputType="text"
+                    android:digits="0123456789"
+                    android:maxLength="50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/isdnoracc" />
+
+                <EditText
+                    android:id="@+id/editisdnacount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_height_layout_channel_manager"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnTimKiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height_s"
+                    android:background="@drawable/round_button"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/siTimKiem"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_title" />
+            </LinearLayout>
+
+            
+
+   
+
+
+            <!-- Thông tin người yêu cầu -->
+
+            <ListView 
+                android:id="@+id/lvAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+
+        
+
+            <!-- End khảo sát sơ bộ -->
+
+
+      
+        </LinearLayout>
+
+        
+    </LinearLayout>
+

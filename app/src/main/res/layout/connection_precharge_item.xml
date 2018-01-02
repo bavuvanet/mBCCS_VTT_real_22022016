@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linThongtindonhang"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_left"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:text="@string/sothangdongtruoc"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/txtmonthPrePaid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_left"
+                android:layout_weight="0.5"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:hint="@string/sotien1thang"
+                android:lines="1"
+                  android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+            
+                <TextView
+                android:id="@+id/txtpromAmount"
+                android:layout_width="wrap_content"
+                 android:layout_marginLeft="@dimen/padding_left"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                  android:textColor="@color/text_title"
+                android:lines="1"
+                android:textSize="@dimen/text_size_13" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+               <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:hint="@string/tongsotiencuoc"
+                android:lines="1"
+                  android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+            
+                <TextView
+                android:id="@+id/txttongsotiencuoc"
+                android:layout_width="wrap_content"
+                 android:layout_marginLeft="@dimen/padding_left"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                  android:textColor="@color/text_title"
+                android:lines="1"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:hint="@string/moneyUnit"
+                android:lines="1"
+                  android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+            
+                <TextView
+                android:id="@+id/txtmoneyUnit"
+                android:layout_width="wrap_content"
+                 android:layout_marginLeft="@dimen/padding_left"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                  android:textColor="@color/text_title"
+                android:lines="1"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtdiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/giamtrucuoctu"
+                android:textColor="@color/list_background_pressed_vt"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnupload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/button_normal_background"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtscan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:lines="3"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnListInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/padding_text_5"
+    android:paddingRight="@dimen/padding_text_5">
+
+    <TextView
+        android:id="@+id/txtItem"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="16"
+        android:gravity="center_vertical" />
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@android:drawable/ic_menu_info_details"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+
+</LinearLayout>

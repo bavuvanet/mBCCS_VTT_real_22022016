@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_left"
+            android:paddingRight="@dimen/padding_right">
+
+            <TextView
+                android:id="@+id/txtinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_text_1"
+                android:layout_marginTop="@dimen/margin_text_1"
+                android:text="@string/infoconnect"
+                android:textColor="@color/list_background_pressed_vt"
+                android:textSize="@dimen/text_size_nomal"/>
+
+            <View
+                android:id="@+id/viewhead"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/view_size"
+                android:background="@color/color_view"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:ems="8"
+                    android:text="@string/mayeucau"/>
+
+                <TextView
+                    android:id="@+id/txtmayeucau"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/edittext"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:ems="8"
+                    android:text="@string/isdnandaccount"/>
+
+                <TextView
+                    android:id="@+id/txtisdnoraccount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/edittext"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:ems="8"
+                    android:text="@string/idhopdong"/>
+
+                <TextView
+                    android:id="@+id/txtidhopdong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/edittext"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:ems="8"
+                    android:text="@string/service"/>
+
+                <TextView
+                    android:id="@+id/txtservice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/edittext"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:ems="8"
+                    android:text="@string/goi_cuoc"/>
+
+                <TextView
+                    android:id="@+id/txtgoicuoc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/edittext"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_left"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbIsDeploy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/tutrienkhai"/>
+
+            <LinearLayout
+                android:id="@+id/idlistfreeService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_1"
+                    android:layout_marginTop="@dimen/margin_text_1"
+                    android:text="@string/dsphidichvu"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_nomal"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_size"
+                    android:background="@color/color_view"/>
+
+                <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+                    android:id="@+id/listfreeService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:scrollbars="none">
+                </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lndshanghoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_1"
+                    android:layout_marginTop="@dimen/margin_text_1"
+                    android:text="@string/dshanghoa"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_nomal"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_size"
+                    android:background="@color/color_view"/>
+
+                <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+                    android:id="@+id/listproduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:scrollbars="none">
+                </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_1"
+                    android:layout_marginTop="@dimen/margin_text_1"
+                    android:text="@string/thongtinhoso"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_nomal"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lvUploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+            </ListView>
+
+            <LinearLayout
+                android:id="@+id/lnButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_lin_layout_channel_manager"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btndaunoi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+
+                    android:text="@string/customer_connection_service_static"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_title"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

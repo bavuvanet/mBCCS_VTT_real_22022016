@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvStaffCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:text="AAAAAAAAA"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_content" />
+
+    <TextView
+        android:id="@+id/tvStaffName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:text="AAAAAAAAA"
+        android:textSize="@dimen/text_size_content" />
+</LinearLayout>

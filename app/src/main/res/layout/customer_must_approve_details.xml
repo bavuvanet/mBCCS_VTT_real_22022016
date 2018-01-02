@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <TextView
+        android:id="@+id/vl_detail_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Dialgo"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_staff_name"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_staff_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="Nguyen Ha"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_customer_type"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_customer_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="Tư nhân trong nước"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_customer_code"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_customer_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="9623563253"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_birthday"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_birthday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="24/07/1990"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_sex"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_sex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="Nữ"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_country"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="Việt Nam"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_bussiness_number"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_bussiness_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+    
+     
+     
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_document_type"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_document_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="Chứng minh thư"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_id_no_detail"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_id_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="185236021"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_location_supply"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_location_supply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="Ha noi"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_date_supply"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_date_supply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="10/07/2011"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_taxcode"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_taxcode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="2013220512"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_number_of_household"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_household"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="120252021"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_location_supply"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_location_supply_household"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="ha noi"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_date_supply"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_date_supply_household"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="24/07/2010"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_address"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="ha noi, Bạch Đằng, Hai Bà Trưng, Hà Nội"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_phone"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+            android:text="24/07/1990"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:text="@string/txt_note"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/vl_detail_note"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="4"
+             android:textColor="@color/red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+    <Button 
+        android:id="@+id/btn_detail_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/padding_top_button"
+
+        android:textColor="#fff"
+        android:text="@string/boquaReq"
+        android:textSize="@dimen/text_size_title"/>
+</LinearLayout>
+</ScrollView> 

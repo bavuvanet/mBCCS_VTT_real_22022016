@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+<!-- banner -->
+    <TextView
+        android:id="@+id/tvBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/tvBanner" />
+
+    <EditText
+        android:id="@+id/edtNumberBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="41dp"
+        android:inputType="number"
+       
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    <EditText
+        android:id="@+id/edtNoteBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/edtNumberBanner"
+        android:inputType="text"
+        android:layout_below="@+id/edtNumberBanner"
+        android:ems="10" />
+    
+<!-- poster -->
+    <TextView
+        android:id="@+id/tvPoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edtNoteBanner"
+        android:layout_marginTop="22dp"
+        android:text="@string/tvPoster" />
+
+    <EditText
+        android:id="@+id/edtPosterNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvPoster"
+        android:layout_alignRight="@+id/edtNoteBanner"
+         android:inputType="number"
+       
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/edtNotePoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/edtPosterNumber"
+        android:layout_below="@+id/tvPoster"
+        android:inputType="text"
+        android:ems="10" />
+    
+<!-- To roi -->
+
+    <TextView
+        android:id="@+id/tvLeaflets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edtNotePoster"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvLeaflets" />
+<!-- Khac -->
+
+    <TextView
+        android:id="@+id/tvToolShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvLeaflets"
+        android:layout_marginTop="82dp"
+        android:text="@string/tvOtherToolShop" />
+
+    <EditText
+        android:id="@+id/edtNoteToolShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/edtNumberToolShop"
+        android:layout_below="@+id/tvToolShop"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edtNoteLeaflets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtNumberToolShop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/edtNumberToolShop"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnSaveToolShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:layout_marginRight="233dp"
+        android:layout_toLeftOf="@+id/edtNumberToolShop"
+        android:text="@string/btnAddToolShop" />
+
+    <EditText
+        android:id="@+id/edtNumberLeaflets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvLeaflets"
+        android:layout_alignBottom="@+id/tvLeaflets"
+        android:layout_alignRight="@+id/edtNotePoster"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtNumberToolShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvToolShop"
+        android:layout_alignLeft="@+id/edtNumberLeaflets"
+        android:ems="10"
+        android:inputType="number" />
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:text="@string/sogt"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:id="@+id/edtIdNo"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:text="@string/ver_isdn"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:id="@+id/edtIsdn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_top"
+        android:layout_marginRight="@dimen/padding_top"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSearchBundleGroup"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/button_height_litter"
+            android:layout_weight="1"
+
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/tkphuluchdCD"
+            android:textColor="#fff"
+            android:layout_marginRight="2dp"
+            android:textSize="@dimen/text_size_content" />
+        <Button
+            android:id="@+id/btnCreateBundle"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/button_height_litter"
+            android:layout_weight="1"
+
+            android:text="@string/create_quick_bundle"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lvBundleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_top"
+        android:layout_marginRight="@dimen/padding_top"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        
+    </LinearLayout>
+
+</LinearLayout>

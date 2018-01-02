@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="Danh sách thuê bao thuộc đường dây"
+            android:textColor="@color/bg_tv_vt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+            android:id="@+id/lvAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:scrollbars="none">
+        </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/icon_height_layout_channel_manager"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_s"
+                android:background="@drawable/round_button"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/boquaReq"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="80dip"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center_vertical"
+            android:text="@string/service" />
+
+        <Spinner
+            android:id="@+id/spServiceIDNum"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/margin_text_1"
+            android:layout_toRightOf="@+id/txt1"
+            android:gravity="center_vertical"
+            android:prompt="@string/title_spinner_id_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip" >
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="80dip"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center_vertical"
+            android:text="Công nghệ" />
+
+        <Spinner
+            android:id="@+id/infraType"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/margin_text_1"
+            android:layout_toRightOf="@+id/txt2"
+            android:gravity="center_vertical"
+            android:prompt="@string/title_spinner_id_num" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt2"
+            android:layout_marginBottom="4dip"
+            android:layout_marginTop="4dip"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edtSearchIDNum"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/search1_03"
+                android:drawablePadding="@dimen/padding_text"
+                android:singleLine="true"
+                android:enabled="false"
+                android:text="@string/hint_text_search_station"
+                android:textSize="@dimen/text_size_nomal" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="34dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/list_clicked"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <ListView
+            android:id="@+id/lvStationIdNum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tvNotItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Không có địa chỉ nào"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

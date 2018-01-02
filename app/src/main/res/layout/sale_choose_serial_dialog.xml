@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvParentSerial"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:text="12345789 - 123456789"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+
+    <TextView
+        android:id="@+id/tvMissingSerial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_nomal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from_serial"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <EditText
+            android:id="@+id/edtStartSerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:ems="10"
+            android:textSize="@dimen/text_size_nomal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvMoneyBeforTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_serial"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <EditText
+            android:id="@+id/edtEndSerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:ems="10"
+            android:textSize="@dimen/text_size_nomal" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:text="xxx"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_nomal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/ok"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_title" />
+
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/btnViewSaleTrans"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+</LinearLayout>

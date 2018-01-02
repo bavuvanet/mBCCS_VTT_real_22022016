@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvdfdfd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/so_thue_bao" />
+
+        <EditText
+            android:id="@+id/edtIsdn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="phone"
+            android:maxLength="12"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/btnPreDate"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_normal_background"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/accountChange"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_background"
+            android:text="20/20/2016"
+            android:textColor="@color/green_app" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/accountChange"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_background"
+            android:gravity="right"
+            android:text="20/20/2016"
+            android:textColor="@color/green_app" >
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/btnNextDate"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_normal_background"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/accountChange"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/danh_sach_so_tra_cuu" />
+
+        <LinearLayout
+            android:id="@+id/btnAddIsdn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView03"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/button_normal_background"
+                android:contentDescription="@string/accountChange"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add_black_24dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/textDialogTitle" />
+
+    <ListView
+        android:id="@+id/lvSub"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnCheckSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+
+            android:text="@string/kiemtrabutton"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>

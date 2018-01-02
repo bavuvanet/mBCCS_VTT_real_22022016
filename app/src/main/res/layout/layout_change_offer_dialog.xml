@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Chuyển đổi gói cước"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+  	 <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="Chọn lý do"
+                android:textSize="@dimen/text_size_14" />
+
+            <Spinner
+                android:id="@+id/spn_reason"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/height_item_menu"
+                android:layout_weight="4" />
+        </LinearLayout>
+    
+      	 <LinearLayout
+      	      android:padding="2dp"
+      	      android:id="@+id/lntinhtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="@string/tinhTP"
+                android:textSize="@dimen/text_size_14" />
+
+            <Spinner
+                android:id="@+id/spn_tinhtp"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/height_item_menu"
+                android:layout_weight="4" />
+        </LinearLayout>
+    
+
+    <TextView
+        android:id="@+id/texterror"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_nomal"
+        android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/ok"
+            android:filterTouchesWhenObscured="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/black" />
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+</LinearLayout>

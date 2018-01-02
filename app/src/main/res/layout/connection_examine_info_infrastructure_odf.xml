@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/list_background_pressed_vt" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:text="@string/thongtinhatang"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/titlemaodf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/maodf" />
+
+            <TextView
+                android:id="@+id/txtmaodf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_left"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/titlediachiodf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/diachiodf" />
+
+            <TextView
+                android:id="@+id/txtdiachiodf"
+                 android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/padding_left"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/titletainguyenodf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/tainguyenodf" />
+
+            <TextView
+                android:id="@+id/txttnodf"
+                 android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/padding_left"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/dodaituyencap" />
+
+            <TextView
+                android:id="@+id/txtdodaituyencap"
+                 android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/padding_left"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/tainguyentbi" />
+
+            <TextView
+                android:id="@+id/txttntbi"
+                 android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/padding_left"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/dvquanlyketcuoi" />
+
+            <TextView
+                android:id="@+id/txtdvquanlyketcuoi"
+                 android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/padding_left"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext" />
+        </LinearLayout>
+		   <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/padding_top"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/loaivendor" />
+
+            <TextView
+                android:id="@+id/txtloaivendor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_left" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/kiemtra"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textDialogTitle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnkiemtra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+
+                android:ems="6"
+                android:text="@string/kiemtrabutton"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/txtcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="@dimen/dp12"
+                android:background="@drawable/edittext"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_left"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textDialogTitle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="8"
+                android:text="@string/namequanly" />
+
+            <TextView
+                android:id="@+id/txtnamequanly"
+                 android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/padding_left"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/edittext" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:layout_marginTop="@dimen/padding_top"
+            android:orientation="horizontal" >
+
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:ems="4"
+                android:text="@string/dtlienhe" />
+
+            <EditText
+                android:id="@+id/txtdtlienhe"
+                android:layout_width="169dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="0.62"
+                android:ems="6"
+                android:gravity="center_vertical"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingLeft="@dimen/padding_left" />
+
+            <ImageView
+                android:id="@+id/btnphone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/picon"
+                android:scaleType="fitXY"
+                android:gravity="center_vertical" />
+             />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_lin_layout_channel_manager"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_right"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btncapnhat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+
+                android:text="@string/capnhat"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+
+            <Button
+                android:id="@+id/btnchonlai"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_weight="1"
+
+                android:text="@string/chonlaiks"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

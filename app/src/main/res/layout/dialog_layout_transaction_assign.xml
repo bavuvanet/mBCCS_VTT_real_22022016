@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/textDialogTitle"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingTop="@dimen/margin_5"
+            android:text="@string/bankplus_work_detail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_header" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_10"
+            android:weightSum="11">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="4"
+                android:inputType="textPersonName"
+                android:text="Mã giao dịch" />
+
+            <TextView
+                android:id="@+id/txtIdTrans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="7"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/margin_10"
+                android:text="0981239032305033" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_10"
+            android:weightSum="11">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="4"
+                android:inputType="textPersonName"
+                android:text="Số tiền chuyển" />
+
+            <TextView
+                android:id="@+id/txtMoney"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="7"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/margin_10"
+                android:text="3.000.000 VND" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_10"
+            android:weightSum="11">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="4"
+                android:inputType="textPersonName"
+                android:paddingRight="@dimen/margin_10"
+                android:text="SĐT KH nhận" />
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="7"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/margin_10"
+                android:text="0123356889" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_10">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_weight="4"
+                android:paddingRight="@dimen/margin_10"
+                android:text="Địa chỉ" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:text="Số 1 Đại Cồ Việt,Hai Bà Trưng Hà Nội" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_10"
+            android:weightSum="11">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="4"
+                android:inputType="textPersonName"
+                android:paddingRight="@dimen/margin_10"
+                android:text="CTV" />
+
+            <Spinner
+                android:id="@+id/spinCTV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="left"
+                android:layout_weight="7"
+                android:paddingLeft="@dimen/margin_10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_15"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/btnAssign"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:paddingLeft="@dimen/margin_16"
+                android:paddingRight="@dimen/margin_16"
+                android:paddingTop="@dimen/margin_16"
+                android:text="GIAO VIỆC"
+                android:paddingBottom="@dimen/margin_5"
+                android:textColor="@color/background"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+        </View>
+    </LinearLayout>
+</LinearLayout>

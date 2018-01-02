@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/padding_text"
+    android:paddingRight="@dimen/padding_text"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    
+    <TextView
+		android:id="@+id/txt_customer_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="@integer/d6" />
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnpayment"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/button_cancle_background"
+            android:text="@string/charge_del"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/button_cancle_background"
+            android:text="@string/cancel"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

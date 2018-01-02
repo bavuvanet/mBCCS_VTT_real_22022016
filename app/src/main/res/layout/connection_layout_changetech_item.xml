@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linThongtindonhang"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_left"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:text="Mã thuê bao"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/txtmathuebao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_left"
+                android:layout_weight="0.5"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:text="Dịch vụ"
+                android:lines="1"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/txtdichvu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_left"
+                android:layout_weight="0.5"
+                android:lines="1"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:text="Thuê bao"
+                android:lines="2"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/txtaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_left"
+                android:layout_weight="0.5"
+                android:lines="2"
+                android:textSize="@dimen/text_size_13" />
+            
+            
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="8"
+                android:text="Thuê bao cha/chính"
+                android:lines="1"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/txtparentSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_left"
+                android:layout_weight="0.5"
+                android:lines="2"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="8"
+                android:text="Tình trạng"
+                android:lines="2"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/txttinhtrang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_left"
+                android:layout_weight="0.5"
+                android:lines="2"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lncheck"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.32"
+                android:text="Chọn tách thuê bao cha"
+                android:textSize="@dimen/text_size_13" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txttrangthai"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:maxLength="50"
+            android:textSize="@dimen/text_size_13"
+            android:text="Đã tạo yêu cầu chuyển đổi công nghệ"
+            android:textColor="@color/list_background_pressed_vt" >
+        </TextView>
+    </LinearLayout>
+
+   <LinearLayout
+            android:id="@+id/btndelete"
+            android:layout_width="@dimen/button_height"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/button_normal_background"
+            android:filterTouchesWhenObscured="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imgdelete"
+                android:layout_width="@dimen/icon_inner_width"
+                android:layout_height="@dimen/icon_inner_width"
+                android:scaleType="fitXY"
+                android:src="@drawable/delete" />
+        </LinearLayout>
+
+</LinearLayout>

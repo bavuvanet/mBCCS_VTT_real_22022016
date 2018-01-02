@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/icon_height"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="cancelActivity"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="@dimen/icon_height"
+        android:layout_height="@dimen/icon_height"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/close"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="cancelActivity"
+        android:text="X"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCancel"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical" >
+
+        <!-- Contents will go here.. -->
+
+        <com.viettel.bss.viettelpos.v4.ui.LoadMoreListView
+            android:id="@+id/loadMoreListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

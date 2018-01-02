@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_view_payment"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/padding_left"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <Spinner
+            android:id="@+id/spinner_partner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edittext_acc"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_litter"
+                android:layout_gravity="left|center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:hint="@string/select_acc"
+                android:textSize="@dimen/text_size_nomal" />
+
+            <LinearLayout
+                android:id="@+id/btn_search_acc"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/button_normal_background"
+                android:gravity="center_vertical|center_horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/icon_inner_width"
+                    android:layout_height="@dimen/icon_inner_width"
+                    android:layout_gravity="right|center_horizontal|center_vertical"
+                    android:background="@drawable/search_c"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_del_search2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_view_payment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <EditText
+            android:id="@+id/edittext_input_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/input_money"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <Button
+            android:id="@+id/btn_view_payment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_litter"
+            android:layout_gravity="right|center_vertical|center_horizontal"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_weight="1"
+
+            android:lines="1"
+            android:text="@string/view_payment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_nomal" />
+    </LinearLayout>
+
+</RelativeLayout>

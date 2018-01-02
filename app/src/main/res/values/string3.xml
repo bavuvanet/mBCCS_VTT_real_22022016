@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kpi_title">Thông tin chi tiêu</string>
+    <string name="kpi_month_title">Tháng giao chi tiêu</string>
+    <string name="kpi_list_title">Thông tin chi tiêu được giao</string>
+    <string name="kpi_total_title" formatted="false">Số lượng giao: %s</string>
+    <string name="alarm_title">Cảnh báo chi tiêu</string>
+    <string name="alarm_code" formatted="false">Mã chỉ tiêu: %s</string>
+    <string name="alarm_time_start" formatted="false">Bắt đầu: %s</string>
+    <string name="alarm_time_accrued" formatted="false">Thời gian tồn: %s ngày</string>
+    <string name="alarm_time_nok" formatted="false">Số ngày không đạt: %s ngày</string>
+    <string name="alarm_content" formatted="false">Nội dung: %s</string>
+    <string name="cause_title">Nguyên nhân</string>
+    <string name="cause_detail_title">Lý do cụ thể</string>
+    <string name="cause_btn_close">ĐÓNG</string>
+    <string name="cause_btn_update">CẬP NHẬT</string>
+    <string name="msg_cause_update_success">Cập nhật thành công!</string>
+    <string name="msg_cause_update_fail">Cập nhật thất bại!</string>
+    <string name="msg_cause_reason_fail">Đã xảy ra lỗi trong quá trình tải nguyên nhân cảnh báo!</string>
+    <string name="msg_cause_fail">Đã xảy ra lỗi, vui lòng thử lại!</string>
+
+    <string name="staff_work_list_title">Danh sách công việc được giao</string>
+    <string name="staff_work_search">Thông tin tìm kiếm</string>
+    <string name="staff_work_list">Danh sách công việc</string>
+    <string name="staff_work_assign" formatted="false">Người giao: %s</string>
+    <string name="staff_work_from_date" formatted="false">Ngày giao: %s</string>
+    <string name="staff_work_to_date" formatted="false">Ngày hoàn thành: %s</string>
+    <string name="staff_work_content" formatted="false">Nội dung: %s</string>
+    <string name="staff_work_list_from_date_name">Từ ngày</string>
+    <string name="staff_work_list_to_date_name">Đến ngày</string>
+    <string name="staff_work_status_title">Trạng thái</string>
+    <string name="staff_work_reason_title">Nguyên nhân</string>
+    <string name="staff_work_solution_title">Hướng xử lý</string>
+    <string-array name="staff_work_status_name">
+        <item>Chưa xử lý</item>
+        <item>Đang xử lý</item>
+        <item>Tạm đóng cần kiểm tra</item>
+        <item>Tạm đóng</item>
+        <item>Đóng</item>
+    </string-array>
+    <string name="search_connector">Nhập mã kết cuối để tìm kiếm</string>
+    <string name="listConnector">Danh sách mã kết cuối</string>
+    <string name="notdataconector">Không có dữ liệu kết cuối. Vui lòng kiểm tra lại.</string>
+    <string name="searchNode">Tra cứu hạ tầng online</string>
+    <string name="datenthu">Ngày nghiệm thu</string>
+
+    <string name="common_no_infor">N/A</string>
+    <string name="common_act_normal">Bình thường</string>
+    <string name="common_act_not_active">Chưa kích hoạt</string>
+    <string name="common_act_cus_req">KHYC</string>
+    <string name="common_act_charge">nợ cước</string>
+    <string name="common_act_spam">do hệ thống</string>
+    <string name="common_act_red_warn">báo đỏ</string>
+
+    <string name="common_one_block_way">Chặn 1c</string>
+    <string name="common_two_block_way">Chặn 2c</string>
+    <string name="common_spam_block_way">Chặn bởi hệ thống</string>
+    <string name="spliterdes">Danh sách mã kết cuối</string>
+    <string name="notdataomniprocessid">Không lấy được thông tin mã yêu cầu. Vui lòng kiểm tra lại.</string>
+</resources>

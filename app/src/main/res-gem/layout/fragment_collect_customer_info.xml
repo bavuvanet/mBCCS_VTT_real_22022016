@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#0488D1">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/bg_press_collect_infor_icon"
+            android:padding="16dp"
+            android:src="@drawable/md_nav_back" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/commonTextBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/action_iv"
+            android:layout_toRightOf="@+id/back_iv"
+            android:gravity="center"
+            android:text="@string/cap_nhat_thong_tin_khach_hang"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/action_iv"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_press_collect_infor_icon"
+            android:padding="20dp"
+            android:src="@drawable/ic_gem_common_tick_white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/contentRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/standard.spacing_small" />
+    </ScrollView>
+
+</LinearLayout>

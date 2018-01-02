@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="@string/trangthai"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spnStatus"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+                android:entries="@array/task_assign"
+                android:entryValues="@array/task_assign_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="@string/taikhoan"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edtAccount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+                android:entries="@array/task_assign"
+                android:entryValues="@array/task_assign_value" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="@string/fromDate" />
+
+            <EditText
+                android:id="@+id/edtFromDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:longClickable="false"
+                android:maxLength="20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="@string/toDate" />
+
+            <EditText
+                android:id="@+id/edtToDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:longClickable="false"
+                android:maxLength="20" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/search"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+        
+        <LinearLayout
+            android:id="@+id/lnTaskNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_top" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="@integer/d5"
+                android:background="@drawable/cell_shape_background"
+                android:text="@string/tvTaskNew"
+                android:textSize="@dimen/text_size_content" />
+
+            <Button
+                android:id="@+id/btnTaskNew"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+
+                android:filterTouchesWhenObscured="true"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnTaskUpdateSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_top" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="@integer/d5"
+                android:background="@drawable/cell_shape_background"
+                android:text="@string/tvTaskUpdateSuccess"
+                android:textSize="@dimen/text_size_content" />
+
+            <Button
+                android:id="@+id/btnTaskUpdateSuccess"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+
+                android:filterTouchesWhenObscured="true"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnTaskExpired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_top" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="@integer/d5"
+                android:background="@drawable/cell_shape_background"
+                android:text="@string/tvTaskExpired"
+                android:textSize="@dimen/text_size_content" />
+
+            <Button
+                android:id="@+id/btnTaskExpired"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+
+                android:filterTouchesWhenObscured="true"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnTaskUpdateFail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_top" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="@integer/d5"
+                android:background="@drawable/cell_shape_background"
+                android:text="@string/tvTaskUpdateFail"
+                android:textSize="@dimen/text_size_content" />
+
+            <Button
+                android:id="@+id/btnTaskUpdateFail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+
+                android:filterTouchesWhenObscured="true"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

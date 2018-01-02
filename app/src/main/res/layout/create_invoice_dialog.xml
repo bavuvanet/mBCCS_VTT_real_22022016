@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="@string/list_of_sale_trans"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/input_sale_trans_code"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <CheckBox
+            android:id="@+id/checkBoxAll"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_padding"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/prbLoadSaleTrans"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lvSaleTrans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnCreateInvoice"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:filterTouchesWhenObscured="true"
+
+            android:text="@string/createInvoice"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:filterTouchesWhenObscured="true"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+</LinearLayout>

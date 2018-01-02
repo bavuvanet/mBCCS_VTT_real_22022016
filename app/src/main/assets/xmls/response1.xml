@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:gwOperationResponse xmlns:ns2="http://webservice.bccsgw.viettel.com/">
+            <Result>
+                <error>0</error>
+                <description>success</description>
+                <return></return>
+                <original>&lt;?xml version='1.0' encoding='UTF-8'?&gt;&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;S:Body&gt;&lt;ns3:cusInfoCollectV2Response
+                    xmlns:ns2=&quot;http://service.sale.bccs.viettel.com/&quot; xmlns:ns3=&quot;http://ws.smartphonev2.bss.viettel.com/&quot;
+                    xmlns:ns4=&quot;http://externalSystem.service.sale.bccs.viettel.com/&quot;&gt;&lt;return&gt;&lt;description&gt;java.lang.NullPointerException&lt;/description&gt;&lt;errorCode&gt;1&lt;/errorCode&gt;&lt;isCheckPrduct&gt;false&lt;/isCheckPrduct&gt;&lt;isMoreThan&gt;false&lt;/isMoreThan&gt;&lt;isCompany&gt;0&lt;/isCompany&gt;&lt;refuseCollect&gt;false&lt;/refuseCollect&gt;&lt;idNo&gt;&lt;/idNo&gt;&lt;accountOrIsdn&gt;&lt;/accountOrIsdn&gt;&lt;isCVT&gt;false&lt;/isCVT&gt;&lt;isPSenTdO&gt;false&lt;/isPSenTdO&gt;&lt;/return&gt;&lt;/ns3:cusInfoCollectV2Response&gt;&lt;/S:Body&gt;&lt;/S:Envelope&gt;
+                </original>
+            </Result>
+        </ns2:gwOperationResponse>
+    </S:Body>
+</S:Envelope>

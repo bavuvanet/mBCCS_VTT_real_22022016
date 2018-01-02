@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_view_title">#98cbca</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#FF212121</color>
+    <color name="bg_tv">#4fa5d5</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#FFFFFF</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="list_background_pressed_vt">#0488D1</color>
+    <color name="bg_tv_vt">@color/colorAccent</color>
+    <color name="line_button_color">#ffffff</color>
+    <color name="bg_item_list_ex">#8e8e8e</color>
+    <color name="textColorVT">#008A7B</color>
+    <color name="line_bottom">#005c52</color>
+    <color name="line_bottom_table">#d0d0d0</color>
+    <color name="table_row_f">#e7e9e9</color>
+    <color name="table_row_line">#d0d0d0</color>
+    <color name="bg_view">#009688</color>
+    <color name="colorPrimary">#0488D1</color>
+    <color name="blue">#42a5f5</color>
+    <color name="blue_light_button">#ff5252</color>
+
+    <!-- Floating Action Button colors -->
+    <color name="fab_color_1">#ff5252</color>
+    <color name="fab_color_1_muted">#ff8080</color>
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="dark_value_gray">#4d3319</color>
+    <color name="gray_1">#F5F5F5</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_3">#D3D3D3</color>
+    <color name="gray_4">#DCDCDC</color>
+    <color name="gray_5">#dfdfdf</color>
+    <color name="gray_6">#f1f1f1</color>
+    <color name="gray_7">#f5f5f5</color>
+    <color name="gray_8">#fafafa</color>
+    <color name="gray_9">#999999</color>
+    <color name="step_pager_previous_tab_color">#4433b5e5</color>
+    <color name="step_pager_selected_tab_color">#ff0099cc</color>
+    <color name="step_pager_selected_last_tab_color">#ff669900</color>
+    <color name="step_pager_next_tab_color">#10000000</color>
+    <color name="review_green">#ff669900</color>
+    <color name="text_light">#66000000</color>
+    <color name="yellow">#F5F6CE</color>
+    <color name="roll_up_blue">#CEF6CE</color>
+    <color name="color_828282">#828282</color>
+    <color name="color_219653">#219653</color>
+    <color name="color_e9e4e4">#e9e4e4</color>
+    <color name="transparent">#00000000</color>
+  <color name="devider_background">#D9D9D9</color>
+
+</resources>

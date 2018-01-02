@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/dskhachhang"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+
+    <ListView
+        android:id="@+id/listcustomer"
+        android:layout_width="match_parent"
+        android:layout_height="370dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btncancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_l"
+        android:layout_marginTop="10dp"
+
+        android:text="@string/cancel"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_title"
+        android:visibility="visible" />
+
+</LinearLayout>

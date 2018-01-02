@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_tinh_tp_creat_address"
+                    android:textSize="@dimen/text_size_content"/>
+
+                <Spinner
+                    android:id="@+id/spProvincial"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_quan_huyen_creat_address"
+                    android:textSize="@dimen/text_size_content"/>
+
+                <Spinner
+                    android:id="@+id/spDistrict"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_phuong_xa_creat_address"
+                    android:textSize="@dimen/text_size_content"/>
+
+                <Spinner
+                    android:id="@+id/spPricent"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_to_thon_creat_address"
+                    android:textSize="@dimen/text_size_content"/>
+
+                <Spinner
+                    android:id="@+id/sqGroupAddress"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/flowAddress"
+                    android:textSize="@dimen/text_size_content"/>
+
+                <EditText
+                    android:id="@+id/edtFlowAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:hint=""
+                    android:maxLength="50"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/homeNumber"
+                    android:textSize="@dimen/text_size_content"/>
+
+                <EditText
+                    android:id="@+id/edtHomeNumber"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:hint=""
+                    android:maxLength="50"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bootom_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollView1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+
+                    android:filterTouchesWhenObscured="true"
+                    android:text="@string/cancel"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_content"/>
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+
+                    android:filterTouchesWhenObscured="true"
+                    android:text="@string/ok"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

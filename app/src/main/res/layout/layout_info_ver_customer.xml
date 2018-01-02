@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/padding_bottom"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right"
+    android:paddingTop="@dimen/padding_top" >
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_update"
+        android:layout_alignParentTop="true" >
+        <LinearLayout
+            android:id="@+id/layout_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/txt_policy_status_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/ver_customer_detail"
+                android:textColor="@color/textColorVT" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="0dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ver_isdn" />
+                <EditText
+                    android:id="@+id/edit_cus_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:enabled="false"
+                    android:text="Nguyen Quang Vu"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="0dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ver_addr" />
+                <EditText
+                    android:id="@+id/edit_cus_addr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:enabled="false"
+                    android:text="Van Cao - ba dinh - ha noi"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_select_employee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                android:visibility="visible" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ver_nvdb" />
+                <Spinner
+                    android:id="@+id/spinner_cus_care_select_employee"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="0dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ver_date" />
+                <EditText
+                    android:id="@+id/edit_cus_care_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="0dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_select_employee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/select_employee" />
+                <Spinner
+                    android:id="@+id/spinner_cus_care_select_employee"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+
+        android:padding="4dp"
+        android:text="@string/button_update"
+        android:textColor="@color/white" />
+</RelativeLayout>

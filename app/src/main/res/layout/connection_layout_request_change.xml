@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_view_payment"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+ 
+
+        
+
+        
+             <TextView
+                 android:paddingLeft="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14"
+            android:text="Danh sách yêu cầu"
+            android:textColor="@color/textDialogTitle"
+         />
+        
+        <ListView
+            android:id="@+id/lvrequest"
+            android:layout_width="match_parent"
+            android:layout_height="388dp"
+            android:choiceMode="singleChoice"
+            android:paddingBottom="@dimen/padding_bottom" >
+
+        </ListView>
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal" >
+
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:filterTouchesWhenObscured="true"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/boquaReq"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+    </LinearLayout>
+
+    
+
+</RelativeLayout>

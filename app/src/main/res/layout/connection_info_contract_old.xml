@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <!-- thong tin hop dong -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/contractInfo"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textDialogTitle" />
+
+        <LinearLayout
+            android:id="@+id/lnTThopdong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/sohdCD" />
+
+                <EditText
+                    android:id="@+id/edt_contractNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:editable="false"
+                    android:maxLength="11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/nguoithanhtoanCD" />
+
+                <EditText
+                    android:id="@+id/edt_payer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:inputType="text"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/loaihdCD" />
+
+                <Spinner
+                    android:id="@+id/spn_contractTypeCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:textSize="@dimen/text_size_nomal" />
+                 <ProgressBar
+                    android:id="@+id/prb_contractType"
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/ngaykyCD" />
+
+                <EditText
+                    android:id="@+id/edt_signDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/ngayhieulucCD" />
+
+                <EditText
+                    android:id="@+id/edt_effectDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/ngayhethanCD" />
+
+                <EditText
+                    android:id="@+id/edt_endEffectDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/htttCD" />
+
+                <Spinner
+                    android:id="@+id/spn_payMethodCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:textSize="@dimen/text_size_nomal" />
+                 <ProgressBar
+                    android:id="@+id/prb_payMethodCode"
+                     android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/chukicuocCD" />
+
+                <Spinner
+                    android:id="@+id/spn_billCycleFromCharging"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.6"
+                    android:textSize="@dimen/text_size_nomal" />
+                <ProgressBar
+                    android:id="@+id/billCycleFromCharging"
+                    style="?android:attr/progressBarStyleSmall"
+                     android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/inchitietCD" />
+
+                <Spinner
+                    android:id="@+id/spinner_printMethodCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:textSize="@dimen/text_size_nomal" />
+                  <ProgressBar
+                    android:id="@+id/prb_printMethodCode"
+                     android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Thong tin tai khoan ngan hang -->
+        <LinearLayout
+            android:id="@+id/lnBankAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/bank_info"
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textDialogTitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/payDate" />
+
+                <EditText
+                    android:id="@+id/edt_strBankContractDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:focusableInTouchMode="false"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/payContract" />
+
+                <EditText
+                    android:id="@+id/edt_bankContractNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:inputType="text"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/tkoanld" />
+
+                <EditText
+                    android:id="@+id/edt_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:inputType="text"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/bank_account_name" />
+
+                <EditText
+                    android:id="@+id/edt_accountName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:inputType="text"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/bank"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_bankCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:editable="false"
+                    android:hint="@string/search" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Thong tin hop dong dia chi -->
+
+        <LinearLayout
+            android:id="@+id/lnDiachiHopDong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/contract_address"
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textDialogTitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_tinh_tp_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spn_province"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_quan_huyen_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spn_district"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_phuong_xa_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spn_precinct"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_to_thon_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spn_streetBlock"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="0.6" />
+                
+                <ProgressBar
+                    android:id="@+id/prb_todialog"
+                     android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/flowAddress"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_streetName"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="0.6"
+                    android:hint=""
+                    android:maxLength="50"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/homeNumber"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_home"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="0.6"
+                    android:hint=""
+                    android:maxLength="50"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/diachidaydu"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint=""
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLength="100"
+                    android:maxLines="10"
+                    android:minLines="5" />
+            </LinearLayout>
+        </LinearLayout><!-- Thong tin dai dien hop dong -->
+<LinearLayout
+            android:id="@+id/lnDaidienHopDong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/thongtindaidien"
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textDialogTitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/nguoidaidien" />
+
+                <EditText
+                    android:id="@+id/edt_contactName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:maxLength="60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/chucvuCD" />
+
+                <EditText
+                    android:id="@+id/edt_contactTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/dtcodinh"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_telFax"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint=""
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="@string/dtdidong"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_telMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint=""
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCMT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/cmt" />
+
+                <EditText
+                    android:id="@+id/edt_idNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:maxLength="20" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Thong tin hop dong dia chi thong bao cuoc -->
+
+        <LinearLayout
+            android:id="@+id/lnDiachiThongbaocuoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/dctbcvattc"
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textDialogTitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/httbcCD" />
+
+                <Spinner
+                    android:id="@+id/spn_noticeCharge"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:textSize="@dimen/text_size_nomal" />
+                      <ProgressBar
+                    android:id="@+id/prb_noticeCharge"
+                     android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/ttinbosung" />
+
+                <Spinner
+                    android:id="@+id/spn_contractPrint"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:textSize="@dimen/text_size_nomal" />
+                <ProgressBar
+                    android:id="@+id/prb_contractPrint"
+                     android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/dctbcvattc" />
+
+                <EditText
+                    android:id="@+id/edt_billAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLength="100"
+                    android:maxLines="10"
+                    android:minLines="5" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Thong tin phu luc hop dong -->
+        <LinearLayout
+            android:id="@+id/lnPhuLucHopDong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/ttphuluchdCD"
+                android:textColor="@color/textDialogTitle"
+                android:textSize="@dimen/text_size_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textDialogTitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/sophulucHDCD" />
+
+                <EditText
+                    android:id="@+id/edtplhdong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:editable="false"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/nguoidaidien" />
+
+                <EditText
+                    android:id="@+id/edt_contractOffer_represent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:maxLength="60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/chucvuCD" />
+
+                <EditText
+                    android:id="@+id/edt_contractOffer_representPosition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/ngaykyCD" />
+
+                <EditText
+                    android:id="@+id/edt_contractOffer_signDatetime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.4"
+                    android:ems="5"
+                    android:text="@string/loaigt" />
+
+                <Spinner
+                    android:id="@+id/spn_contractOffer_idType"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:textSize="@dimen/text_size_nomal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/magiaytoCD" />
+
+                <EditText
+                    android:id="@+id/edt_contractOffer_idNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:text="@string/ngaycapCD" />
+
+                <EditText
+                    android:id="@+id/edt_contractOffer_issueDatetime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.6"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:longClickable="false"
+                    android:maxLength="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/padding_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:ems="6"
+                    android:text="@string/noicapCD" />
+
+                <EditText
+                    android:id="@+id/edt_contractOffer_issuePlace"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.6"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Them moi hop dong -->
+
+        <LinearLayout
+            android:id="@+id/lnButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_lin_layout_channel_manager"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_insert_contract"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_weight="0.6"
+
+                android:text="@string/themmoi"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_weight="0.6"
+
+                android:text="@string/btn_cancel"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

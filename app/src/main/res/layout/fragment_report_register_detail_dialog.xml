@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvIsdn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_5"
+        android:text="@string/isdn_param"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cust_name_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvIdNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ido_lst"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvIssueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/issue_date_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvIssuePlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/issue_place_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_dia_chi"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvCustType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cust_type_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvBirthDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_ngay_sinh"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvRegisterDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_date_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvActiveDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/active_date_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvSubType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_type_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvShopName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shop_manage_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvProfileStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_status_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvStaffChecked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/staff_checked_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvCheckedDatetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checked_datetime_param"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvCountCheckAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/count_check_again_param"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="@dimen/button_width_extra"
+        android:layout_height="@dimen/button_height_litter"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="5dp"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_nomal1"
+        android:textStyle="bold" />
+</LinearLayout>

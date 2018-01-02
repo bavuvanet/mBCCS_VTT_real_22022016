@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/btnHome"
+        android:layout_width="27dp"
+        android:layout_height="26dp"
+        android:icon="@drawable/ic_support"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/btnListOrGridView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:visible="false"
+        android:icon="@drawable/ic_grid_on_white_36dp"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/btnSortByCareAsc"
+        android:layout_width="27dp"
+        android:layout_height="26dp"
+        android:icon="@drawable/fail"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/btnSortByCareDesc"
+        android:layout_width="27dp"
+        android:layout_height="26dp"
+        android:icon="@drawable/checkbox_star_background"
+        android:title="Tim kiem xa nhat"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/btnMap"
+        android:layout_width="27dp"
+        android:layout_height="26dp"
+        android:icon="@drawable/background_button_map"
+        android:title="Ban do"
+        android:visible="false"
+        app:showAsAction="always"/>
+</menu>

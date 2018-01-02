@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/title_manager">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_sale"
+                    android:icon="@drawable/ic_ban_hang"
+                    android:title="@string/msg_sale_manager"/>
+
+                <item
+                    android:id="@+id/nav_omichanel"
+                    android:icon="@drawable/ic_omni_48dp"
+                    android:title="@string/omicnel"/>
+
+                <item
+                    android:id="@+id/nav_customer"
+                    android:icon="@drawable/ic_khach_hang"
+                    android:title="@string/msg_customer_manager"/>
+                <item
+                    android:id="@+id/nav_charge"
+                    android:icon="@drawable/ic_thu_cuoc"
+                    android:title="@string/msg_charge_manager"/>
+                <item
+                    android:id="@+id/nav_channel"
+                    android:icon="@drawable/ic_kenh"
+                    android:title="@string/msg_channel_manager"/>
+
+                <item
+                    android:id="@+id/nav_infras"
+                    android:icon="@drawable/ic_ha_tang"
+                    android:title="@string/msg_infras_manager"/>
+
+                <item
+                    android:id="@+id/nav_job"
+                    android:icon="@drawable/ic_cong_viec"
+                    android:title="@string/msg_work_manager"/>
+
+                <item
+                    android:id="@+id/nav_report"
+                    android:icon="@drawable/ic_bao_cao"
+                    android:title="@string/msg_report_manager"/>
+
+                <item
+                    android:id="@+id/nav_cc"
+                    android:icon="@drawable/ic_chamsoc_khachhang"
+                    android:title="@string/msg_cc_mamagement"/>
+
+                <item
+                    android:id="@+id/nav_bankplus"
+                    android:icon="@drawable/ic_tracuu_giaodich_bankplus"
+                    android:title="@string/msg_bankplus_mamagement"/>
+
+                <item
+                    android:id="@+id/nav_guide"
+                    android:icon="@drawable/user_manual"
+                    android:title="@string/msg_guidle"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/title_setting">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_system"
+                    android:icon="@drawable/ic_quan_ly_he_thong"
+                    android:title="@string/msg_system_manager"/>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_dang_xuat"
+                    android:title="@string/msg_logout"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<TextView
+		android:id="@+id/tv_title"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:paddingLeft="10dp"
+		android:paddingBottom="12dp"
+		android:paddingTop="12dp"
+		android:text="bas"
+        android:textColor="@color/textDialogTitle"
+		android:textSize="17sp" />
+	
+
+    <View
+        android:id="@+id/view1"
+		android:layout_below="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+	<TextView
+		android:id="@+id/tv_connectorCode"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/height_dialog_tv"
+		android:layout_below="@+id/view1"
+		android:layout_centerHorizontal="true"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="12dip"
+		android:background="@drawable/bg_textview"
+		android:paddingBottom="10dp"
+		android:paddingLeft="5dp"
+		android:paddingTop="10dp"
+		android:text="bas"
+		android:textColor="@color/black"
+		android:textSize="17sp" />
+	<ListView
+		android:id="@+id/lvLockBoxInfo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/btn_colse"
+		android:layout_below="@+id/tv_connectorCode"
+		android:layout_centerHorizontal="true"
+		android:layout_marginLeft="8dp"
+		android:layout_marginTop="12dip" >
+	</ListView>
+	<Button
+		android:id="@+id/btn_colse"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/button_height"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="12dip"
+		android:background="@color/bg_tv_vt"
+		android:text="@string/btn_close"
+		android:textColor="@color/white" />
+</RelativeLayout>

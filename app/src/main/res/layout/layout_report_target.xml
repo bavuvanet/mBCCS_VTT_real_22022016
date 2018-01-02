@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginLeft="@dimen/padding_left"
+        android:layout_marginRight="@dimen/padding_right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_item_menu"
+            android:gravity="center_vertical"
+            android:text="@string/edt_report_date"
+            android:textSize="@dimen/text_size_content" />
+
+        <EditText
+            android:id="@+id/edt_report_date"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="2dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:inputType="date"
+            android:longClickable="false"
+            android:text=""
+            android:textSize="@dimen/text_size_content" />
+
+        <Button
+            android:id="@+id/btnExportReport"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_left"
+            android:layout_margin="@dimen/padding_right"
+
+            
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/report_out"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+
+    </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lnTable"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </TableLayout>
+
+                <ScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TableLayout
+                            android:id="@+id/table"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stretchColumns="*" >
+                        </TableLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+</LinearLayout>

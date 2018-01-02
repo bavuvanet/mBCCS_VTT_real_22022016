@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lnSelectdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_top"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtFromDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:longClickable="false"
+                    android:text="20/02/1990"
+                    android:textSize="@dimen/text_size_15" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/icon_2muiten"
+                    android:contentDescription="arrow" />
+
+                <EditText
+                    android:id="@+id/edtToDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/calendar_07"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:text="20/02/1990"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edtRequestId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/bp_enter_request_id"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageButton
+                android:id="@+id/btnLookupTrans"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_search"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bankplus_transaction_type"
+                android:textSize="@dimen/text_size_14" />
+
+            <Spinner
+                android:id="@+id/spnTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_s"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@drawable/round_button"
+        android:textColor="@color/white"
+        android:text="@string/search"
+        android:textSize="@dimen/text_size_title" />
+
+    <LinearLayout
+        android:id="@+id/lnTransBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/padding_bottom" >
+
+            <ListView
+                android:id="@+id/lvTransBank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:clickable="true" >
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lvdetail" >
+
+                <View
+                    android:id="@+id/viewhead2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_view" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+    </LinearLayout>
+
+</LinearLayout>

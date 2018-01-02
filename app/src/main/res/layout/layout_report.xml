@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="0dp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_bottom"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right"
+    android:paddingTop="@dimen/padding_top" >
+    <!-- the top buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btn_report_luykethang"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/report_luykethang"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/btn_report_trongngay"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/report_trongngay"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <!-- tu ngay, den ngay -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="@integer/d5"
+                android:gravity="center_vertical"
+                android:text="@string/from" />
+            <EditText
+                android:id="@+id/txt_date_from"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="@integer/d4"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="0dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="20/10/2014"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="@integer/d5"
+                android:gravity="center_vertical"
+                android:text="@string/to" />
+            <EditText
+                android:id="@+id/txt_date_to"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="@integer/d4"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="0dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="20/10/2014"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtChooseChannel"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_edtitext_click"
+        android:gravity="center_vertical"
+        android:hint="@string/chooseChannelOrStaff"
+        android:minHeight="30dp"
+        android:textColor="#996633"
+        android:textSize="@dimen/text_size_15" />
+    <ListView
+        android:id="@+id/lv_list_report"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:clickable="false" >
+    </ListView>
+</LinearLayout>

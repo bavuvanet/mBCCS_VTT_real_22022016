@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:text="@string/technew"
+            android:textSize="@dimen/text_size_14" />
+
+        <Spinner
+            android:id="@+id/spn_technew"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_item_menu"
+            android:layout_gravity="center"
+            android:layout_weight="4" />
+
+        <ProgressBar
+            android:id="@+id/prbProunit"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+    </LinearLayout>
+	        <TextView
+        android:id="@+id/txtinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_text_1"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:text="@string/lydotech"
+        android:textColor="@color/list_background_pressed_vt"
+        android:textSize="@dimen/text_size_nomal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:text="@string/lydocdtech"
+            android:textSize="@dimen/text_size_14" />
+
+        <Spinner
+            android:id="@+id/spn_reason_fail"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_item_menu"
+            android:layout_gravity="center"
+            android:layout_weight="4" />
+
+        <ProgressBar
+            android:id="@+id/prbreason"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/taoyeucauchuyendoi"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+        
+    </LinearLayout>
+
+</LinearLayout>

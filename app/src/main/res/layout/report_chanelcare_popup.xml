@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/list_background_pressed_vt" >
+
+        <TextView
+            android:paddingLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:text="@string/REPORT_CHANEL_CARE"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <TextView
+            android:id="@+id/tvsolancs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/padding_top"
+            android:text="@string/dsbaocaocskenh"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <View
+            android:id="@+id/viewhead"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:layout_below="@+id/txtinfo"
+            android:background="@color/color_view" />
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/table_height"
+            android:layout_marginTop="@dimen/padding_top"
+            android:background="@color/bg_tv_vt"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/maten"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/table_row_line" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/loaidiemban"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/table_row_line" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="2.2"
+                 android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/diachi"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/table_row_line" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="2"
+                 android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/csgannhat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvdetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dplv"
+            android:clickable="true" >
+        </ListView>
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/padding_bottom"
+            android:layout_marginTop="@dimen/padding_top"
+            android:background="#00897b"
+            android:text="@string/buttonCancel"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>

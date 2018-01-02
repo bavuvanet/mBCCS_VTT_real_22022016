@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frlMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/edt_customer_code"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Spinner
+                    android:id="@+id/spnCustType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/d4" />
+
+                <ProgressBar
+                    android:id="@+id/prbCustType"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+
+                <Button
+                    android:id="@+id/btnRefreshCustType"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_menu_refresh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/dich_vu_required"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:longClickable="false"
+                    android:text=""
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/congnghe_required"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtTechnology"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:longClickable="false"
+                    android:text=""
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ngayhen"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtNgayHen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siMaKetCuoi"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtKetCuoi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:longClickable="false"
+                    android:text=""
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/dclapdatmobile"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtDiaChiLapDat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/duong_day_required"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtDuongDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:longClickable="false"
+                    android:text=""
+                    android:textSize="@dimen/text_size_15" />
+
+                <ProgressBar
+                    android:id="@+id/prbDuongDay"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvGoiCuoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ems="6"
+                    android:text="@string/goicuoc_required"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtGoiCuoc"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@id/tvGoiCuoc"
+                    android:layout_weight="1"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:text="@string/chongoicuoc"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Button
+                    android:id="@+id/btnInfoProduct"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_toRightOf="@id/edtGoiCuoc"
+                    android:background="@android:drawable/ic_menu_info_details"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnIpAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/iptinh"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Spinner
+                    android:id="@+id/spnStaticIp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/d4" />
+
+                <ProgressBar
+                    android:id="@+id/prbStaticIp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnPPPOE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/account_pppoe"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtAccPPPOE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:longClickable="false"
+                    android:text=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+
+                <ProgressBar
+                    android:id="@+id/prbPPPOE"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnPassPPPOE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/pass_pppoe"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtPassPPPOE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:longClickable="false"
+                    android:text=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+
+                <ProgressBar
+                    android:id="@+id/prbPassPPPOE"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/loaithuebao"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtSubType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:text="@string/chonloaithuebao"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/hthm"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtHTHM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:text="@string/chonhthm"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnQuota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/qouta"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Spinner
+                    android:id="@+id/spnQuota"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/d4" />
+
+                <ProgressBar
+                    android:id="@+id/prbQuota"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnRefreshQuota"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_menu_refresh"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnDatCoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/deposit"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Spinner
+                    android:id="@+id/spnDeposit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/d4" />
+
+                <ProgressBar
+                    android:id="@+id/prbDeposit"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnRefreshDeposit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_menu_refresh"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/makm"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtPromotion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:text="@string/chonctkm1"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Button
+                    android:id="@+id/btnInfoPromotion"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:drawable/ic_menu_info_details"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:visibility="gone" />
+
+
+                <ProgressBar
+                    android:id="@+id/prbPromotion"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/cuoc_dong_truoc_required"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Spinner
+                    android:id="@+id/spnCuocDongTruoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/d4" />
+
+                <ProgressBar
+                    android:id="@+id/prbCuocdongtruoc"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnInfoPayment"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_toRightOf="@id/edtGoiCuoc"
+                    android:background="@android:drawable/ic_menu_info_details"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/isdnoracc"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/edtIsdn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:longClickable="false"
+                    android:text=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+
+                <ProgressBar
+                    android:id="@+id/prbIsdn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvcamketso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_text_1"
+                android:layout_marginTop="@dimen/margin_text_1"
+                android:text="@string/strviewcommit"
+                android:textColor="@color/list_background_pressed_vt"
+                android:textSize="@dimen/text_size_nomal"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/lnMoHinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/mohinhtrienkhai"
+                    android:textSize="@dimen/text_size_15" />
+
+                <Spinner
+                    android:id="@+id/spnMoHinh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnThietBi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/button_normal_background"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvThietBi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/danh_sach_thiet_bi"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ProgressBar
+                    android:id="@+id/prbThietBi"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/next_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnSubAddtional"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/button_normal_background"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvSubAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/thue_bao_dau_kem"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/next_black" />
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+            android:id="@+id/tvxxx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/list_profile"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_16" />
+
+            <ProgressBar
+            android:id="@+id/prbProfile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone" />
+            </LinearLayout>
+
+            <ListView
+            android:id="@+id/lvUploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+            </ListView>
+            <include layout="@layout/layout_select_profile" />
+
+            <LinearLayout
+                android:id="@+id/lnButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnConnectSub"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button"
+                    android:text="@string/customer_connection_service_static"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <ImageView
+        android:id="@+id/expandedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:visibility="gone" />
+</FrameLayout>

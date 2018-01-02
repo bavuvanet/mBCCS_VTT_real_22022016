@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvRecordName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_litter"
+            android:gravity="center_vertical"
+            android:text="HD_Hợp đồng"
+            android:textSize="@dimen/text_size_content"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDownloadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Lý do: 123132121"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ibUploadImage"
+        android:layout_width="@dimen/icon_height_layout_channel_manager"
+        android:layout_height="@dimen/icon_height_layout_channel_manager"
+        android:background="@drawable/logo_vt"
+        android:contentDescription="@string/desc_list_item_icon" />
+
+</LinearLayout>

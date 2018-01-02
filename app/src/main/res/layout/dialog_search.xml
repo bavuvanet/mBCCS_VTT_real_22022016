@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSearch_Dialog_ShowData"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtTitleOnlineDialog"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/heigth_title_dialog"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/title_search_dialog_showdata"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textDialogTitle" />
+
+        <TextView
+            android:id="@+id/spinnerProvince"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_textview"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:prompt="@string/title_spinner_id_num" />
+
+        <TextView
+            android:id="@+id/spinnerDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_textview"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:prompt="@string/title_spinner_id_num" />
+
+        <Spinner
+            android:id="@+id/spinnertram"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:prompt="@string/title_spinner_id_num" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSearch_Dialog_ShowData"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+
+        android:text="@string/btn_search"
+        android:textColor="#fff" />
+
+</RelativeLayout>

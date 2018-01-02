@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:padding="5dp"
+    android:orientation="horizontal" >
+    <TextView 
+        android:id="@+id/textnamePakage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_15"
+        android:text="MIMAX"/>
+    
+    <ImageView
+        android:id="@+id/checkPakage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textnamePakage"
+        android:layout_marginLeft="@dimen/padding_right"
+        android:background="@drawable/background_button_rowcharge"
+       />
+</RelativeLayout>

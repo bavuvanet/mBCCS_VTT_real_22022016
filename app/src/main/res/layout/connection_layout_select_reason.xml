@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/list_background_pressed_vt">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/chonlydo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right">
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:hint="@string/searchreasion"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_15" />
+
+        <View
+            android:id="@+id/viewhead"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+
+        <ListView
+            android:id="@+id/lstreason"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp230">
+
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/lnButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_lin_layout_channel_manager"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnhuy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_weight="1"
+                android:text="@string/buttonCancel"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/list_background_pressed_vt"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/d1"
+            android:layout_gravity="center_vertical|left"
+            android:text="@string/list_staff"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:layout_marginLeft="@dimen/margin_10" />
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/search"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/black"
+            android:background="@color/background"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:src="@drawable/ic_search" />
+        <CheckBox
+            android:id="@+id/ckbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_light"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:focusable="false"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lnButton"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_alignParentBottom="true">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rouder_common_button"
+                        android:text="@string/alert_dialog_no"
+                        android:textColor="@color/background" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnOk"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rouder_common_button"
+                        android:text="@string/alert_dialog_ok"
+                        android:textColor="@color/background" />
+                </LinearLayout>
+            </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:divider="#000"
+            android:dividerHeight="0.1dp"
+            android:layout_above="@id/lnButton"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>

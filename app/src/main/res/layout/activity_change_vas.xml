@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lnVasUsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.15"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/padding_top"
+            android:text="@string/vasused"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <GridView
+            android:id="@+id/gridRegisteredUse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2" >
+        </GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnreasoncancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ems="6"
+            android:text="@string/choose_reason_cancel" />
+
+        <EditText
+            android:id="@+id/edtselectreasoncancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/txt_select_reason"
+            android:longClickable="false"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnRegiterVas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/padding_top"
+            android:text="@string/vasregister"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/lnVassafenet"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/vassafenet" />
+
+            <Spinner
+                android:id="@+id/spnVassafenet"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </Spinner>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2" >
+        </GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnreasonregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ems="6"
+            android:text="@string/choose_reason_register" />
+
+        <EditText
+            android:id="@+id/edtselectreason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/txt_select_reason"
+            android:longClickable="false"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnregisterorcancel"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="5dp"
+        android:background="@color/list_background_pressed_vt"
+        android:text="@string/btn_create_chanel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_nomal1"
+        android:textStyle="bold" />
+
+</LinearLayout>

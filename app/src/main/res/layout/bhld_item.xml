@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_lin_layout_channel_manager"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvStaffCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BSS_HUYPQ15"
+        android:textSize="@dimen/text_size_content" />
+
+    <TextView
+        android:id="@+id/tvStaffName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phung Quoc Huy"
+        android:textSize="@dimen/text_size_content_list" />
+
+    <TextView
+        android:id="@+id/tvISDNAgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0965747979"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_content_list" />
+
+</LinearLayout>

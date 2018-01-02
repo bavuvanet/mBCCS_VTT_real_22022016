@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Dialgo"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+
+    <TextView
+        android:id="@+id/txt_customer_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center"
+        android:text="Dialgo"
+        android:textSize="@dimen/text_size_16" />
+
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnpayment"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+
+        android:textColor="#fff"
+        android:text="Gạch nợ"
+        android:textSize="@dimen/text_size_title" />
+
+    <View
+        android:id="@+id/btnView"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/black" />
+
+    <Button
+        android:id="@+id/btncancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+        android:text="Hủy"
+
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_title" />
+
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="d1">6</integer>
+    <integer name="d2">3</integer>
+    <integer name="d3">4</integer>
+    <integer name="d4">2</integer>
+    <integer name="d5">1</integer>
+    <integer name="d6">8</integer>
+    <integer name="d7">5</integer>
+</resources>

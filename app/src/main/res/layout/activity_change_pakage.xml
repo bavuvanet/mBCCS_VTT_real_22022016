@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chongoicuoc"
+            android:layout_gravity="center_vertical"
+            android:ems="6"/>
+        <com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner
+            android:id="@+id/spnpakage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_reason_zone"
+            android:layout_gravity="center_vertical"
+            android:ems="6"/>
+        <com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner
+            android:id="@+id/spnReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lnCDTandPro"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selectpromotion"
+                android:layout_gravity="center_vertical"
+                android:ems="6"/>
+            <com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner
+                android:id="@+id/spnselectpromotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="visible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selectCDC"
+                android:layout_gravity="center_vertical"
+                android:ems="6"/>
+
+            <com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner
+                android:id="@+id/spnCDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.viettel.bss.viettelpos.v4.commons.MaterialBetterSpinner>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="200dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="5dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/btn_apply"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

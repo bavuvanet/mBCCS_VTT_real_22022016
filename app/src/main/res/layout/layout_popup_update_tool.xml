@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+	<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/list_background_pressed_vt" >
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+        </LinearLayout>
+        
+	 <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="horizontal"
+        android:paddingTop="7dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:text="@string/soluongcap" />
+
+        <EditText
+            android:id="@+id/edtsoluongcap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:digits="0123456789"
+            android:inputType="number"
+             />
+    </LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:ems="6"
+            android:text="@string/tinhtrangbienhieu" />
+
+        <Spinner
+            android:id="@+id/spinner_tinhtrangbienhieu"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right|center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/text_size_nomal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnlido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="vertical"
+        android:paddingTop="7dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lido" />
+
+        <EditText
+            android:id="@+id/edtlido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2000"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="horizontal"
+        android:paddingTop="7dp" >
+
+        <Button
+            android:id="@+id/btncapnhat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/ok"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/line_button_color" />
+
+        <Button
+            android:id="@+id/btnhuy"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permisson_explain_camera">Hãy cho phép truy cập camera để thực hiện chức năng này! </string>
+    <string name="permisson_explain_storage">Hãy cho phép truy cập bộ nhớ để thực hiện chức năng này! </string>
+
+    <string name="title_error">Error</string>
+    <string name="title_network_lost">Network connection error</string>
+    <string name="msg_network_lost">Please check your network connection and try again!</string>
+    <string name="has_no_phone_card">No SIM card is available in the device</string>
+    <string name="title_caution">Caution</string>
+    <string name="msg_clear_date">Bạn có chắc muốn xóa thời hạn hết đóng cước?</string>
+</resources>

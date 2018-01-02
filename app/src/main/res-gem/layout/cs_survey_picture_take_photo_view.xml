@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/take_photo"
+    android:layout_width="99dp"
+    android:layout_height="66dp"
+    android:layout_marginLeft="10dp"
+    android:background="#D9D9D9"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="14dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_gem_common_take_photo" />
+
+</RelativeLayout>

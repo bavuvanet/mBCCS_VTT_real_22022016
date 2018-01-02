@@ -1,0 +1,239 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffe5e5e5"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/no_data"
+                android:textColor="@color/background_capcha" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:text="@string/staff"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvStaff"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.8"
+                            android:text="@string/choose_staff"
+                            android:textColor="@color/blue_light"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:text="@string/order_type"
+                            android:textSize="14sp" />
+
+                        <Spinner
+                            android:id="@+id/spnOrderType"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1.8"></Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:text="@string/contract_status"
+                            android:textSize="14sp" />
+
+                        <Spinner
+                            android:id="@+id/spnStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1.8"></Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llStaffList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:text="@string/staff_list"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/edtStaffList"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/editSim"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="0,1,2,3,4,5,6,7,8,9"
+                            android:drawableLeft="@drawable/ic_sim_card_18px"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:hint="Số thuê bao đã đặt"
+                            android:inputType="textMultiLine|phone"
+                            android:maxLength="11"
+                            android:maxLines="2"
+                            android:textSize="14sp" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/editIsdnContact"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="0,1,2,3,4,5,6,7,8,9"
+                            android:drawableLeft="@drawable/ic_phone_18px"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:hint="SDT liên hệ"
+                            android:inputType="textMultiLine|phone"
+                            android:maxLength="11"
+                            android:maxLines="2"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/editOrder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="0,1,2,3,4,5,6,7,8,9"
+                            android:drawableLeft="@drawable/ic_assignment_18px"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:hint="Mã order"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:maxLines="2"
+                            android:textSize="14sp" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/editId"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="0,1,2,3,4,5,6,7,8,9"
+                            android:drawableLeft="@drawable/ic_featured_18px"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:hint="Số CMT"
+                            android:inputType="textMultiLine|phone"
+                            android:maxLength="16"
+                            android:maxLines="2"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnSearch"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rouder_common_button"
+                            android:text="@string/search"
+                            android:textColor="@color/background" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>
+

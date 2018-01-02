@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_text_1"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edtFromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_height"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:longClickable="false"
+                android:text="20/02/1990"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edtToDate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_height"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:text="20/02/1990"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnxuatbaocao"
+        android:layout_width="@dimen/button_width_extra"
+        android:layout_height="@dimen/button_height_litter"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="@dimen/padding_top"
+
+        android:text="@string/xuatbaocao"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_nomal1"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <TextView
+            android:id="@+id/tvsolancs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/padding_top"
+            android:text="@string/soluongdbduoccs"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <View
+            android:id="@+id/viewhead"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:layout_below="@+id/txtinfo"
+            android:background="@color/color_view" />
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/table_height"
+            android:layout_marginTop="@dimen/padding_top"
+            android:background="@color/bg_tv_vt"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="4"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/nhanvien"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/table_row_line" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/solancs1lanE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/table_row_line" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/solancs2lanE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/table_row_line" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/solancs3lanE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/table_row_line" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/solancs4lanE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_nomal1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_bottom" >
+		 <ListView
+                android:id="@+id/lvdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:clickable="true" >
+            </ListView>
+           
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_below="@id/lvdetail"
+		    android:layout_height="wrap_content">
+		     <View
+                android:id="@+id/viewhead2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_view" />
+		</LinearLayout>
+           
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

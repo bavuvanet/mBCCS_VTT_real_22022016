@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lnTopView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/edt_customer_code"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_18" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/textDialogTitle" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/title_object_code" />
+
+        <EditText
+            android:id="@+id/edtCodeCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_item_menu"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/title_object_name" />
+
+        <EditText
+            android:id="@+id/edtNameCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_item_menu"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="" >
+        </EditText>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+        
+        <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+
+        android:filterTouchesWhenObscured="true"
+        android:text="@string/btnDelete"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_content" />
+		
+        <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+
+        android:filterTouchesWhenObscured="true"
+        android:text="@string/search"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_content" />
+        
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:text="@string/title_list_object_customer" />
+
+    <com.viettel.bss.viettelpos.v4.ui.LoadMoreListView
+        android:id="@+id/lvListObjectCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+    </com.viettel.bss.viettelpos.v4.ui.LoadMoreListView>
+
+</LinearLayout>

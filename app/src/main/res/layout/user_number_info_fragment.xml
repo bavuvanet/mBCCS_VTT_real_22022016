@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/advisory_custom_boder"
+        android:orientation="vertical">
+
+        <TableRow
+            android:id="@+id/tbrow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPackData"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_product_packet_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPackDataValue"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="TOMATO"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDateActive"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_start_date_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDateActiveValue"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="0dp"
+                android:text="12/08/2017"
+                android:textSize="13sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tvRootAcc"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_acc_balance_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRootAccValue"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="128.000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDateDeadline"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_expired_date_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDateDeadlineValue"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="0dp"
+                android:text="12/09/2017"
+                android:textSize="13sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tvPromotion"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_acc_promotion_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPromotionValue"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="11.000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvSim"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_sim_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSimValue"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="0dp"
+                android:text="4G"
+                android:textSize="13sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvDevice"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_use_device_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDeviceValue"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:padding="0dp"
+                android:text="BPhone 2/4G"
+                android:textSize="13sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:padding="0dp"
+                android:text="@string/advisory_install_myvt_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <CheckBox
+                    android:id="@+id/cbMyViettel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSubscriberAble"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="0dp"
+                android:text="@string/advisory_able_subscriber_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSubscriberAbleValue"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:padding="0dp"
+                android:text="0988128191,01656094339, 01676334221"
+                android:textSize="13sp" />
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/useServiceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/advisory_custom_boder"
+            android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/tbrow2_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:id="@+id/tvVasUseServicse"
+                    android:gravity="start"
+                    android:text="@string/advisory_use_service_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableLayout
+                android:background="@color/gray_1"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/tvDevice"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:paddingLeft="3dp"
+                        android:text="@string/advisory_service_name_text"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvDeviceValue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="left"
+                        android:text="@string/advisory_active_date_text"
+                        android:textSize="13sp" />
+                </TableRow>
+
+                <ListView
+                    android:id="@+id/lvVasUseServicse"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/customersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/advisory_custom_boder">
+            <TableRow
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvFreeTitle"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:text="@string/advisory_use_free_text"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableLayout
+                android:background="@color/gray_1"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/tvDevice"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:paddingLeft="3dp"
+                        android:text="@string/advisory_free_id_text"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvDeviceValue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="left"
+                        android:text="@string/advisory_free_name_text"
+                        android:textSize="13sp" />
+                </TableRow>
+
+                <ListView
+                    android:id="@+id/lvFree"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

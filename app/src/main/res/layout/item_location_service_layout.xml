@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingBottom="10dp"
+	android:paddingTop="10dp" >
+	<TextView
+		android:id="@+id/txtNameLocation"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="asdsad"
+		android:textColor="#000"
+		android:textSize="@dimen/text_size_title" />
+	<TextView
+		android:id="@+id/txtCountNetTV"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="3dp"
+		android:text="txtCountNetTV"
+		android:textColor="@color/text_nomal"
+		android:textSize="@dimen/text_size_nomal" />
+	<TextView
+		android:id="@+id/txtCountFTTH"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="3dp"
+		android:text="txtCountFTTH"
+		android:textColor="@color/text_nomal"
+		android:textSize="@dimen/text_size_nomal" />
+	<TextView
+		android:id="@+id/txtCountADSL"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="asdsad"
+		android:textColor="@color/text_nomal"
+		android:textSize="@dimen/text_size_nomal" />
+	<TextView
+		android:id="@+id/txtCountPSTN"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="asdsad"
+		android:textColor="@color/text_nomal"
+		android:textSize="@dimen/text_size_nomal" />
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:padding="5dp" >
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="@integer/d5"
+			android:text="@string/loaigt" />
+		<Spinner
+			android:id="@+id/spinner_loaigt"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/button_height"
+			android:layout_gravity="right"
+			android:layout_marginLeft="2dp"
+			android:layout_weight="@integer/d4"
+			android:background="@drawable/background_spinner"
+			android:textSize="@dimen/text_size_nomal" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:padding="5dp" >
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="@integer/d5"
+			android:text="@string/sogt" />
+		<EditText
+			android:id="@+id/edit_sogt"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:layout_marginLeft="2dp"
+			android:layout_weight="@integer/d4" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:padding="5dp" >
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="@integer/d5"
+			android:text="@string/sothuebao" />
+		<EditText
+			android:id="@+id/edit_sothuebao"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:layout_marginLeft="2dp"
+			android:layout_weight="@integer/d4" />
+	</LinearLayout>
+	<Button
+		android:id="@+id/btn_check"
+		android:layout_width="@dimen/button_width"
+		android:layout_height="@dimen/button_height"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/button_vertical_margin"
+		android:background="@drawable/button_dongbo_background"
+		android:text="@string/check" />
+</LinearLayout>

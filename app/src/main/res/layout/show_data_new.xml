@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ececec"
+	android:orientation="vertical"
+	android:paddingLeft="@dimen/activity_vertical_margin"
+	android:paddingRight="@dimen/activity_vertical_margin" >
+	<!--
+    <RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent" >
+		<EditText
+			android:id="@+id/edtSearchShowData"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/button_height"
+			android:layout_toLeftOf="@+id/btnSearchShowData"
+			android:drawableLeft="@drawable/icon_search"
+			android:drawablePadding="@dimen/padding_text"
+			android:hint="@string/hint_text_search_infrastruct_online"
+			android:singleLine="true"
+			android:textSize="@dimen/text_size_nomal" />
+		<Button
+			android:id="@+id/btnSearchShowData"
+			android:layout_width="@dimen/button_height"
+			android:layout_height="@dimen/button_height"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/search_button" />
+		<LinearLayout
+			android:id="@+id/lin1"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/edtSearchShowData"
+			android:layout_marginTop="@dimen/activity_vertical_margin"
+			android:orientation="horizontal" >
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="3"
+				android:background="#d6d6d6"
+				android:gravity="center"
+				android:text="@string/title_show_data_1"
+				android:textSize="@dimen/text_size_title" />
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:background="#d6d6d6"
+				android:gravity="center"
+				android:text="@string/title_show_data_2"
+				android:textSize="@dimen/text_size_title" />
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:background="#d6d6d6"
+				android:gravity="center"
+				android:text="@string/title_show_data_3"
+				android:textSize="@dimen/text_size_title" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin2"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin1"
+			android:orientation="horizontal" >
+			<TextView
+				android:id="@+id/txt_col1_1_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="3"
+				android:drawableRight="@drawable/down"
+				android:gravity="center_vertical"
+				android:padding="@dimen/margin_text_1"
+				android:text="@string/content_showdata_1"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col2_1_31"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="40.000"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col3_1_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="TB"
+				android:textSize="@dimen/text_size_nomal" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin21"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin2"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="3"
+				android:orientation="vertical" >
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_2"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin3"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin21"
+			android:orientation="horizontal" >
+			<TextView
+				android:id="@+id/txt_col1_2_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="3"
+				android:drawableRight="@drawable/down"
+				android:gravity="center_vertical"
+				android:padding="@dimen/margin_text_1"
+				android:text="@string/content_showdata_1"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col2_2_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="40.000"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col3_2_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="TB"
+				android:textSize="@dimen/text_size_nomal" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin31"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin3"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="3"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_2"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col2_1_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col2_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col2_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col2_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col2_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col3_1_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col3_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col3_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col3_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col3_12_2"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin4"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin31"
+			android:orientation="horizontal" >
+			<TextView
+				android:id="@+id/txt_col1_3_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="3"
+				android:drawableRight="@drawable/down"
+				android:gravity="center_vertical"
+				android:padding="@dimen/margin_text_1"
+				android:text="@string/content_showdata_1"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col2_3_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="40.000"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col3_3_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="TB"
+				android:textSize="@dimen/text_size_nomal" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin41"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin4"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="3"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_2"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin5"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin41"
+			android:orientation="horizontal" >
+			<TextView
+				android:id="@+id/txt_col1_4_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="3"
+				android:drawableRight="@drawable/down"
+				android:gravity="center_vertical"
+				android:padding="@dimen/margin_text_1"
+				android:text="@string/content_showdata_1"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col2_3_2"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="40.000"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col1_1_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="TB"
+				android:textSize="@dimen/text_size_nomal" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin51"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin5"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="3"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_2"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin6"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin51"
+			android:orientation="horizontal" >
+			<TextView
+				android:id="@+id/txt_col1_5_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="3"
+				android:drawableRight="@drawable/down"
+				android:gravity="center_vertical"
+				android:padding="@dimen/margin_text_1"
+				android:text="@string/content_showdata_1"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col1_1_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="40.000"
+				android:textSize="@dimen/text_size_nomal" />
+			<TextView
+				android:id="@+id/txt_col1_1_1"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="TB"
+				android:textSize="@dimen/text_size_nomal" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lin61"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lin6"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="3"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_2"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center_vertical"
+					android:padding="@dimen/margin_text_1"
+					android:text="@string/content_showdata_3"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg2g"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:paddingLeft="30dp"
+					android:text="@string/reg3g"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:orientation="vertical" >
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/button_height"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+				<TextView
+					android:id="@+id/txt_col1_1_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="40.000"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+	-->
+</ScrollView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="1dp" >
+
+    <CheckBox
+        android:id="@+id/checkPakage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:gravity="left|center_vertical"
+        android:layout_toRightOf="@id/textnamePakage"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+        android:id="@+id/tvQuantitySaling"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/checkPakage"
+        android:background="@drawable/background_edtitext_click"
+        android:ems="4"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:text="10"
+        android:textSize="@dimen/text_size_quantity" />
+
+    <TextView
+        android:id="@+id/textnamePakage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:layout_centerVertical="true"
+        android:gravity="left|center_vertical"
+        android:text="FTTHHHHHHHHHHHHHHHHHHH"
+        android:textSize="@dimen/text_size_13"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+         <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+     	android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:ems="6"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:text="Mã điểm đến "/>
+    	<TextView 
+    	    android:id="@+id/txtmadiemden"
+    	    android:layout_width="fill_parent"
+    	    android:background="@drawable/edittext"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+     	android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:ems="6"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:text="Tên điểm đến "/>
+    	<TextView 
+    	    android:id="@+id/txttendiemden"
+    	    android:layout_width="fill_parent"
+    	    android:background="@drawable/edittext"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+     	android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:ems="6"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:text="Địa chỉ "/>
+
+    	    <TextView 
+    	    android:id="@+id/txtdiachi"
+    	    android:layout_width="fill_parent"
+    	    android:background="@drawable/edittext"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:maxLines="6"
+    	    android:scrollbars="vertical"
+    	    android:layout_height="wrap_content"/>
+    	
+    
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+     	android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:ems="6"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:text="Nội dung "/>
+    	    	<TextView 
+    	    android:id="@+id/txtnoidung"
+    	    android:layout_width="fill_parent"
+    	    android:background="@drawable/edittext"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:maxLines="6"
+    	    android:scrollbars="vertical"
+    	    android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+     	android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:ems="6"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:text="Ngày bắt đầu "/>
+    	<TextView 
+    	    android:id="@+id/txtstartdate"
+    	    android:layout_width="fill_parent"
+    	    android:background="@drawable/edittext"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+        <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+     	android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:ems="6"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:text="Ngày kết thúc"/>
+    	<TextView 
+    	    android:id="@+id/txtenddate"
+    	    android:layout_width="fill_parent"
+    	    android:background="@drawable/edittext"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+      <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+     	android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:ems="6"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:text="Ghi chú:"/>
+
+    	    <EditText 
+    	    android:id="@+id/txtbaocao"
+    	    android:layout_width="fill_parent"
+    	    android:background="@drawable/edittext"
+    	    android:maxLength="1500"
+    	    android:maxLines="10"
+    	    android:scrollbars="vertical"
+    	    android:gravity="center_horizontal|center_vertical"
+    	    android:layout_gravity="center_horizontal|center_vertical"
+    	    android:layout_height="wrap_content"/> 
+    	
+    </LinearLayout>
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_lin_layout_channel_manager"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/padding_bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnhoanthanh"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="Hoàn Thành"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btntuchoi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:filterTouchesWhenObscured="true"
+            android:layout_weight="1"
+
+            android:text="Từ Chối"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+      
+        
+    </LinearLayout>
+   
+  
+
+</ScrollView>

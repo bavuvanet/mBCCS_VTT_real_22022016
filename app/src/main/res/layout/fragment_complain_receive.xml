@@ -1,0 +1,574 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.viettel.bss.viettelpos.v4.customer.fragment.ComplainReceiveFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/edtIsdnComplain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/txt_isdn_complain"
+                    android:imeOptions="actionSearch"
+                    android:textSize="@dimen/text_size_14"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imgViewSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnComplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnInfoCustComplain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/txt_cust_complain_info"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/acImgViewInfoCustComplain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_down"/>
+                </LinearLayout>
+
+
+                <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                    android:id="@+id/expanInfoCustComplain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:ael_duration="1"
+                    app:ael_expanded="true">
+
+                    <EditText
+                        android:id="@+id/edtCustComplain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txt_cust_complain"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtIdNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:hint="@string/txtIDNo"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <EditText
+                            android:id="@+id/edtIsdnContact"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:hint="@string/txt_isdn_contact"
+                            android:textSize="@dimen/text_size_14"/>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:hint="@string/email"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <EditText
+                        android:id="@+id/edtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/diachi"
+                        android:textSize="@dimen/text_size_14"/>
+
+                </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnInfoComplain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/txt_complain_info"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/acImgViewInfoComplain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_down"/>
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                    android:id="@+id/expanInfoComplain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:ael_duration="1"
+                    app:ael_expanded="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_priority_level"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <Spinner
+                            android:id="@+id/spnPriorityLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_method_receive"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <Spinner
+                            android:id="@+id/spnMethodReceive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_group_complaint"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <Spinner
+                            android:id="@+id/spnGroupComplaint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <com.viettel.bss.viettelpos.v4.customview.CustomAutoCompleteTextView
+                            android:id="@+id/actvGroupComplaint"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_theloai_complaint"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <Spinner
+                            android:id="@+id/spnTheLoai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_type_complaint"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <Spinner
+                            android:id="@+id/spnType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </Spinner>
+                    </LinearLayout>
+                </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnInfoProcess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/txt_process_info"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/acImgViewInfoProcess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_down"/>
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                    android:id="@+id/expanInfoProcess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:ael_duration="1"
+                    app:ael_expanded="true">
+
+                    <LinearLayout
+                        android:id="@+id/lnProvince"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/provinceMobile"
+                                android:textSize="@dimen/text_size_14"/>
+
+                            <EditText
+                                android:id="@+id/edtProvince"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="true"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center_vertical"
+                                android:longClickable="false"
+                                android:prompt="@string/title_spinner_id_num"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/districtMobile"
+                                android:textSize="@dimen/text_size_14"/>
+
+                            <EditText
+                                android:id="@+id/edtDistrict"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="true"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center_vertical"
+                                android:longClickable="false"
+                                android:prompt="@string/title_spinner_id_num"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/precintMobile"
+                                android:textSize="@dimen/text_size_14"/>
+
+                            <EditText
+                                android:id="@+id/edtPrecint"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="true"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center_vertical"
+                                android:longClickable="false"
+                                android:prompt="@string/title_spinner_id_num"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="5"
+                                android:text="@string/chitiethhConnect"
+                                android:textSize="@dimen/text_size_13"/>
+
+                            <EditText
+                                android:id="@+id/edtDetail"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/text_size_13">
+                            </EditText>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_complain_content"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <EditText
+                        android:id="@+id/edtProblemContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="9"
+                        android:scrollbars="vertical"/>
+                </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnInfoAddition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/txt_cust_complain_info"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/acImgViewInfoAddition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_down"/>
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                    android:id="@+id/expanInfoAddition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:ael_duration="1"
+                    app:ael_expanded="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_date_deadline"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <EditText
+                            android:id="@+id/edtDateAppoint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:drawablePadding="5dp"
+                            android:drawableRight="@drawable/calendar_07"
+                            android:editable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center_vertical"
+                            android:longClickable="false"
+                            android:text="@string/advisory_not_have_text"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/note"
+                            android:textSize="@dimen/text_size_14"/>
+
+                        <EditText
+                            android:id="@+id/edtNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="9"
+                            android:scrollbars="vertical"/>
+
+                    </LinearLayout>
+                </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_lst_file_attack"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_16"/>
+
+                    <LinearLayout
+                        android:id="@+id/lnAddFileAttack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/margin_16"
+                            app:srcCompat="@drawable/ic_add"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+                    android:id="@+id/lvFileAttack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:scrollbars="none">
+                </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnComplain"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_s"
+                android:background="@drawable/bg_button_main"
+                android:text="@string/txt_complain"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

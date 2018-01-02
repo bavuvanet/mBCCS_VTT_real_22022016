@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lnStaff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_top" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/nhanvien"
+            android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spnStaff"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_top"
+                android:visibility="gone" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/lido"
+            android:textSize="@dimen/text_size_content" />
+
+        <Spinner
+            android:id="@+id/spnReason"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/lnNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_top" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/note"
+            android:textSize="@dimen/text_size_content" />
+
+        <EditText
+            android:id="@+id/edtNote"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_top" >
+
+        <include layout="@layout/item_task_assign" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_top" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="left"
+            android:layout_marginRight="10dp"
+            android:layout_weight="@integer/d4"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/buttonCancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+
+                <Button
+                    android:id="@+id/btnTaskReassign"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="@integer/d4"
+
+                    android:filterTouchesWhenObscured="true"
+                    android:text="@string/task_reassign"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

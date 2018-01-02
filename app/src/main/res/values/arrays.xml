@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tab_titles">
+
+        <!-- <item>@string/take_photo</item> -->
+        <item>@string/gallery</item>
+    </string-array>
+    <string-array name="payment_status">
+        <item>Tất cả</item>
+        <item>Đã thanh toán</item>
+        <item>Chưa thanh toán</item>
+    </string-array>
+    <string-array name="payment_status_reason">
+        <item>Tất cả</item>
+        <item>Đã cập nhật lý do</item>
+        <item>Chưa cập nhật lý do</item>
+    </string-array>
+
+    <integer-array name="payment_status_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
+    <string-array name="payment_bill">
+        <item>Dưới 500.000</item>
+        <item>500.000 đến 1.000.000</item>
+        <item>1.000.000 đến 2.000.000</item>
+        <item>2.000.000 đến 4.000.000</item>
+        <item>Trên 4.000.000</item>
+    </string-array>
+    <string-array name="payment_bill_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="payment_report_type">
+        <item>Đầu kì</item>
+        <item>Giao lại</item>
+    </string-array>
+
+    <integer-array name="payment_report_type_value">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
+    <string-array name="verify_type">
+        <item>Chính xác</item>
+        <item>Không xác định</item>
+    </string-array>
+    <string-array name="verify_type_value">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="verify_note">
+        <item>Không có khách hàng tại địa chỉ</item>
+        <item>Có khách hàng tại địa chỉ nhưng không thừa nhận sử dụng dịch vụ</item>
+    </string-array>
+    <string-array name="verify_notify">
+        <item>-- Lựa chọn --</item>
+        <item>Phát được</item>
+        <item>Không phát được</item>
+    </string-array>
+    <string-array name="verify_notify_value">
+        <item>-1</item>
+        <item>1003</item>
+        <item>1002</item>
+    </string-array>
+    <string-array name="support">
+        <item>-- Lựa chọn --</item>
+        <item>Hỗ trợ</item>
+        <item>Không hỗ trợ</item>
+    </string-array>
+    <string-array name="support_value">
+        <item>-1</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="bankplus">
+        <item>-- Lựa chọn --</item>
+        <item>Gạch nợ thất bại</item>
+        <item>Lập yêu cầu thành công</item>
+        <item>Gạch nợ thành công</item>
+    </string-array>
+    <string-array name="bankplus_value">
+        <item/>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="task_assign">
+        <item>-- Lựa chọn --</item>
+        <item>Giao việc mới</item>
+        <item>Thành công</item>
+        <item>Không thành công</item>
+        <item>Công việc quá hạn</item>
+    </string-array>
+    <string-array name="task_assign_value">
+        <item/>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="task_assign_update">
+        <item>-- Lựa chọn --</item>
+        <item>Thành công</item>
+        <item>Không thành công</item>
+    </string-array>
+    <string-array name="task_assign_value_update">
+        <item/>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="object_customer_name">
+        <item>N1</item>
+        <item>N2</item>
+        <item>N3</item>
+        <item>N4</item>
+        <item>N5</item>
+        <item>N6</item>
+    </string-array>
+    <string-array name="object_customer_code">
+        <item>1QS14,1QS1,1QS8,1Q</item>
+        <item>1TS14,1TS1,1TS8,1T</item>
+        <item>1KS14,1KS1,1KS8,1K</item>
+        <item>1RS14,1RS1,1RS8,1R</item>
+        <item>1PS14,1PS1,1PS8,1P</item>
+        <item>1US14,1US8,1US1,1U</item>
+    </string-array>
+    <string-array name="contract_status">
+        <item>Hợp đồng đã bị xóa</item>
+        <item>Hợp đồng mới chưa kích hoạt</item>
+        <item>Hợp đồng thường</item>
+        <item>Hợp đồng đã bị hủy</item>
+        <item>Hợp đồng đã chấm dứt</item>
+    </string-array>
+
+    <integer-array name="contract_status_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+	<string-array name="arr_status_sub_assign">
+	    <item>Đã giao</item>
+	    <item>Đã tiếp xúc</item>
+	    <item>Khách hàng hẹn</item>
+	    <item>Lịch sử đặt hẹn</item>
+	</string-array>
+	<string-array name="arr_status_sub_assign_ngoai_mang">
+	    <item>Đã giao</item>
+	    <item>Đã tiếp xúc</item>
+	    <item>Khách hàng hẹn</item>
+	</string-array>
+	
+	<string-array name="arr_care_type">
+	    <item>Nội mạng</item>
+	    <item>Nội mạng vãng lai</item>
+	    <item>Ngoại mạng</item>
+	    <item>Ngoại mạng vãng lai</item>
+	</string-array>
+	
+	<string-array name="arr_status_sub_assign_noi_mang_vang_lai">
+	    <item>Đã tiếp xúc</item>
+	    <item>Khách hàng hẹn</item>
+	</string-array>
+	
+	<string-array name="arr_status_sub_assign_ngoai_mang_vang_lai">
+	    <item>Đã tiếp xúc</item>
+	    <item>Khách hàng hẹn</item>
+	</string-array>
+    <string-array name="arr_service">
+        <item>Trả trước</item>
+        <item>Trả sau</item>
+    </string-array>
+	<string-array name="warranty_method">
+	    <item>Chọn thao tác</item>
+        <item>Trả bảo hành cho KH</item>
+        <item>Tra cứu thông tin BH</item>
+    </string-array>
+    
+	<string-array name="warranty_object_type">
+	    <item>Đối tượng tiếp nhận</item>
+        <item>Thuộc cá nhân tiếp nhận</item>
+        <item>Không thuộc cá nhân tiếp nhận</item>
+    </string-array>
+
+    <string-array name="modify_profile_status">
+        <item>Tất cả</item>
+        <item>Đã tích sai</item>
+        <item>Chưa tích duyệt</item>
+    </string-array>
+
+    <string-array name="report_register_profile_status">
+        <item>Tất cả</item>
+        <item>Đã tích sai</item>
+        <item>Đã tích đúng</item>
+        <item>Chưa tích duyệt</item>
+    </string-array>
+
+    <string-array name="modify_profile_action_code">
+        <item>Tất cả</item>
+        <item>Thuê bao hòa mạng</item>
+        <item>Đăng ký thông tin</item>
+        <item>Chuyển đổi TT-TS</item>
+        <item>Chuyển đổi TS-TT</item>
+    </string-array>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/from_isdn"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_from_isdn"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:hint=""
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/to_isdn"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_to_isdn"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:hint=""
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/serviceMobile_info_search"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spiner_service"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/title_container"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spiner_container"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/trangthai"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/spiner_state"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:text="@string/title_code_capcha"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edt_capcha"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:digits="1234567890 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint=""
+                    android:maxLength="50"
+                    android:singleLine="true" />
+
+                <com.viettel.bss.viettelpos.v4.sale.activity.CaptchaView
+                    android:id="@+id/imgCapcha"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/background_capcha" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bootom_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+
+                    android:filterTouchesWhenObscured="true"
+                    android:text="@string/search"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/listViewIsdn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

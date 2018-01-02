@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+      <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/list_background_pressed_vt">
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/create_new_request_title"/>
+    </LinearLayout>
+      <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/padding_left"
+   		android:paddingRight="@dimen/padding_right"
+   		android:orientation="vertical"
+        >
+        <TextView
+        android:id="@+id/txtinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_text_1"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:text="@string/infoconnect"
+        android:textColor="@color/list_background_pressed_vt"
+        android:textSize="@dimen/text_size_nomal" />
+
+    <View
+        android:id="@+id/viewhead"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+           	android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/mayeucau" />
+        <TextView
+            android:id="@+id/txtmayeucau"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/edittext"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+           	android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/isdnandaccount" />
+        <TextView
+            android:id="@+id/txtisdnoraccount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/edittext"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+           	android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/idhopdong" />
+        <TextView
+            android:id="@+id/txtidhopdong"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/edittext"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+           	android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/service" />
+        <TextView
+            android:id="@+id/txtservice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/edittext"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/padding_top"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+           	android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/goi_cuoc" />
+        <TextView
+            android:id="@+id/txtgoicuoc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/edittext"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_lin_layout_channel_manager"
+        android:gravity="center"
+        android:orientation="horizontal"
+         >
+
+        <Button
+            android:id="@+id/btndaunoi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/customer_connection_service_static"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btnhuy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_weight="1"
+
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+          
+      </LinearLayout>
+      
+</LinearLayout>

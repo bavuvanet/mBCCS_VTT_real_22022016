@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_view_payment"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="@integer/d5"
+                android:text="Loại yêu cầu" />
+
+            <Spinner
+                android:id="@+id/spinner_hotlinetype"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+                android:textSize="@dimen/text_size_nomal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnttcus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="Thông tin KH" />
+            <EditText
+                android:id="@+id/editusernameortel"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical|center_horizontal"
+                android:hint="@string/select_acchotline"
+                android:maxLength="50"
+                android:layout_weight="@integer/d4"
+                android:textSize="@dimen/text_size_nomal" />
+          </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/lnaccount"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="@integer/d5"
+                android:text="@string/isdnandaccount" />
+
+            <EditText
+                android:id="@+id/edit_isdnacount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="@integer/d4"
+                android:hint="Nhập Isdn/account chuyển đổi"
+                android:textSize="@dimen/text_size_nomal"></EditText>
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="4dp">
+         <Button
+             android:id="@+id/btn_search_acc"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Tìm kiếm"
+             android:textColor="@android:color/white"
+             android:textSize="16sp"/>
+        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/btn_search_acc"-->
+            <!--android:layout_width="@dimen/button_height"-->
+            <!--android:layout_height="@dimen/button_height"-->
+            <!--android:background="@drawable/button_normal_background"-->
+            <!--android:gravity="center_vertical|center_horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="@dimen/icon_inner_width"-->
+                <!--android:layout_height="@dimen/icon_inner_width"-->
+                <!--android:layout_gravity="right|center_horizontal|center_vertical"-->
+                <!--android:background="@drawable/search_c"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:textColor="@color/white" />-->
+        <!--</LinearLayout>-->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:singleLine="true"
+            android:text="Danh sách yêu cầu"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_14" />
+
+        <ListView
+            android:id="@+id/lvrequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            android:paddingBottom="@dimen/padding_bottom"></ListView>
+    </LinearLayout>
+
+
+</RelativeLayout>

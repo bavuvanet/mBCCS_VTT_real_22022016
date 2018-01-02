@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_text_5"
+    android:paddingTop="@dimen/padding_text_3" >
+	<EditText
+            android:id="@+id/edtsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:drawableLeft="@drawable/search_c"
+            android:hint="Nhập tên chủ hộ để tìm kiếm"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_13" />
+    <ListView
+        android:id="@+id/lvFamily"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+         >
+    </ListView>
+
+
+    <LinearLayout 
+    android:id="@+id/lnButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btncapnhat"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+        android:filterTouchesWhenObscured="true"
+
+        android:textColor="#fff"
+        android:text="@string/capnhat"
+        android:textSize="@dimen/text_size_title" />
+
+    <View
+        android:id="@+id/btnView"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/line_button_color" />
+
+    <Button
+        android:id="@+id/btnthemmoi"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+
+        android:textColor="#fff"
+        android:text="@string/addNewItem"
+        android:textSize="@dimen/text_size_title" />
+
+</LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_padding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lnReportNoiMang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_normal_background"
+                android:text="@string/report_cus_care"
+                android:textColor="#11A9AA"
+                android:textSize="@dimen/text_size_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#D4D4D4" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/sum_sub_assigned"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtThueBaoDuocGiao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/txt_tiep_xuc_ngay"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtTiepXucNgay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/txt_tiep_xuc_luy_ke"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtTiepXucLuyKe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/txt_thue_bao_con_lai"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtThueBaoConLai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/txt_so_tb_kh_hen"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtThueBaoKHHen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnReportNoiMangVangLai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_normal_background"
+                android:text="@string/report_cus_care_noi_mang_vang_lai"
+                android:textColor="#11A9AA"
+                android:textSize="@dimen/text_size_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#D4D4D4" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/sum_sub_vanglai_tiepxuc"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtTBNoiMangVLTX"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnReportNgoaiMang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_normal_background"
+                android:text="@string/report_cus_care_ngoai_mang"
+                android:textColor="#11A9AA"
+                android:textSize="@dimen/text_size_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#D4D4D4" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/sum_sub_assigned"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtThueBaoDuocGiaoNM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/txt_tiep_xuc_ngay"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtTiepXucNgayNM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/txt_tiep_xuc_luy_ke"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtTiepXucLuyKeNM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/txt_thue_bao_con_lai"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtThueBaoConLaiNM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+        </LinearLayout>
+        
+         <LinearLayout
+            android:id="@+id/lnReportNgoaiMangVangLai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_normal_background"
+                android:text="@string/report_cus_care_ngoai_mang_vang_lai"
+                android:textColor="#11A9AA"
+                android:textSize="@dimen/text_size_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#D4D4D4" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/sum_sub_vanglai_tiepxuc"
+                    android:textSize="@dimen/text_size_content_list" />
+
+                <TextView
+                    android:id="@+id/txtTBNgoaiMangVLTX"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_content_list" />
+            </LinearLayout>
+        </LinearLayout>
+        
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height_litter"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/margin_top"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/OK"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+</ScrollView>

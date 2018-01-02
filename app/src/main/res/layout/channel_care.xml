@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llHeaderCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/WizardPageTitle"
+            android:text="@string/strChannelCare"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/dividerHorizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHistoryCare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llHeaderCC"
+        android:layout_above="@+id/sms11"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:paddingBottom="@dimen/margin_text_1"
+        android:paddingLeft="@dimen/margin_text_5"
+        android:paddingTop="@dimen/margin_text_1"
+        android:text="@string/strChannelCare"
+        android:textColor="@color/textColorInfo"
+        android:textSize="@dimen/sp18" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/sms11"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/llHeaderCC"
+        android:layout_height="@dimen/button_height_l"
+        android:gravity="center"
+        android:text="@string/notContten"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/tvHistoryCare"
+        android:background="@color/color_view" />
+
+    <ListView
+        android:id="@+id/lv_list_care"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnChanelCare"
+        android:layout_below="@+id/v"
+        android:cacheColorHint="@android:color/transparent" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btnChanelCare"
+        android:layout_width="@dimen/button_width"
+        android:minHeight="@dimen/button_height"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_text_1"
+        android:layout_marginTop="@dimen/margin_text_1"
+
+        android:filterTouchesWhenObscured="true"
+        android:gravity="center"
+        android:text="@string/btnUpdate"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_content" />
+
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearBranch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/title_branch"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spinner_branch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearChargeBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/title_plan_charge"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spinner_plane_charge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearChargeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/title_group_charge"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spinner_group_charge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearManagerCTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/title_manager_ctv"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spinner_manager_ctv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/title_ctv"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spinner_ctv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/service"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spinner_service"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="6"
+                android:text="@string/num_month_expire_promotion"
+                android:textSize="@dimen/text_size_content" />
+
+            <Spinner
+                android:id="@+id/spiMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="6"
+                android:text="@string/ver_isdn"
+                android:textSize="@dimen/text_size_content" />
+
+            <EditText
+                android:id="@+id/edtIsdnAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:text="" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_l"
+            android:layout_margin="10dp"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/search"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+</ScrollView>

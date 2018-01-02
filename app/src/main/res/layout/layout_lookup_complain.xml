@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fab="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="10dp"
+              android:paddingRight="16dp"
+              android:paddingLeft="16dp"
+              android:paddingBottom="16dp"
+              android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtIsdnComplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_isdn_complain"
+            android:textSize="@dimen/text_size_14"
+            android:imeOptions="actionSearch" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/lnSelectdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:text="20/02/1990"
+            android:textSize="@dimen/text_size_15"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/icon_2muiten"
+            android:contentDescription="arrow"/>
+
+        <EditText
+            android:id="@+id/edtToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:text="20/02/1990"
+            android:textSize="@dimen/text_size_15"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLookup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:paddingLeft="@dimen/margin_30"
+        android:paddingRight="@dimen/margin_30"
+        android:background="@drawable/bg_button_main"
+        android:text="@string/tracuu"/>
+
+
+    <LinearLayout
+        android:id="@+id/lnHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_lst_sub"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_16"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_1"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvTransComplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        </android.support.v7.widget.RecyclerView>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabAddComplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:src="@drawable/fab_add"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:menu_colorNormal="@color/colorPrimary"
+            fab:menu_colorPressed="@color/blue"
+            fab:menu_colorRipple="@color/colorPrimary"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <RadioButton
+            android:id="@+id/rbModifyProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/rb_modify_profile" />
+
+        <RadioButton
+            android:id="@+id/rbVerifyProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rb_verify_profile" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/txt_isdn_account" />
+
+        <EditText
+            android:id="@+id/edtIsdnAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:maxLength="100"
+            android:minHeight="@dimen/height_spinner"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/statusDN" />
+
+        <Spinner
+            android:id="@+id/spinStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:minHeight="@dimen/height_spinner"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/txt_action_name" />
+
+        <Spinner
+            android:id="@+id/spinAction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:minHeight="@dimen/height_spinner"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="@integer/d5"
+            android:text="@string/sohd" />
+
+        <EditText
+            android:id="@+id/edtContractNo"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_spinner"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnSelectdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:text="20/02/1990"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/icon_2muiten"
+            android:contentDescription="arrow" />
+
+        <EditText
+            android:id="@+id/edtToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:text="20/02/1990"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="@dimen/button_width_extra"
+        android:layout_height="@dimen/button_height_litter"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="5dp"
+
+        android:text="@string/tkphuluchdCD"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_nomal1"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lnResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/padding_top"
+            android:text="@string/dsgiaodich"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/padding_bottom">
+
+            <ListView
+                android:id="@+id/lvdetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:clickable="true"></ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lvdetail">
+
+                <View
+                    android:id="@+id/viewhead2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_view" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+    </LinearLayout>
+
+</LinearLayout>

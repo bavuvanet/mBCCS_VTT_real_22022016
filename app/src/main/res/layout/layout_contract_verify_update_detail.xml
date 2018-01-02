@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/idhopdong"
+            android:textSize="@dimen/text_size_content" />
+
+        <TextView
+            android:id="@+id/tvContractId"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/idhopdong"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/spnVerifyType"
+            android:textSize="@dimen/text_size_content" />
+
+        <Spinner
+            android:id="@+id/spnVerifyType"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:entries="@array/verify_type"
+            android:entryValues="@array/verify_type_value"
+            android:hint="@string/select_acc_charge"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lnReason"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/spnReasonVerify"
+            android:textSize="@dimen/text_size_content" />
+
+        <Spinner
+            android:id="@+id/spnReasonVerify"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/select_acc_charge"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnVerifyNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/spnVerifyNote"
+            android:textSize="@dimen/text_size_content" />
+
+        <Spinner
+            android:id="@+id/spnVerifyNote"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:entries="@array/verify_note"
+            android:entryValues="@array/verify_note"
+            android:hint="@string/select_acc_charge"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/spnCustType"
+            android:textSize="@dimen/text_size_content" />
+
+        <Spinner
+            android:id="@+id/spnCustType"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/select_acc_charge"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/dp50"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/selectimage"
+                android:textSize="@dimen/text_size_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/select_multi_pic"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/text_size_content_list" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ibUploadImage"
+            android:layout_width="@dimen/icon_height_layout_channel_manager"
+            android:layout_height="@dimen/icon_height_layout_channel_manager"
+            android:background="@drawable/view_img1"
+            android:contentDescription="@string/desc_list_item_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/ibMap"
+            android:textSize="@dimen/text_size_content" />
+
+        <ImageButton
+            android:id="@+id/ibMap"
+            android:layout_width="@dimen/icon_height_layout_channel_manager"
+            android:layout_height="@dimen/icon_height_layout_channel_manager"
+            android:background="@drawable/vtmap_ic_btn_layer_2"
+            android:contentDescription="@string/desc_list_item_icon" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginRight="5dp"
+
+        android:filterTouchesWhenObscured="true"
+        android:text="@string/button_update"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_content" />
+
+    <com.viettel.maps.MapView
+        xmlns:vtmap="http://schemas.android.com/apk/lib/com.viettel.maps"
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        vtmap:appKey="670e813ba8994d376f69289f235fd4c4"
+        vtmap:gpsControlEnabled="true"
+        vtmap:scaleControlEnabled="true"
+        vtmap:zoomControlEnabled="true" />
+
+</LinearLayout>

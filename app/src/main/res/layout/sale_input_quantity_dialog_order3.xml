@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	 >
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Nhập số lượng muốn duyệt"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18" />
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+     <EditText
+        android:id="@+id/edtQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_20"
+        android:ems="10"
+        android:digits="0123456789"
+        android:inputType="numberSigned"
+        android:maxLength="10"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_nomal" >
+
+        <requestFocus />
+    </EditText>
+
+	<TextView 
+	    android:id="@+id/texterror"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_vertical|center_horizontal"
+	    android:gravity="center_vertical|center_horizontal"
+	    android:textColor="@color/red"
+	    android:visibility="gone"
+	    android:textSize="@dimen/text_size_nomal"
+	    />
+	 <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/ok"
+            android:filterTouchesWhenObscured="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/btnViewSaleTrans"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+   
+
+</LinearLayout>

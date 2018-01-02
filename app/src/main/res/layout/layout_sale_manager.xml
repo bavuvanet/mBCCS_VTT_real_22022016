@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/list_background"
+    android:orientation="vertical" >
+
+	<EditText
+	    android:id="@+id/edtsearch"
+	    android:layout_width="match_parent"
+	    android:layout_height="30dp"
+	    android:background="@color/list_background"
+	    android:drawableLeft="@drawable/search_c"
+	    android:hint="@string/searchname"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:textSize="@dimen/text_size_15" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+         >
+    </GridView>
+
+</LinearLayout>

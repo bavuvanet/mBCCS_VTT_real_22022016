@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/item_title_sale_trans"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:padding="3dp" >
+	<TextView
+		
+		android:layout_width="0dp"
+		android:layout_height="40dp"
+		android:layout_weight="@integer/d1"
+		android:background="#cecece"
+		android:gravity="center"
+		android:text="Ten mat hang"
+		android:textColor="#000"
+		android:textSize="@dimen/text_size_nomal" />
+	<View
+		android:layout_width="@dimen/view_size"
+		android:layout_height="fill_parent"
+		android:background="@color/color_view" />
+	<TextView
+		
+		android:layout_width="0dp"
+		android:layout_height="40dp"
+		android:layout_weight="@integer/d2"
+		android:background="#cecece"
+		android:gravity="center"
+		
+		android:text="So luong"
+		android:textColor="#000"
+		android:textSize="@dimen/text_size_nomal" />
+	<View
+		android:layout_width="@dimen/view_size"
+		android:layout_height="fill_parent"
+		android:background="@color/color_view" />
+	<TextView
+		
+		android:layout_width="0dp"
+		android:layout_height="40dp"
+		android:layout_weight="@integer/d3"
+		android:background="#cecece"
+		android:gravity="center"
+		android:text="Thanh tien"
+		android:textColor="#000"
+		android:textSize="@dimen/text_size_nomal" />
+</LinearLayout>

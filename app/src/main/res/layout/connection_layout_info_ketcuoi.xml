@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/padding_left"
+              android:paddingRight="@dimen/padding_right">
+
+    <ScrollView
+        android:orientation="vertical"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginTop="15dp"
+                android:text="@string/siLabelThongTinKetCuoi"
+                android:textColor="@color/siLabel"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siCongNghe"/>
+
+                <TextView
+                    android:id="@+id/txtCongNghe"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/ketcuoiMaKetCuoi" />
+
+                <TextView
+                    android:id="@+id/txtMaKetCuoi"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siDiaChiKetCuoi" />
+
+                <TextView
+                    android:id="@+id/txtDiaChiKetCuoi"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siTaiNguyenKetCuoi"/>
+
+                <TextView
+                    android:id="@+id/txtTaiNguyenKetCuoi"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siTaiNguyenThietBi"/>
+
+                <TextView
+                    android:id="@+id/txtTaiNguyenThietBi"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siTaiNguyenCapGoc"/>
+
+                <TextView
+                    android:id="@+id/txtTaiNguyenCapGoc"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siMaTram"/>
+
+                <TextView
+                    android:id="@+id/txtMaTram"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siDonViQuanLyKetCuoi"/>
+
+                <TextView
+                    android:id="@+id/txtDonViQuanLyKetCuoi"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siPortRF"/>
+
+                <TextView
+                    android:id="@+id/txtPortRF"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+            <!-- Begin Nhân viên quản lý -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginTop="15dp"
+                android:text="@string/siLabelNhanVienQuanLy"
+                android:textColor="@color/siLabel"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siHoTenNV"/>
+
+                <TextView
+                    android:id="@+id/txtHoTenNV"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siDTNV"/>
+
+                <TextView
+                    android:id="@+id/txtDTNV"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siChucVu"/>
+
+                <TextView
+                    android:id="@+id/txtChucVu"
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="?android:attr/editTextBackground"
+                    android:textColor="?android:attr/editTextColor"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"/>
+            </LinearLayout>
+            <!-- End Nhân viên quản lý -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="?android:buttonBarButtonStyle"
+            android:id="@+id/btnChon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_s"
+            android:layout_weight="1"
+
+            android:text="@string/ketcuoiBtnChon"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title"/>
+
+        <Button
+            style="?android:buttonBarButtonStyle"
+            android:id="@+id/btnBoQua"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_s"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+
+            android:text="@string/ketcuoiBtnBoQua"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title"/>
+    </LinearLayout>
+
+</LinearLayout>

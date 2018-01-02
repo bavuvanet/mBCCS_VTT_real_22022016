@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ems="5"
+            android:text="@string/pakagevas" />
+
+        <EditText
+            android:id="@+id/edtvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.25"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:longClickable="false"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btninfo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:drawable/ic_menu_info_details"
+            android:visibility="gone" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ems="5"
+            android:text="@string/selectpromotionvas" />
+
+        <EditText
+            android:id="@+id/edtselectpromotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.25"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/selectpromotioncd"
+            android:longClickable="false"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btninfo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:drawable/ic_menu_info_details"
+            android:visibility="gone" />
+    </LinearLayout>
+	
+    
+    <LinearLayout
+    android:id="@+id/lnButton"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_marginTop="@dimen/padding_top"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+        android:filterTouchesWhenObscured="true"
+        android:background="@drawable/round_button_common"
+        android:textColor="#fff"
+        android:text="@string/btn_create_chanel"
+        android:textSize="@dimen/text_size_title" />
+
+    <View
+        android:id="@+id/btnView"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/line_button_color" />
+
+    <Button
+        android:id="@+id/btncancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+        android:background="@drawable/round_button_common"
+        android:textColor="#fff"
+        android:text="@string/cancel"
+        android:textSize="@dimen/text_size_title" />
+
+</LinearLayout>
+    
+   
+    
+</LinearLayout>

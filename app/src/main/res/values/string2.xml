@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Subcriber Info-->
+    <string name="siLabelTimKiem">Tìm kiếm thuê bao cùng địa chỉ</string>
+    <string name="siLabelInfo">Thông tin người yêu cầu</string>
+    <string name="siLabelKhaoSat">Khảo Sát Sơ Bộ</string>
+    <string name="siLabelThongTinKetCuoi">Thông tin kết cuối</string>
+    <string name="siLabelNhanVienQuanLy">Nhân viên quản lý</string>
+
+    <string name="siNguoiLienHe">Người liên hệ <font color="red">*</font></string>
+    <string name="siDTLienHe">ĐT liên hệ <font color="red">*</font></string>
+    <string name="siDiaChiKS">Địa chỉ KS <font color="red">*</font></string>
+    <string name="siDiaChiKetCuoi">Địa chỉ Kết Cuối</string>
+    <string name="siMaKetCuoi">Mã kết cuối <font color="red">*</font></string>
+    <string name="siKetQuaKS">KQ khảo sát <font color="red">*</font></string>
+    <string name="siHoTen">Họ và tên</string>
+    <string name="siDiaChiLapDat">Địa chỉ lắp đặt</string>
+    <string name="siTimKiem">Tìm kiếm</string>
+    <string name="siKetQua">TB cùng địa chỉ</string>
+    <string name="siduongday">Đường dây<font color="red">*</font></string>
+    <string name="siCongNghe">Công Nghệ</string>
+    <string name="siTaiNguyenKetCuoi">TN kết cuối</string>
+    <string name="siTaiNguyenThietBi">TN thiết bị</string>
+    <string name="siTaiNguyenCapGoc">TN cáp gốc</string>
+    <string name="siMaTram">Mã Trạm</string>
+    <string name="siDonViQuanLyKetCuoi">ĐVQL kết cuối</string>
+    <string name="siPortRF">Port RF</string>
+    <string name="siHoTenNV">Họ và tên</string>
+    <string name="siDTNV">Số điện thoại</string>
+    <string name="siChucVu">Chức vụ</string>
+    <string name="siBtnFinish">Hoàn tất khảo sát</string>
+    <string name="siBtnClear">Khảo sát lại</string>
+    <string name="siBtnQuanLyYeuCau">Quản lý yêu cầu</string>
+    <string name="siTagQuanLyKetCuoi">EditText</string>
+    <string name="siTaoYeuCau">Tạo yêu cầu</string>
+    <!--<color name="siLabel">#390f0f</color>-->
+    <color name="siLabel">#D5853B</color>
+    <string name="siTechnology_require">Công nghệ<font color="red">*</font></string>
+    <string name="siService_require">Dịch vụ<font color="red">*</font></string>
+
+
+    <!--Location Popup-->
+    <string name="loFullAddress">Địa chỉ đầy đủ</string>
+
+    <!--Thông tin kết cuối-->
+    <string name="ketcuoiBtnChon">Lựa chọn</string>
+    <string name="ketcuoiBtnBoQua">Bỏ qua</string>
+    <string name="ketcuoiMaKetCuoi">Mã kết cuối</string>
+
+    <!--Thong tin dau noi-->
+    <string name="dnBtnDauNoi">Đấu nối</string>
+    <string name="dsthuebaodskh">Danh sách TB ĐK theo giấy tờ KH</string>
+    <string name="checknocuoc">Số giấy tờ %s đang nợ cước. Bạn có muốn chuyển sang chức năng gạch nợ?</string>
+    <string name="tenhsempty">Tên học sinh không được để trống</string>
+    <string name="tenhs4">Tên học sinh phải lớn hơn 4 hoặc nhỏ hơn 120 ký tự</string>
+    <string name="notviewcamket">Không có thông tin cam kết.</string>
+    <string name="notmarkowner">Khách hàng chưa sở hữu thuê bao chính chủ trước đó</string>
+    <string name="ttinphidn">Xem thông tin phí đấu nối</string>
+
+    <string name="serialhople">Serial hợp lệ</string>
+    <string name="cdttsts">Chuyển TT sang TS</string>
+    <string name="ttintbtt">Thuê bao %s không được thực hiện chức năng này</string>
+    <string name="lydochuyendoi">Lý do CD<font color="red">*</font></string>
+    <string name="cdmobile">Chuyển đổi</string>
+    <string name="confirmttsts">Bạn có chắc chắn muốn chuyển đổi thuê bao %s sang trả sau .</string>
+    <string name="confirmtsstt">Bạn có chắc chắn muốn chuyển đổi thuê bao %s sang trả trước .</string>
+    <string name="validatecd">Bạn phải chọn lý do chuyển đổi</string>
+    <string name="selectCDC">Chọn CTCDT</string>
+    <string name="selectpromotion">Chọn CTKM</string>
+    <string name="changepakage">Chuyển đổi gói cước</string>
+    <string name="validateIsdn">Bạn phải nhập số điện thoại để gửi mã OTP</string>
+    <string name="khdd14">Khách hàng phải đủ 14 tuổi</string>
+    <string name="confirmChangeCus">Bạn có chắc chắn muốn thay đổi thông tin khách hàng ?</string>
+    <string name="changeCusSucess">Thay đổi thông tin khách hàng thành công.</string>
+    <string name="cdttstt">Chuyển TS sang TT</string>
+    <string name="progessing_changesub">Đang thực hiện chuyển đổi . Vui lòng đợi ...</string>
+    <string name="progress_changeprofile">Chuyển đổi thành công . Đang thực hiện nén ảnh hồ sơ.</string>
+    <string name="upload_all_profile_change_success">Chuyển đổi thành công và hồ sơ thuê bao đã được đẩy lên hệ thống Quản lý hồ sơ</string>
+    <string name="upload_profile_change_fail_try_again">Chuyển đổi thành công. Hồ sơ chưa được đẩy lên hệ thống, vui lòng không xóa file ảnh, vào chức năng Quản lý hồ sơ tồn để xem chi tiết và thực hiện cập nhật lại.</string>
+    <string name="checkreplace">nên không được thực hiện ĐKTT</string>
+    <string name="notsubscriber">Không có thông tin thuê bao. Vui lòng kiểm tra lại</string>
+    <string name="notaccount">Không tìm thấy thông tin đường dây . Vui lòng kiểm tra lại</string>
+    <string name="quantitythan1">Số lượng phải lớn hơn hoặc bằng 1</string>
+    <string name="thc">THC</string>
+    <string name="not_old_subId">Không lấy được subId cũ</string>
+
+    <string name="idnoEmpty">Bạn phải nhập số giấy hoặc số isdn/account để tìm kiếm</string>
+    <string name="notubinfra">Không tìm thấy thông tin hạ tầng từ thuê bao trên. Vui lòng chọn thuê bao khác.</string>
+    <string name="notinfra">Không có thông tin hạ tầng. Vui lòng chọn mã kết cuối khác.</string>
+    <string name="nguoilienheisempty">Người liên hệ không được để trống</string>
+    <string name="sdtlienhe">Số điện thoại liên hệ không được để trống</string>
+    <string name="hatangempty">Bạn chưa chọn thông tin hạ tầng</string>
+    <string name="hatangnok">Hạ tầng khảo sát NOK. Vui lòng chọn hạ tầng khác</string>
+    <string name="surveyempty">Bạn phải kiểm tra thông tin hạ tầng trước khi kết thúc khảo sát</string>
+    <string name="capdong">Cáp đồng</string>
+    <string name="capdongtruc">Cáp đồng trục</string>
+    <string name="capquang">Cáp quang</string>
+    <string name="quanggpon">Quang GPON</string>
+    <string name="maxservice">Bạn không được nhập quá số lượng cho phép là : </string>
+    <string name="selectcontract">Chọn hợp đồng</string>
+    <string name="infochangeinfra">Thông tin thuê bao chuyển đổi công nghệ</string>
+    <string name="strhistorycdkm">Lịch sử khuyến mại thuê bao</string>
+    <string name="tgianhuongkm">TG Hưởng KM</string>
+    <string name="reasonkm">Lý do<font color="red">*</font></string>
+    <string name="ctvtuvan">CTV Tư Vấn<font color="red">*</font></string>
+    <string name="selectctvtuvan">Chọn CTV tư vấn</string>
+    <string name="nguoitao">Người tạo</string>
+    <string name="addressrequest">Địa chỉ YC</string>
+    <string name="daterequest">Ngày YC</string>
+    <string name="statusRq12">Tạo YC - Bỏ qua KS</string>
+    <string name="statusRq33">Đấu nối - Triển khai</string>
+    <string name="statusRq36">Đấu nối - Đang triển khai</string>
+    <string name="statusRq48">Hoàn thành công việc</string>
+    <string name="statusRq03">Hủy yêu cầu - Triển khai</string>
+    <string name="statusRq06">Hủy yêu cầu - Đang triển khai</string>
+    <string name="statusRq02">Hủy YC - Bỏ qua KS</string>
+    <string name="versiontest">Tải bản thử nghiệm</string>
+    <string name="confirmUpgradeVersion">Bạn có chắc chắn muốn tải bản thử nghiệm? Lưu ý: Bạn vẫn có thể sử dụng song song bản thử nghiệm và phiên bản mBCCS hiện tại.</string>
+    <string name="versiontest2">Cập nhật phiên bản hồ sơ điện tử</string>
+    <string name="confirmUpgradeVersion2">Bạn có chắc chắn muốn tải bản bản vá lỗi?</string>
+    <string name="notitem">Hình thức hòa mạng không cấu hình chọn hàng hóa</string>
+    <string name="notpermissiondeposit">Bạn không được phép chuyển đổi hình thức rút đặt cọc cho lần gia hạn này.</string>
+    <string name="updatecustype">Bạn phải thay đổi loại khách hàng theo qui hoạch mới.</string>
+    <string name="updatecustypePr">Bạn phải thay đổi loại khách hàng đại diện theo qui hoạch mới.</string>
+    <string name="strviewcommit">Xem cam kết số</string>
+    <string name="isdnemptyNP">Bạn phải chọn số isdn</string>
+    <string name="summoney">Tổng phí : %s</string>
+    <string name="suggesscdt">Tư vấn cước đóng trước</string>
+    <string name="chargetb">Mức cước trung bình hàng tháng : %s</string>
+    <string name="notdataadvisier">Không có dữ liệu tư vấn cước đóng trước. Vui lòng kiểm tra lại</string>
+    <string name="chargeMonth">Cước hàng tháng : %s</string>
+    <string name="validatestreetblockcd">Bạn phải nhập thông tin tổ trong phần địa chỉ thông báo cước</string>
+    <string name="notaddresskm">Thuê bao thiếu thông tin địa chỉ lắp đặt . Vui lòng kiểm tra lại</string>
+    <string name="notprovince">Thuê bao thiếu thông tin tỉnh . Vui lòng kiểm tra lại</string>
+    <string name="notdistrict">Thuê bao thiếu thông tin huyện . Vui lòng kiểm tra lại</string>
+    <string name="notprecint">Thuê bao thiếu thông tin địa chỉ lắp đặt xã. Vui lòng kiểm tra lại</string>
+    <string name="confirmuntick">Bạn phải chọn lý do bỏ tích không chính chủ</string>
+
+
+
+    <string name="dsthuebaodskhchangesim">Danh sách TB ĐK theo giấy tờ %s KH</string>
+    <string name="transfercus">Chuyển nhượng TB trả trước</string>
+    <string name="isvalidateMarknotowner">Khách hàng phải là chính chủ thì mới thực hiện được chức năng này</string>
+    <string name="confirmTransfer">Bạn có chắc chắn muốn chuyển nhượng khách hàng không ?</string>
+    <string name="transferCusSuccess">Chuyển nhượng khách hàng thành công</string>
+    <string name="validateExpiredate">Bạn phải nhập ngày hết hạn</string>
+    <string name="khhm18">Khách hàng phải đủ 18 tuổi</string>
+    <string name="checkcmtngaycap15">Ngày cấp CMT so với ngày hiện tại không được vượt quá 15 năm</string>
+    <string name="userinfo">Thông tin khách hàng sử dụng</string>
+    <string name="reuseCus">Sử dụng lại thông tin người đại diện</string>
+    <string name="not_data_cus">Không tin thấy dữ liệu khách hàng yêu cầu</string>
+    <string name="selectCust">Chọn khách hàng</string>
+    <string name="selectcusted">Đã chọn thông tin khách hàng</string>
+    <string name="notselectpeopleused">Bạn phải nhập thông tin người sử dụng</string>
+    <string name="signDateEmptyThan">Ngày ký phải nhỏ hơn hoặc bằng ngày hiện tại</string>
+    <string name="notreaccount">Bạn phải chọn thông tin hợp đồng </string>
+    <string name="noticepaydebit">Vui lòng thực hiện gạch nợ tại màn hình này, nếu thực hiện gạch nợ tại công cụ khác (Anypay..), bạn phải thực hiện tìm kiếm lại thuê bao!</string>
+    <string name="TDTTCVT">Thay đổi thông tin cục viễn thông</string>
+    <string name="notaloweditcus">Khách hàng không chính chủ không được phép thay đổi thông tin</string>
+    <string name="qouataname">Hạn mức</string>
+    <string name="qoutarequets">Bạn còn tồn %s yêu cầu NOK chưa hủy . Vui lòng vào chức năng quản lý yêu cầu để thực hiện hủy yêu cầu.</string>
+    <string name="manageApParam">Cấu hình tham số</string>
+    <string name="resetdata">Nhập lại</string>
+    <string name="tthatang">TT Kết cuối</string>
+    <string name="lb_btn_ulock_isdn">Đang thực hiện ulock số</string>
+    <string name="depositcds">Đặt cọc</string>
+    <string name="signprofile">Chữ ký</string>
+    <string name="omicnel">Bán hàng đa kênh</string>
+    <string name="validateProduct">Gói cước không hợp lệ . Vui lòng kiểm tra lại</string>
+    <string name="validateReasoncode">Lý do hòa mạng không hợp lệ . Vui lòng kiểm tra lại</string>
+</resources>

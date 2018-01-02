@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+             android:layout_alignParentTop="true"
+            android:background="@color/list_background_pressed_vt" >
+
+            <TextView
+                android:id="@+id/textitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageDetail"
+        android:scaleType="fitXY"
+        />
+		<LinearLayout 
+    android:id="@+id/lnButton"
+    android:paddingTop="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnselectImage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+        android:filterTouchesWhenObscured="true"
+
+        android:textColor="#fff"
+        android:text="@string/selectimage"
+        android:textSize="@dimen/text_size_title" />
+
+    <View
+        android:id="@+id/btnView"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/line_button_color" />
+
+    <Button
+        android:id="@+id/btndeleteImage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+
+        android:textColor="#fff"
+         android:text="@string/deleteimage"
+        android:textSize="@dimen/text_size_title" />
+
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/textnomal"
+            android:layout_marginBottom="@dimen/padding_bottom"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/margin_text_1"
+            android:text="@string/strHistorySale"
+            android:textColor="@color/textColorInfo"
+            android:textSize="@dimen/sp15" >
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_view" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10" >
+
+        <View
+            android:layout_width="@dimen/view_size"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_view" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/bg_tv_vt"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="9dp"
+            android:text="@string/tv_date_sale"
+            android:textSize="@dimen/text_size_title" />
+
+        <View
+            android:layout_width="@dimen/view_size"
+            android:layout_height="fill_parent"
+            android:background="@color/color_view" />
+		
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/white"
+            android:background="@color/bg_tv_vt"
+            android:gravity="center"
+            android:padding="9dp"
+            android:text="@string/tv_amount_tax_sale"
+          	android:textSize="@dimen/text_size_title"/>
+        <View
+            android:layout_width="@dimen/view_size"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_view" />
+    </LinearLayout>
+	
+    <ExpandableListView
+        android:id="@+id/lv_view_history_sale_trans"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:groupIndicator="@null" />
+	<TextView
+        android:id="@+id/sms11"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height_l"
+        android:text="@string/notConttenSale"
+        android:gravity="center"
+        android:visibility="gone" />
+</LinearLayout>

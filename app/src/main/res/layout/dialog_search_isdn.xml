@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSearch_Dialog_ShowData"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtTitleOnlineDialog"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_spinner_item"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/dsthuebaodskh"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textDialogTitle" />
+
+        <EditText
+            android:id="@+id/edtseach"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/search_c"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:prompt="@string/title_spinner_id_num" />
+		
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_spinner_item"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/botichkcc"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="11sp"
+             />
+        <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+            android:id="@+id/lvsubparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:scrollbars="none" >
+        </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+
+
+        <LinearLayout
+            android:id="@+id/ln_lydochinhchu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="5"
+                android:text="@string/lydountick" />
+
+            <Spinner
+                android:id="@+id/spinner_reasonuntick"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1" />
+
+            <ProgressBar
+                android:id="@+id/prbreasonuntick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical|center_horizontal" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnok"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:text="@string/ok"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</ScrollView>

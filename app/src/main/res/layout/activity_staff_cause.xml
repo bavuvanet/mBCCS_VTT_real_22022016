@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<TextView
+		android:id="@+id/tv_name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="[Ten Canh Bao]"
+		android:textColor="@color/white"
+		android:background="@color/colorPrimary"
+		android:padding="10dp"
+		android:textSize="18sp"
+		android:textStyle="bold"/>
+
+	<LinearLayout
+		android:padding="10dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/tv_code"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="[Ma chi tieu]"/>
+
+		<TextView
+			android:id="@+id/tv_time_start"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/alarm_time_start"/>
+
+		<TextView
+			android:id="@+id/tv_time_accrued"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/alarm_time_accrued"/>
+
+		<TextView
+			android:id="@+id/tv_time_nok"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/alarm_time_nok"/>
+
+		<TextView
+			android:id="@+id/tv_content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/alarm_content"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="5dp"
+			android:text="@string/cause_title"/>
+
+		<android.support.v7.widget.AppCompatSpinner
+			android:id="@+id/sp_cause"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAlignment="center"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="5dp"
+			android:text="@string/cause_detail_title"/>
+
+		<EditText
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:id="@+id/edt_reason"
+			android:lines="5"
+			android:gravity="top|left"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/bg_white_default"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:gravity="right">
+			<Button
+				android:id="@+id/btn_close"
+				android:textColor="@color/white"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/cause_btn_close"/>
+			<Button
+				android:id="@+id/btn_update"
+				android:textColor="@color/white"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/cause_btn_update"/>
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

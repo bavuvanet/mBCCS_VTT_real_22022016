@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sothuebao" />
+
+        <EditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:digits="0123456789+"
+            android:maxLength="11" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnSelectdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:text="20/02/1990"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/icon_2muiten"
+            android:contentDescription="arrow" />
+
+        <EditText
+            android:id="@+id/edtToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:text="20/02/1990"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_delete_height"
+        android:layout_marginTop="@dimen/padding_relaback"
+        android:layout_marginBottom="@dimen/padding_relaback"
+        android:background="@drawable/round_button"
+        android:textColor="@color/white"
+        android:text="@string/search" />
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvNoData"
+            android:text="@string/advisory_no_data_text"
+            android:textColor="@color/gray_1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ListView
+            android:id="@+id/lvCardInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lvCardInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

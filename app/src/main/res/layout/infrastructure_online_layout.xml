@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin" >
+
+        <RelativeLayout
+            android:id="@+id/rela1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="80dip"
+                android:layout_height="@dimen/button_height"
+                android:gravity="center_vertical"
+                android:text="@string/service" />
+
+            <Spinner
+                android:id="@+id/spServiceIDNum"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/margin_text_1"
+                android:layout_toRightOf="@+id/txt1"
+                android:gravity="center_vertical"
+                android:prompt="@string/title_spinner_id_num" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela1"
+            android:layout_marginTop="6dip" >
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="80dip"
+                android:layout_height="@dimen/button_height"
+                android:gravity="center_vertical"
+                android:text="Công nghệ" />
+
+            <Spinner
+                android:id="@+id/infraType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/margin_text_1"
+                android:layout_toRightOf="@+id/txt2"
+                android:gravity="center_vertical"
+                android:prompt="@string/title_spinner_id_num" />
+        </RelativeLayout>
+        <!--
+        <LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/rela3"
+			android:orientation="horizontal" >
+			<EditText
+				android:id="@+id/edtSearchIDNum"
+				android:layout_width="0dip"
+				android:layout_height="@dimen/button_height"
+				android:layout_weight="1"
+				android:drawableLeft="@drawable/icon_search"
+				android:drawablePadding="@dimen/padding_text"
+				android:text="@string/hint_text_search_station"
+				android:singleLine="true"
+				android:textSize="@dimen/text_size_nomal" />
+			<Button
+				android:id="@+id/btnSearch"
+				android:layout_width="34dip"
+				android:layout_height="30dip"
+				android:layout_marginBottom="4dip"
+				android:layout_marginLeft="4dip"
+				android:layout_marginTop="4dip"
+				android:background="@drawable/list_clicked" />
+		</LinearLayout>
+        -->
+
+    </RelativeLayout>
+
+    <com.viettel.maps.MapView
+        xmlns:vtmap="http://schemas.android.com/apk/lib/com.viettel.maps"
+        android:id="@+id/idMapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        vtmap:appKey="670e813ba8994d376f69289f235fd4c4"
+        vtmap:gpsControlEnabled="true"
+        vtmap:scaleControlEnabled="true"
+        vtmap:zoomControlEnabled="true" />
+
+</LinearLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:text="@string/strhistorycdkm"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_13" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/padding_right"
+            android:ems="6"
+            android:text="@string/tgianhuongkm"
+            android:textSize="@dimen/text_size_13" />
+
+        <Spinner
+            android:id="@+id/spn_tgapdung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="@dimen/padding_right"
+            android:ems="6"
+            android:text="@string/makmmoi"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:id="@+id/edtPromotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="@string/chonctkm1"
+            android:text=""
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_13" />
+
+        <ProgressBar
+            android:id="@+id/prbPromotion"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="7dp"
+            android:ems="6"
+            android:text="CT cước ĐTHT"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/txt_ctdcht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="hhhhhhhhhhh"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="@dimen/padding_right"
+            android:ems="6"
+            android:text="@string/cuoc_dong_truoc_required"
+            android:textSize="@dimen/text_size_13" />
+
+        <Spinner
+            android:id="@+id/spnCuocDongTruoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/prbCuocdongtruoc"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="@dimen/padding_right"
+            android:ems="6"
+            android:text="@string/reasonkm"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:id="@+id/edtreason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0.95"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="@string/chonlydo"
+            android:text=""
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_13" />
+
+        <ProgressBar
+            android:id="@+id/prbreason"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="@dimen/padding_right"
+            android:ems="6"
+            android:text="@string/ctvtuvan"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:id="@+id/edtctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:text="@string/selectctvtuvan"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_13" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnok"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="30dp"
+            android:background="@drawable/round_button_common"
+            android:filterTouchesWhenObscured="true"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/btn_apply"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:visibility="gone"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/line_button_color" />
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/round_button_common"
+            android:text="@string/boquaReq"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+</LinearLayout>

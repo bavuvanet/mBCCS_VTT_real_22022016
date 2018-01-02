@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<EditText
+        android:id="@+id/searchLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:background="@drawable/edittext"
+        android:hint="@string/strSearchLocation"
+        android:textSize="@dimen/text_size_nomal" />
+    <View
+        android:id="@+id/v"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+
+    <ListView
+        android:id="@+id/lv_collect_maket"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_text_5" >
+    </ListView>
+
+</LinearLayout>

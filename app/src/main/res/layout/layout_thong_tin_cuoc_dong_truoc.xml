@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/padding_left"
+              android:paddingRight="@dimen/padding_right"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="@integer/d5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Tên cước đóng trước" />
+
+        <EditText
+
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="2dp"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="Chọn loại KH"
+            android:longClickable="false"
+            android:text=""
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="@integer/d5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Mã cước đóng trước" />
+
+        <EditText
+
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="@integer/d4"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="2dp"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="Chọn loại KH"
+            android:longClickable="false"
+            android:text=""
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_content" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="?android:buttonBarButtonStyle"
+            android:id="@+id/btnFinish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_s"
+            android:layout_weight="1"
+
+            android:text="@string/capnhat"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title"/>
+
+        <Button
+            style="?android:buttonBarButtonStyle"
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_s"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+
+            android:text="@string/ketcuoiBtnBoQua"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title"/>
+    </LinearLayout>
+
+</LinearLayout>

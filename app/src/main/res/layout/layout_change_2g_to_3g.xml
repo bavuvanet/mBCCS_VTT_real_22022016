@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/program_chage"
+                    android:textSize="@dimen/text_size_13" />
+
+                <Spinner
+                    android:id="@+id/spn_program"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1" />
+
+                <ProgressBar
+                    android:id="@+id/prbProgram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnRefreshProgram"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_menu_refresh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/register_new_tv7"
+                    android:textSize="@dimen/text_size_13" />
+
+                <EditText
+                    android:id="@+id/edt_cus_name"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:maxLength="50" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/isdnStar"
+                    android:textSize="@dimen/text_size_13" />
+
+                <EditText
+                    android:id="@+id/edtCusPhone"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:inputType="phone"
+                    android:maxLength="12" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/imei2G"
+                    android:textSize="@dimen/text_size_13" />
+
+                <EditText
+                    android:id="@+id/edtImei2g"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:maxLength="20" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_spinner"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/handset3G"
+                    android:textSize="@dimen/text_size_13" />
+
+                <TextView
+                    android:id="@+id/tvHandsetChange"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_normal_background"
+                    android:text="@string/chooseHandset"
+                    android:textColor="@color/textDialogTitle" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnVas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/vasProduct"
+                    android:textSize="@dimen/text_size_13" />
+
+                <Spinner
+                    android:id="@+id/spnVas"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_marginLeft="@dimen/margin_text_1"
+                    android:layout_weight="1" />
+
+                <ProgressBar
+                    android:id="@+id/prbVas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnRefreshVas"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_menu_refresh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnImei3G"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/imei3G"
+                    android:textSize="@dimen/text_size_13" />
+
+                <TextView
+                    android:id="@+id/tvImei3G"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLength="20" >
+                </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvChooseChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_normal_background"
+                android:text="@string/chooseChannel"
+                android:textColor="#11A9AA"
+                android:textSize="@dimen/text_size_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvChooseStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_normal_background"
+                android:text="Chọn nhân viên phát triển"
+                android:textColor="#11A9AA"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_bootom_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/btn_apply"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+</LinearLayout>

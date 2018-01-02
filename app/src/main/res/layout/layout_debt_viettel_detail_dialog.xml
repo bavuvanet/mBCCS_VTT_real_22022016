@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDebtType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_title"
+            android:paddingBottom="@dimen/activity_margin_half"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_margin_half"
+            android:text="@string/debt_viettel_pay" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/start_cycle_balance1" />
+
+        <TextView
+            android:id="@+id/tvStaOfCycleBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_margin_half_and_half"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/debt_type" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/increase_balance" />
+
+        <TextView
+            android:id="@+id/tvAddCycleBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_margin_half_and_half"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/debt_type" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/decrease_balance" />
+
+        <TextView
+            android:id="@+id/tvGetCycleBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_margin_half_and_half"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/debt_type" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/end_cycle_balance1" />
+
+        <TextView
+            android:id="@+id/tvEndCycleBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_margin_half_and_half"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/debt_type" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:paddingLeft="@dimen/activity_horizontal_margin">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtConfirmPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/staff_confirm"
+                android:inputType="numberDecimal|numberSigned"
+                android:maxLength="12" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvDifferent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_margin_half_and_half"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="italic" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:paddingLeft="@dimen/activity_horizontal_margin">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/reason_diferent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCloseDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@color/colorAccent"
+                android:paddingLeft="@dimen/activity_margin_half_and_half"
+                android:paddingRight="@dimen/activity_margin_half_and_half"
+                android:text="@string/cancel"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_margin_half_and_half"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@color/colorAccent"
+                android:paddingLeft="@dimen/activity_margin_half_and_half"
+                android:paddingRight="@dimen/activity_margin_half_and_half"
+                android:text="@string/ok"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/standard.spacing_small">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/standard.spacing_small"
+        android:layout_marginRight="@dimen/standard.spacing_small"
+        android:layout_toLeftOf="@+id/layoutCount"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_survey_content" />
+
+    <LinearLayout
+        android:id="@+id/layoutCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imvDown"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_down_blue" />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/standard.spacing_small"
+            android:layout_marginRight="@dimen/standard.spacing_small"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_survey_content" />
+
+        <ImageView
+            android:id="@+id/imvUp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_up_blue" />
+    </LinearLayout>
+
+</RelativeLayout>
+

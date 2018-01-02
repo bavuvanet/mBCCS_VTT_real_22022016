@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="height_imv">50dp</dimen>
+    <dimen name="width_imv">50dp</dimen>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/tbduongday"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+
+    <ListView
+        android:id="@+id/lvSubChild"
+        android:layout_width="match_parent"
+        android:layout_height="388dp" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btncancel"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+        android:background="@color/list_background_pressed_vt"
+        android:text="@string/boquaReq"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_title" />
+
+</LinearLayout>

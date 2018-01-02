@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_text_5"
+    android:paddingRight="@dimen/margin_text_5" >
+
+    <TextView
+        android:id="@+id/tvHistoryCare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:paddingBottom="@dimen/margin_text_1"
+        android:paddingTop="@dimen/margin_text_1"
+        android:text="@string/strInfoAccSale"
+        android:textColor="@color/textColorInfo"
+        android:textSize="@dimen/sp18" >
+    </TextView>
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingBottom="@dimen/padding_top_text_info"
+            android:paddingTop="@dimen/padding_top_text_info"
+            android:text="@string/tvRemain" />
+
+        <TextView
+            android:id="@+id/tvRemain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_top_text_info"
+            android:paddingTop="@dimen/padding_top_text_info"
+            android:textColor="@color/textColorVT" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingBottom="@dimen/padding_top_text_info"
+            android:paddingTop="@dimen/padding_top_text_info"
+            android:text="@string/tvPaymentDC" />
+
+        <TextView
+            android:id="@+id/tvPaymentDC"
+             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_top_text_info"
+            android:paddingTop="@dimen/padding_top_text_info"
+            android:textColor="@color/textColorVT" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingBottom="@dimen/padding_top_text_info"
+            android:paddingTop="@dimen/padding_top_text_info"
+            android:text="@string/tvPaymentSubmit" />
+
+        <TextView
+            android:id="@+id/tvPaymentSubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_top_text_info"
+            android:paddingTop="@dimen/padding_top_text_info"
+            android:textColor="@color/textColorVT" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_l"
+            android:layout_weight="1"
+            android:background="@color/bg_tv_vt"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:text="@string/tvStockNameTitle"
+            android:textSize="@dimen/text_size_title" />
+
+        <View
+            android:layout_width="@dimen/view_size"
+            android:layout_height="fill_parent"
+            android:background="@color/color_view" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_l"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@color/bg_tv_vt"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/tvTotalDepositTitle"
+          android:textSize="@dimen/text_size_title"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/smsDetailPaymont"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_text_1"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:text="@string/text_list_pay"
+        android:textColor="@color/text_nomal"
+        android:textSize="@dimen/text_size_nomal"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lvListProduct"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="standard.minimum">1px</dimen>
+
+    <dimen name="standard.recycler_padding">3dp</dimen>
+
+    <dimen name="standard.action_button.size">48dp</dimen>
+    <dimen name="standard.edit_text.size">48dp</dimen>
+    <dimen name="standard.edit_text.padding_left_right">8dp</dimen>
+    <dimen name="standard.edit_text.padding_top_bottom">12dp</dimen>
+
+    <dimen name="standard.menu_item.size">48dp</dimen>
+    <dimen name="standard.search_view.size">48dp</dimen>
+
+    <!-- ===================== SPACING ===================== -->
+    <dimen name="standard.spacing_micro">2dp</dimen>
+    <dimen name="standard.spacing_minor">4dp</dimen>
+    <dimen name="standard.spacing_minor_plus">6dp</dimen>
+    <dimen name="standard.spacing_small">8dp</dimen>
+    <dimen name="standard.spacing_small_plus">12dp</dimen>
+    <dimen name="standard.spacing_medium">16dp</dimen>
+    <dimen name="standard.spacing_medium_plus">20dp</dimen>
+    <dimen name="standard.spacing_large">24dp</dimen>
+    <dimen name="standard.spacing_large_plus">30dp</dimen>
+
+
+    <!-- ===================== TEXT SIZE ===================== -->
+    <dimen name="standard.text_size_extra_massive">28sp</dimen>
+    <dimen name="standard.text_size_massive">26sp</dimen>
+    <dimen name="standard.text_size_extra_major">22sp</dimen>
+    <dimen name="standard.text_size_major_plus">20sp</dimen>
+    <dimen name="standard.text_size_major">18sp</dimen>
+    <dimen name="standard.text_size_large">16sp</dimen>
+    <dimen name="standard.text_size_medium">14sp</dimen>
+    <dimen name="standard.text_size_small">12sp</dimen>
+
+    <dimen name="standard.adapter.member.item.height">100dp</dimen>
+
+    <dimen name="standard.adapter.conversation.item.height">90dp</dimen>
+
+</resources>

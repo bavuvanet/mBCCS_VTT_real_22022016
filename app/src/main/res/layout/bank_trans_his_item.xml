@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/tvRequestTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/12 - Trần Thị Quí"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRequestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tvAmountRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tvOpeningBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tvClosingBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tvCreateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
+        android:textSize="@dimen/text_size_14" />
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/margin_5"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvVasName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_size_14"
+        android:text="vas name"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvVasPrice"
+        android:text="10.000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:textSize="@dimen/text_size_14"
+        android:text="đ/tháng"/>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewBTS"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#ffffffff"
+            android:dropDownWidth="match_parent"
+            android:dropDownVerticalOffset="10dp"
+            android:ems="10"
+            android:hint="@string/mbccs_input_bts_code"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:popupBackground="@drawable/bg_radius_and_shadow"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@id/imgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.viettel.maps.MapView xmlns:vtmap="http://schemas.android.com/apk/lib/com.viettel.maps"
+            android:id="@+id/idMapViewStaff"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            vtmap:appKey="670e813ba8994d376f69289f235fd4c4"
+            vtmap:gpsControlEnabled="true"
+            vtmap:scaleControlEnabled="true"
+            vtmap:zoomControlEnabled="true" />
+    </LinearLayout>
+</LinearLayout>

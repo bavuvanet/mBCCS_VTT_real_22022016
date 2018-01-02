@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" 
+    android:orientation="vertical">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <TextView 
+            android:id="@+id/vl_item_isdn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ISDN"
+            android:textSize="@dimen/text_size_content"
+            android:textStyle="bold"/>
+        <CheckBox 
+            android:id="@+id/cb_item_approve"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <TextView 
+            android:id="@+id/vl_item_staff_created"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="left"
+            android:text="creator"
+            android:textSize="@dimen/text_size_sale_content"/>
+        <TextView 
+            android:id="@+id/vl_item_download_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="link download"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <TextView 
+            android:id="@+id/vl_item_date_created"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="left"
+            android:text="Ngay tao"
+            android:textSize="@dimen/text_size_sale_content"/>
+        <TextView 
+            android:id="@+id/vl_item_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textSize="@dimen/text_size_sale_content"
+            android:gravity="left"
+            android:text="Trang thai"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</LinearLayout>

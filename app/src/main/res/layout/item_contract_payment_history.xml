@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" 
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Số tiền"
+            android:textSize="@dimen/text_size_content" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="MH0987654"
+            android:textSize="@dimen/text_size_content"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCreateDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0977555115"
+        android:textSize="@dimen/text_size_content" />
+
+    <TextView
+        android:id="@+id/txtPaymentTypeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_amount"
+        android:textSize="@dimen/text_size_content" />
+
+</LinearLayout>

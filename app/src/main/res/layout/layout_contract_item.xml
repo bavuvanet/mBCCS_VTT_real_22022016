@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/tvContractNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ContractNo"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="huYPQ" />
+
+    <TextView
+        android:id="@+id/tvIsdn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0965747979" />
+
+    <TextView
+        android:id="@+id/tvIdNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="112499107" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ha Noi" />
+
+</LinearLayout>

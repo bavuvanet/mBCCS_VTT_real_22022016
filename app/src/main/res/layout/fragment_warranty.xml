@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="@dimen/margin_5"
+    android:paddingRight="@dimen/margin_5"
+    android:paddingTop="@dimen/margin_5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbWarrantyRepair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tiepnhan"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <RadioButton
+            android:id="@+id/rbLookupReturnWarranty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/txt_lookup_return_warranty"
+            android:textSize="@dimen/text_size_nomal" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/lnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <Spinner
+                android:id="@+id/spnMethod"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/warranty_method" />
+
+            <Spinner
+                android:id="@+id/spnObjectType"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/warranty_object_type" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edtFromDate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:longClickable="false"
+                android:text="10/10/2015"
+                android:textSize="@dimen/text_size_content" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_2muiten"
+                android:contentDescription="arrow" />
+
+            <EditText
+                android:id="@+id/edtToDate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calendar_07"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:text="20/10/2015"
+                android:textSize="@dimen/text_size_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edtSerial"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:hint="@string/inputSerialDevice"
+            android:paddingLeft="@dimen/padding_text_5"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <ImageButton
+            android:id="@+id/imgSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:src="@drawable/search_c" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnAccept"
+        style="@style/layout_padding"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_device_info"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_size_content_list"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRecordTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_record_total"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_sale_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_1" />
+
+        <ListView
+            android:id="@+id/lvtransacsion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.68" >
+        </ListView>
+        
+        <EditText 
+            android:id="@+id/edtNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ghi chú"/>
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="@dimen/button_width_extra"
+            android:layout_height="@dimen/button_height_litter"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/txt_return_device"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_nomal1"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linInfrastructure_1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_lin_layout_channel_manager"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:background="@drawable/background_lin_menu"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            android:src="@drawable/ic_ha_tang" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_text"
+            android:text="@string/infrastructure_2"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+
+    <LinearLayout
+        android:id="@+id/linInfrastructure_2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_lin_layout_channel_manager"
+        android:layout_below="@+id/linInfrastructure_1"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:background="@drawable/background_lin_menu"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/ic_ha_tang" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_text"
+            android:text="@string/infrastructure_1"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+
+    <LinearLayout
+        android:id="@+id/linInfrastructure_3"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_lin_layout_channel_manager"
+        android:layout_below="@+id/linInfrastructure_2"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:background="@drawable/background_lin_menu"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_so_lieu_kd_tram" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_text"
+            android:text="@string/infrastructure_show_data"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+</RelativeLayout>

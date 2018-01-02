@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:gravity="left|center_vertical"
+            android:ems="8"
+            android:text="@string/orderid" />
+
+        <TextView
+            android:id="@+id/txtorderid"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:ems="8"
+            android:gravity="left|center_vertical"
+            android:text="@string/nameorderid" />
+
+        <TextView
+            android:id="@+id/txtnameorderid"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:gravity="left|center_vertical"
+            android:ems="8"
+            android:text="@string/timeorder" />
+
+        <TextView
+            android:id="@+id/txttimeorder"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnStockModel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_text_5"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Loại hàng"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#0D9396" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Kho cấp trên"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#0D9396" />
+
+            <LinearLayout
+                 android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/tvQuantitySaling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/button_height"
+                    android:text="SL Đặt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#D4D4D4" />
+
+                <ListView
+                    android:id="@+id/listcontactorder"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    >
+                </ListView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#D4D4D4" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D4D4D4" />
+        </LinearLayout>
+    </LinearLayout>
+	<LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_lin_layout_channel_manager"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnduyetdonhang"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/duyetdonhang"
+            android:filterTouchesWhenObscured="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btnhuydonhang"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_weight="1"
+            android:filterTouchesWhenObscured="true"
+
+            android:text="@string/refuseOrder"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+</LinearLayout>

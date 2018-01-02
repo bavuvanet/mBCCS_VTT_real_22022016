@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Chi tiết hàng hóa"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical|center_horizontal"
+             android:textSize="@dimen/text_size_16"
+             android:layout_marginLeft="@dimen/padding_left"
+             android:ems="6"
+            android:text="Loại mặt hàng"/>
+          <EditText
+        android:id="@+id/edtloaimathang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:ems="10"
+        android:enabled="false"
+        android:textSize="@dimen/text_size_nomal" >
+    </EditText>
+    </LinearLayout>
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:ems="6"
+             android:layout_gravity="center_vertical|center_horizontal"
+             android:textSize="@dimen/text_size_16"
+             android:layout_marginLeft="@dimen/padding_left"
+            android:text="Serial"/>
+          <EditText
+        android:id="@+id/edtSerial"
+         android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:ems="10"
+        android:textSize="@dimen/text_size_nomal" >
+    </EditText>
+    </LinearLayout>
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:ems="6"
+             android:layout_gravity="center_vertical|center_horizontal"
+             android:textSize="@dimen/text_size_16"
+             android:layout_marginLeft="@dimen/padding_left"
+            android:text="Tên mặt hàng"/>
+          <EditText
+        android:id="@+id/edttenmathang"
+         android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:ems="10"
+        android:textSize="@dimen/text_size_nomal" >
+    </EditText>
+    </LinearLayout>
+  	 <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:ems="6"
+             android:layout_gravity="center_vertical|center_horizontal"
+             android:textSize="@dimen/text_size_16"
+             android:layout_marginLeft="@dimen/padding_left"
+            android:text="Mã mặt hàng"/>
+          <EditText
+        android:id="@+id/edtmamathang"
+         android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:ems="10"
+        android:textSize="@dimen/text_size_nomal" >
+    </EditText>
+    </LinearLayout>
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:ems="6"
+             android:layout_gravity="center_vertical|center_horizontal"
+             android:textSize="@dimen/text_size_16"
+             android:layout_marginLeft="@dimen/padding_left"
+            android:text="Nhà SX"/>
+          <EditText
+        android:id="@+id/edtnhasx"
+         android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:ems="10"
+        android:textSize="@dimen/text_size_nomal" >
+    </EditText>
+    </LinearLayout>
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:ems="6"
+             android:layout_gravity="center_vertical|center_horizontal"
+             android:textSize="@dimen/text_size_16"
+             android:layout_marginLeft="@dimen/padding_left"
+            android:text="Giá"/>
+          <EditText
+        android:id="@+id/edtgia"
+         android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:ems="10"
+        android:textSize="@dimen/text_size_nomal" >
+    </EditText>
+    </LinearLayout>
+    
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btncamket"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+
+            android:text="Xem cam kết"
+            android:filterTouchesWhenObscured="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+     
+    </LinearLayout>
+     
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/ok"
+            android:filterTouchesWhenObscured="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+        <View
+            android:id="@+id/btnView"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/black" />
+        <Button
+            android:id="@+id/btnViewSaleTrans"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+</LinearLayout>

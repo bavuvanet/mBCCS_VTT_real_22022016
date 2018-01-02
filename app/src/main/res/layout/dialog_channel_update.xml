@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/height_dialog_update">	 
+	<LinearLayout
+		android:id="@+id/lin"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/btnUpdate_Dialog_Channel"
+		android:orientation="vertical"
+		android:paddingLeft="@dimen/activity_vertical_margin"
+		android:paddingRight="@dimen/activity_vertical_margin" >
+		<TextView
+			android:id="@+id/txtTitleOnlineDialog"
+			android:layout_width="fill_parent"
+			android:layout_height="@dimen/heigth_title_dialog"
+			android:gravity="center_vertical"
+			
+			android:text="@string/title_update_dialog_channel"
+			android:textColor="#48a8a7"
+			android:textSize="@dimen/text_size_title" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="@dimen/view_size"
+			android:background="@color/color_view" />
+		<EditText
+			android:id="@+id/edt_updateNumberDialog"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin_text_5"
+			android:inputType="number"
+			android:maxLength="15"
+			android:textSize="@dimen/text_size_title" />
+		<EditText
+			android:id="@+id/edt_updateContentDialog"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:maxLength="4000"
+			android:textSize="@dimen/text_size_title" />
+	</LinearLayout>
+	<Button
+		android:id="@+id/btnUpdate_Dialog_Channel"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/button_height"
+		android:layout_alignParentBottom="true"
+		android:filterTouchesWhenObscured="true"
+
+		android:text="@string/button_update_up"
+		android:textColor="#fff" />
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số TB: h004_ftth_phuongnt25"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_content_list"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvDeployArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đ/c lắp đặt"
+            android:textSize="@dimen/text_size_sale_content"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_text_1" >
+
+        <TextView
+            android:id="@+id/tvService"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dịch vụ FTTH"
+            android:textSize="@dimen/text_size_sale_content" />
+
+        <TextView
+            android:id="@+id/tvCuocNong"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cước nóng: 13456"
+            android:textSize="@dimen/text_size_sale_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_text_1" >
+
+        <TextView
+            android:id="@+id/tvNoTruoc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nợ trước: 0"
+            android:textSize="@dimen/text_size_sale_content" />
+
+        <TextView
+            android:id="@+id/tvNoPhatSinh"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nợ phát sinh: 12"
+            android:textSize="@dimen/text_size_sale_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_half"
+        android:layout_marginTop="@dimen/margin_text_1" >
+
+        <TextView
+            android:id="@+id/tvDaTT"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Đã TT: 0"
+            android:textSize="@dimen/text_size_sale_content" />
+
+        <TextView
+            android:id="@+id/tvPhaiTT"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Phải TT: 0"
+            android:textSize="@dimen/text_size_sale_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvKHTT"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:layout_weight="1"
+            android:text="KH thanh toán: 100000"
+            android:textSize="@dimen/text_size_sale_content" />
+    </LinearLayout>
+
+</LinearLayout>

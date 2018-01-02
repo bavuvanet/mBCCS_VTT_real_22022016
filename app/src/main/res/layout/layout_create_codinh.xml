@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_tinh_tp_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edtprovince"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.36"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint="Chọn Tỉnh/TP"
+                    android:longClickable="false"
+                    android:text=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_content">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_quan_huyen_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edtdistrict"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.35"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint="Chọn Quận/Huyện"
+                    android:longClickable="false"
+                    android:text=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_content">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_phuong_xa_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edtprecinct"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawablePadding="2dp"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint="Chọn Phường/Xã"
+                    android:longClickable="false"
+                    android:text=""
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_content"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnStreetBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblTo"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_to_thon_creat_address"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Spinner
+                    android:id="@+id/sqGroupAddress"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ProgressBar
+                    android:id="@+id/prbStreetBlock"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <Button
+                    android:id="@+id/btnRefreshStreetBlock"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_menu_refresh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center_vertical"
+                    android:text="Đường"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edtFlowAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:maxLength="50"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center_vertical"
+                    android:text="Số nhà"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edtHomeNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:maxLength="50" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lnghichu"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center_vertical"
+                    android:text="Ghi chú"
+                    android:textSize="@dimen/text_size_content" />
+
+                <EditText
+                    android:id="@+id/edtghichu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:maxLength="100" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_bootom_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollView1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+
+                    android:filterTouchesWhenObscured="true"
+                    android:text="@string/cancel"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+
+                    android:filterTouchesWhenObscured="true"
+                    android:text="@string/ok"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

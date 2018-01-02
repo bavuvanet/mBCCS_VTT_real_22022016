@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnCustomerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="@dimen/margin_text_5"
+            android:text="@string/txt_customer_info"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@color/gray_1" />
+
+        <Spinner
+            android:id="@+id/spnWarrantyType"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_text_5"
+            android:paddingTop="@dimen/margin_text_5" />
+
+        <EditText
+            android:id="@+id/edtCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_customer_name_hint"
+            android:paddingBottom="@dimen/margin_text_5"
+            android:paddingTop="@dimen/margin_text_5"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/edtIsdn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_isdn_hint"
+            android:paddingBottom="@dimen/margin_text_5"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:paddingTop="@dimen/margin_text_5"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_address_hint"
+            android:paddingBottom="@dimen/margin_text_5"
+            android:paddingTop="@dimen/margin_text_5"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/edtError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_warranty_error_description"
+            android:paddingBottom="@dimen/margin_text_5"
+            android:paddingTop="@dimen/margin_text_5"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnChannelInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="@dimen/margin_text_5"
+            android:text="@string/channel_receive_info"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@color/gray_1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="@dimen/margin_text_5"
+            android:text="@string/choose_channel_name"
+
+            android:textSize="@dimen/text_size_16" />
+
+
+        <Spinner
+            android:id="@+id/spnChannelType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half" />
+
+        <TextView
+            android:id="@+id/edtChannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_half"
+            android:hint="@string/channel_receive"
+            android:paddingBottom="@dimen/margin_text_5"
+            android:paddingTop="@dimen/margin_text_5"
+            android:background="@drawable/background_edtitext_click"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_common"
+            android:gravity="center"
+            android:text="@string/close_cap"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/line_button_color" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_common"
+            android:filterTouchesWhenObscured="true"
+            android:gravity="center"
+            android:text="@string/receive_call"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

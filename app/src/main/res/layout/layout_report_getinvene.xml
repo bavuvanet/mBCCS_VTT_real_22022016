@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right" >
+
+
+       <TextView
+                    android:id="@+id/txtinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_1"
+                    android:layout_marginTop="@dimen/margin_text_1"
+                    android:text="Danh sách thuê bao"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:id="@+id/viewhead"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/view_size"
+                    android:background="@color/color_view" />
+
+    <ListView
+        android:id="@+id/lv_report"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

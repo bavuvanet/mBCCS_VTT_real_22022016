@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <CheckedTextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_ln_button"
+        android:background="@drawable/button_normal_background"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:paddingLeft="@dimen/margin_15"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:singleLine="true"
+        android:text="@string/choose_trans_type"
+        android:textColor="@color/textDialogTitle"
+        android:textSize="@dimen/text_size_18"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textDialogTitle" />
+
+    <ListView
+        android:id="@+id/lvItem"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1" >
+    </ListView>
+
+    <include layout="@layout/common_button" />
+
+</LinearLayout>

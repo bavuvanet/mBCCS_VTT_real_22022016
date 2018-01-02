@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_view_payment"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_right" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edittext_acc"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp50"
+                android:layout_gravity="left|center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_content"
+                android:hint="@string/select_acc_charge"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:id="@+id/btn_search_acc"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_normal_background"
+                android:gravity="center_vertical|center_horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/icon_inner_width"
+                    android:layout_height="@dimen/icon_inner_width"
+                    android:layout_gravity="right|center_horizontal|center_vertical"
+                    android:background="@drawable/search_c"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_info_acc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice" >
+        </ListView>
+        
+        <com.viettel.maps.MapView
+			xmlns:vtmap="http://schemas.android.com/apk/lib/com.viettel.maps"
+			android:id="@+id/idmapview"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			vtmap:appKey="670e813ba8994d376f69289f235fd4c4"
+			vtmap:gpsControlEnabled="true"
+			vtmap:scaleControlEnabled="true"
+			vtmap:zoomControlEnabled="true" 
+			android:visibility="gone"/>
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_sale_trans_detail"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:padding="3dp" >
+	<TextView
+		android:id="@+id/tv_name_stock"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="@integer/d1"
+		android:background="#B18904"
+		android:gravity="center"
+		android:text="10/10/2014"
+		android:textColor="#fff"
+		android:textSize="@dimen/text_size_nomal" />
+	<View
+		android:layout_width="@dimen/view_size"
+		android:layout_height="fill_parent"
+		android:background="@color/color_view" />
+	<TextView
+		android:id="@+id/tv_quantity"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="@integer/d2"
+		android:background="#B18904"
+		android:gravity="center"
+		android:text="0"
+		android:textColor="#fff"
+		android:textSize="@dimen/text_size_nomal" />
+	<View
+		android:layout_width="@dimen/view_size"
+		android:layout_height="fill_parent"
+		android:background="@color/color_view" />
+	<TextView
+		android:id="@+id/tv_amount"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="@integer/d3"
+		android:background="#B18904"
+		android:gravity="center"
+		android:text="0"
+		android:textColor="#fff"
+		android:textSize="@dimen/text_size_nomal" />
+</LinearLayout>

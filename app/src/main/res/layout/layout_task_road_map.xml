@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/liRoadMap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.viettel.maps.MapView
+        xmlns:vtmap="http://schemas.android.com/apk/lib/com.viettel.maps"
+        android:id="@+id/mapTaskRoadMap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        vtmap:appKey="670e813ba8994d376f69289f235fd4c4"
+        vtmap:gpsControlEnabled="true"
+        vtmap:scaleControlEnabled="true"
+        vtmap:zoomControlEnabled="true" 
+        
+         />
+
+    <LinearLayout
+        android:id="@+id/linButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/chooseDateJob"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="@dimen/margin_text_1"
+
+            android:text="@string/chooseDateJob"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+</RelativeLayout>

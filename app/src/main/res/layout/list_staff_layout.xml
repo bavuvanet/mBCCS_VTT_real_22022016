@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_text_1"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:text="@string/text_list_pay"
+        android:textColor="@color/text_nomal"
+        android:textSize="@dimen/text_size_nomal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/lnSearchingLocation"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/searching_location"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+        	android:paddingRight="@dimen/activity_vertical_margin"
+            android:textColor="@color/text_nomal"
+            android:textSize="@dimen/text_size_nomal" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/autoSearchStaffName"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/margin_text_5"
+        android:layout_marginRight="@dimen/margin_text_5"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:drawableLeft="@drawable/search_c"
+        android:drawablePadding="5dp"
+        android:hint="@string/contentSearch"
+        android:paddingLeft="@dimen/padding_text_5"
+        android:textSize="@dimen/text_size_nomal" />
+
+    <Spinner
+        android:id="@+id/sp_list_channel_type"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:gravity="left"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:textSize="@dimen/text_size_title" />
+
+    <ListView
+        android:id="@+id/lv_staff"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/linsortBy"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvsortBy"
+            android:textColor="@color/color_view"
+            android:textSize="@dimen/text_size_title" />
+
+        <Spinner
+            android:id="@+id/sp_fillter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/text_size_nomal" />
+    </LinearLayout>
+
+</LinearLayout>

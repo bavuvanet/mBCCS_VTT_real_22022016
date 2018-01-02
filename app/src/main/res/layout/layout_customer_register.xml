@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<ScrollView
+		android:id="@+id/ScrollView01"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_above="@+id/btn_register"
+		android:layout_alignParentTop="true" >
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/so_isdn" />
+				<EditText
+					android:id="@+id/edit_isdn"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/goi_cuoc" />
+				<EditText
+					android:id="@+id/edit_goicuoc"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/nhap_serial" />
+				<EditText
+					android:id="@+id/edit_serial"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/nhap_matinh" />
+				<EditText
+					android:id="@+id/edit_matinh"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/nhap_mahuyen" />
+				<EditText
+					android:id="@+id/edit_mahuyen"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/nhap_maxa" />
+				<EditText
+					android:id="@+id/edit_maxa"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/tenkh" />
+				<EditText
+					android:id="@+id/edit_tenkh"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/gioitinh" />
+				<Spinner
+					android:id="@+id/spinner_gender"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/button_height"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4"
+					android:background="@drawable/background_spinner"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/ngaysinh" />
+				<EditText
+					android:id="@+id/edit_ngaysinh"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/loaigt" />
+				<Spinner
+					android:id="@+id/spinner_loaigt"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/button_height"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4"
+					android:background="@drawable/background_spinner"
+					android:textSize="@dimen/text_size_nomal" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/so_cmt" />
+				<EditText
+					android:id="@+id/edit_cmt"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/ngay_cap_cmt" />
+				<EditText
+					android:id="@+id/edit_ncap_cmt"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/ngay_dead_hchieu" />
+				<EditText
+					android:id="@+id/edit_ndead_hchieu"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/noi_cap_cmt" />
+				<EditText
+					android:id="@+id/edit_noicapcmt"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="5dp" >
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="@integer/d5"
+					android:text="@string/sonha" />
+				<EditText
+					android:id="@+id/edit_sonha"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:layout_marginLeft="2dp"
+					android:layout_weight="@integer/d4" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+	<Button
+		android:id="@+id/btn_register"
+		android:layout_width="@dimen/button_width"
+		android:layout_height="@dimen/button_height"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:filterTouchesWhenObscured="true"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/button_dongbo_background"
+		android:padding="4dp"
+		android:text="@string/dangky" />
+</RelativeLayout>

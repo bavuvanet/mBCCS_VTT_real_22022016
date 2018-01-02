@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+      <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/list_background_pressed_vt">
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/create_new_request_title"/>
+    </LinearLayout>
+      <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/padding_left"
+   		android:paddingRight="@dimen/padding_right"
+   		android:orientation="vertical"
+        >
+        <TextView
+        android:id="@+id/txtinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_text_1"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:text="@string/listpstn"
+        android:textColor="@color/list_background_pressed_vt"
+        android:textSize="@dimen/text_size_nomal" />
+
+    <View
+        android:id="@+id/viewhead"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+
+   <ListView
+       android:id="@+id/lstpstn"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/dp230" >
+       
+   </ListView>
+    <LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_lin_layout_channel_manager"
+        android:gravity="center"
+        android:orientation="horizontal"
+         >
+
+
+
+        <Button
+            android:id="@+id/btnhuy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_weight="1"
+
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+          
+      </LinearLayout>
+      
+</LinearLayout>

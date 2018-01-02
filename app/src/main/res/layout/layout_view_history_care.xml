@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_text_5"
+    android:paddingRight="@dimen/padding_text_5" >
+
+    <TextView
+        android:id="@+id/tvHistoryCare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:paddingBottom="@dimen/margin_text_1"
+        android:paddingTop="@dimen/margin_text_1"
+        android:text="@string/strHistoryCare"
+        android:textColor="@color/textColorInfo"
+        android:textSize="@dimen/sp18" >
+    </TextView>
+	
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+	<TextView
+        android:id="@+id/sms"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height_l"
+        android:text="@string/not_care"
+        android:gravity="center"
+        android:visibility="gone" />
+    <ListView
+        android:id="@+id/lv_view_history_care"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent" >
+    </ListView>
+
+</LinearLayout>

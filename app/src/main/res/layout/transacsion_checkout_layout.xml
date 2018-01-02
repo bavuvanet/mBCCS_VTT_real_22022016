@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnParent"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edtFromDate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:text="10/10/2015"
+            android:textSize="@dimen/text_size_content" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/icon_2muiten"
+            android:contentDescription="arrow" />
+
+        <EditText
+            android:id="@+id/edtToDate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_height"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/calendar_07"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:text="20/10/2015"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:text="@string/loaicongno"
+            android:textSize="@dimen/text_size_13" />
+
+        <Spinner
+            android:id="@+id/spn_congno"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:text="@string/trangthai"
+            android:textSize="@dimen/text_size_13" />
+
+        <Spinner
+            android:id="@+id/spn_status"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btntimkiem"
+            android:layout_width="@dimen/button_width_extra"
+            android:layout_height="@dimen/button_height_litter"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_nomal1"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSearchUtilities"
+            android:layout_width="@dimen/button_width_extra"
+            android:layout_height="@dimen/button_height_litter"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+
+            android:text="@string/tctienich"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_nomal1"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv12"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/padding_top"
+            android:text="@string/account_balance_bccs_bankplus"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <TextView
+            android:id="@+id/tvBCCSBankAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/padding_top"
+            android:singleLine="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_nomal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lntrans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtinfocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_text_1"
+            android:layout_marginLeft="@dimen/padding_left"
+            android:layout_marginTop="@dimen/margin_text_1"
+            android:paddingTop="@dimen/padding_top"
+            android:text="@string/dsgiaodich"
+            android:textColor="@color/list_background_pressed_vt"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <View
+            android:id="@+id/viewhead"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_size"
+            android:background="@color/color_view" />
+
+        <LinearLayout
+            style="@style/layout_padding"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/lvtransacsion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.68" >
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvCountTrans"
+                    android:layout_width="wrap_content"
+                    android:ems="15"
+                    android:singleLine="false"
+                    android:text="10"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/checkAllBox"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:text="@string/chonnganhang"
+                    android:textSize="@dimen/text_size_13" />
+
+                <Spinner
+                    android:id="@+id/spn_bank"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/height_spinner"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btntichtuyet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="5dp"
+
+            android:text="@string/tichduyet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_nomal1"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

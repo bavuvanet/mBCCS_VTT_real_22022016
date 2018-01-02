@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:text="@string/idhopdong"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+
+        <TextView
+            android:id="@+id/tvContractNo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:hint="@string/idhopdong"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/spnVerifyNotify"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+
+        <Spinner
+            android:id="@+id/spnVerifyNotify"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:entries="@array/verify_notify"
+            android:entryValues="@array/verify_notify_value"
+            android:hint="@string/select_acc_charge"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/spnReasonNotify"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+
+        <Spinner
+            android:id="@+id/spnReasonNotify"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="left|center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/select_acc_charge"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginRight="5dp"
+
+        android:filterTouchesWhenObscured="true"
+        android:text="@string/button_update"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_content" />
+
+    <com.viettel.maps.MapView
+        xmlns:vtmap="http://schemas.android.com/apk/lib/com.viettel.maps"
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        vtmap:appKey="670e813ba8994d376f69289f235fd4c4"
+        vtmap:gpsControlEnabled="true"
+        vtmap:scaleControlEnabled="true"
+        vtmap:zoomControlEnabled="true" 
+        android:visibility="gone"/>
+
+</LinearLayout>

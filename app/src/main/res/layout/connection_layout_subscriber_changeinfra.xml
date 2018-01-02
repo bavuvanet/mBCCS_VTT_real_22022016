@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Begin Tìm kiếm thuê bao cùng địa chỉ -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:text="@string/changeTechnology"
+                android:textColor="@color/siLabel"
+                android:textSize="@dimen/text_size_16" />
+
+          
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siHoTen" />
+
+                <EditText
+                    android:id="@+id/editHoTen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:inputType="text"
+                    android:maxLength="50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="@integer/d5"
+                    android:text="@string/siDiaChiLapDat" />
+
+                <EditText
+                    android:id="@+id/editDiaChiLapDat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:hint="Chọn địa chỉ"
+                    android:inputType="text"
+                    android:maxLength="100" />
+            </LinearLayout>
+
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="6"
+                    android:text="@string/siNguoiLienHe" />
+
+                <EditText
+                    android:id="@+id/editNguoiLienHe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:inputType="text"
+                    android:maxLength="50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="6"
+                    android:text="@string/siDTLienHe" />
+
+                <EditText
+                    android:id="@+id/editDTLienHe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d4"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:maxLength="14" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lnsubsamaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:ems="6"
+                    android:text="@string/siKetQua" />
+
+                <TextView
+                    android:id="@+id/edtsubscriber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:drawableRight="@drawable/ic_arrow_sp_n"
+                    android:ems="10"
+                    android:text="@string/siLabelTimKiem"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_nomal" />
+
+                <LinearLayout
+                    android:id="@+id/btndelete"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:background="@drawable/button_normal_background"
+                    android:filterTouchesWhenObscured="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imgdelete"
+                        android:layout_width="@dimen/icon_inner_width"
+                        android:layout_height="@dimen/icon_inner_width"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/delete" />
+                </LinearLayout>
+            </LinearLayout>
+
+			<LinearLayout
+                android:id="@+id/lnacount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:ems="6"
+                    android:text="@string/siduongday" />
+
+                <TextView
+                    android:id="@+id/txtacount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/list_background_pressed_vt"
+                    android:textSize="@dimen/text_size_nomal" />
+
+                <LinearLayout
+                    android:id="@+id/btndelete2"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/button_normal_background"
+                    android:filterTouchesWhenObscured="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_inner_width"
+                        android:layout_height="@dimen/icon_inner_width"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/delete" />
+                </LinearLayout>
+            </LinearLayout>
+  
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                 android:ems="6"
+                android:text="@string/techchange"/>
+
+            <Spinner
+                android:id="@+id/spinner_congnghe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                 android:ems="6"
+                android:text="@string/dich_vu_required"/>
+
+            <Spinner
+                android:id="@+id/spinner_dichvu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="6"
+                    android:text="@string/siDiaChiKS" />
+
+                <TextView
+                    android:id="@+id/txtDiaChiKS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/selectaddresscd"
+                    android:textSize="@dimen/text_size_nomal" 
+                    android:tag="@string/siTagQuanLyKetCuoi"
+                    android:textColor="@color/list_background_pressed_vt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:text="@string/siMaKetCuoi" />
+
+                <EditText
+                    android:id="@+id/editMaKetCuoi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="@integer/d5"
+                    android:hint="@string/nhapmaketcuoi"
+                    android:maxLength="50"
+                    android:textSize="@dimen/text_size_13" />
+
+                <Button
+                    android:id="@+id/btnkiemtra"
+                    android:layout_width="@dimen/height_button_1_phan_2"
+                    android:layout_height="@dimen/height_button_1_phan_2"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/accept"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_content" />
+
+                <Button
+                    android:id="@+id/btnKhaoSat"
+                    android:layout_width="@dimen/height_button_1_phan_2"
+                    android:layout_height="@dimen/height_button_1_phan_2"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/map"
+                    android:text="@string/ksat"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="6"
+                    android:text="@string/siKetQuaKS" />
+
+                <TextView
+                    android:id="@+id/txtKetQuaKS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:ems="6"
+                    android:text=""
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/txtxamchitiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="5dp"
+                    android:text="Xem chi tiết"
+                    android:textColor="@color/list_background_pressed_vt" />
+            </LinearLayout>
+            <!-- End khảo sát sơ bộ -->
+
+
+            <!-- Begin Thông Tin Kết Cuối -->
+
+
+            <!-- End Thông Tin Kết Cuối -->
+
+            
+        </LinearLayout>
+		<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                 >
+
+                <Button
+                    android:id="@+id/btnFinish"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_s"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button"
+                    android:text="@string/siBtnFinish"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_title" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_s"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button"
+                    android:text="@string/siBtnClear"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_title" />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <Button
+                android:id="@+id/btnQuanLyYeuCau"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_s"
+                android:background="@drawable/round_button"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/siBtnQuanLyYeuCau"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

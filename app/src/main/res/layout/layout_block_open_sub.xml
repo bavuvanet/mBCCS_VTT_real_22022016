@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_ln_button"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/block_open_sub"
+            android:textColor="@color/textDialogTitle"
+            android:textSize="@dimen/text_size_18"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textDialogTitle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/padding_relaback"
+            android:text="@string/sodthotline"
+            android:ems="6"
+            android:textSize="@dimen/text_size_14"/>
+
+        <EditText
+            android:id="@+id/edtIsdn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/sdt_chan_mo"
+            android:inputType="phone"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnActionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TextView041"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:text="@string/loaitacdong"
+            android:textSize="@dimen/text_size_14"/>
+
+        <RadioGroup
+            android:id="@+id/rgActionType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbBlockOneWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chan_1c"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/rbBlockTwoWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chan_2c"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/rbOpenOneWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/openSub"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/rbOpenTwoWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/openSub"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/rbSyntheticChargeHot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/block_open_synthetic_chargehot_block_two_way"
+                android:visibility="gone"/>
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spiAction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/padding_relaback"
+            android:text="@string/lido"
+            android:ems="6"
+            android:textSize="@dimen/text_size_14"/>
+
+        <Spinner
+            android:id="@+id/spiReason"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/edtSelectReason"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/block_open_select_reason"
+            android:longClickable="false"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/prbReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnRefreshReason"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/ic_menu_refresh"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnFeeType"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_s"
+            android:background="@color/colorAccent"
+            android:gravity="center">
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/tenphi"
+                android:textColor="#fff"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_button_color"/>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/giaphi"
+                android:textColor="#fff"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/doi_tuong"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnExecute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/button_height_l"
+        android:layout_marginTop="@dimen/padding_relaback"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16"
+        android:visibility="gone"
+        android:text="@string/btn_apply"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBlockOpenSub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/button_height_l"
+            android:layout_weight="1"
+            android:text="@string/block_open_sub"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_content"/>
+    </LinearLayout>
+
+</LinearLayout>

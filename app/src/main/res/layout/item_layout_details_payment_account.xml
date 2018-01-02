@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_sale_trans_detail"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/id1d"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:layout_width="@dimen/view_size"
+            android:layout_height="fill_parent"
+            android:background="@color/color_view" />
+
+        <TextView
+            android:id="@+id/tvStockName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_l"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:gravity="center|left"
+            android:text=""
+            android:paddingLeft="@dimen/margin_10"
+            android:textSize="@dimen/text_size_nomal" />
+
+        <View
+            android:layout_width="@dimen/view_size"
+            android:layout_height="fill_parent"
+            android:background="@color/color_view" />
+
+        <TextView
+            android:id="@+id/tvTotalDeposit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_l"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/text_size_nomal" />
+
+        <View
+            android:layout_width="@dimen/view_size"
+            android:layout_height="fill_parent"
+            android:background="@color/color_view" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/id1d"
+        android:layout_height="@dimen/view_size"
+        android:background="@color/color_view" />
+
+</RelativeLayout>

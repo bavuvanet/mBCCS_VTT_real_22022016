@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnDebtStaff"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_title"
+                android:paddingBottom="@dimen/activity_margin_half"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_margin_half"
+                android:text="@string/debt_pay_viettel" />
+
+            <com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView
+                android:id="@+id/lvDebt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.viettel.bss.viettelpos.v4.connecttionService.listener.ExpandableHeightListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnDebtViettel"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_title"
+                android:paddingBottom="@dimen/activity_margin_half"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_margin_half"
+                android:text="@string/debt_viettel_pay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStartBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_margin_half"
+                        android:paddingRight="@dimen/activity_horizontal_margin" />
+
+                    <TextView
+                        android:id="@+id/tvEndBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_margin_half"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tvConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_margin_half"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tvDifferent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_margin_half"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tvReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_margin_half"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:text="" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_keyboard_arrow_right_48pt" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirmDebt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@color/colorAccent"
+            android:paddingLeft="@dimen/activity_margin_half_and_half"
+            android:paddingRight="@dimen/activity_margin_half_and_half"
+            android:text="@string/confirm_cap"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

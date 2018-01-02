@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_padding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0312344"
+            android:textSize="@dimen/text_size_content"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvChannelCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CTV11234 - Phùng Quốc Huy"
+            android:textSize="@dimen/text_size_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnStockModel"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="@dimen/margin_text_1"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_top" >
+
+            <TextView
+                android:id="@+id/tvStockModelCode1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv_stock_name"
+                android:textSize="@dimen/text_size_content"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvQuantityIssue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_text_5"
+                android:layout_weight="1.4"
+                android:gravity="right"
+                android:text="@string/remain"
+                android:textSize="@dimen/text_size_content"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvQuantitySaling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_text_5"
+                android:layout_weight="1.4"
+                android:gravity="right"
+                android:text="@string/quantity_order"
+                android:textSize="@dimen/text_size_content"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvStockModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_text_5" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

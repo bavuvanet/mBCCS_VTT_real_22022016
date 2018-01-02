@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/list_selector"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="@integer/d7"
+                android:text="@string/txt_action_name"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvActionName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1235466558546"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="@integer/d7"
+                android:text="@string/txt_process_staff"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvProcessStaff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1235466558546"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="@integer/d7"
+                android:text="@string/txt_process_date"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvProcessDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="123546655854"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="@integer/d7"
+                android:text="@string/txt_process_shop"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvProcessShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1235466558546"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="@integer/d7"
+                android:text="@string/txt_process_content"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvProcessContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="@integer/d1"
+                android:text="ghi chu cua khach hang/12345678912"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_1"/>
+</LinearLayout>

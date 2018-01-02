@@ -1,0 +1,1129 @@
+package v4.connecttionService.activity;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpVersion;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.ContentBody;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.StringBody;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.CoreProtocolPNames;
+import org.apache.http.util.EntityUtils;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+import v4.R;
+import v4.activity.LoginActivity;
+import v4.activity.slidingmenu.MainActivity;
+import v4.commons.BCCSGateway;
+import v4.commons.CommonActivity;
+import v4.commons.CommonOutput;
+import v4.commons.Constant;
+import v4.commons.Session;
+import v4.commons.Define.CHANNEL_UPDATE_IMAGE;
+import v4.connecttionMobile.beans.ActionRecordBean;
+import v4.connecttionService.adapter.AdapterUpdateImageProfile;
+import v4.connecttionService.adapter.AdapterUpdateImageProfile.OnChangeImageProfile;
+import v4.connecttionService.adapter.GetListRequestAdapter;
+import v4.connecttionService.adapter.UploadImageHSAdapter;
+import v4.connecttionService.beans.RequestBeans;
+import v4.customer.object.ImageObj;
+import v4.customview.adapter.UploadImageAdapter;
+import v4.customview.obj.FileObj;
+import v4.customview.obj.RecordPrepaid;
+import v4.synchronizationdata.XmlDomParse;
+
+import android.support.v7.app.ActionBar;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.support.v4.app.Fragment;
+import android.app.ProgressDialog;
+import android.app.DatePickerDialog.OnDateSetListener;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.AdapterView.OnItemSelectedListener;
+
+public class FragmentUpLoadImage extends Fragment implements OnClickListener
+		 {
+	// upload Image
+	private Uri mCaptureNewUri;
+	private String mPathFileZ;
+	private List<String> mListFileString = new ArrayList<String>();
+
+	// unit view
+	private RequestBeans requestBeans = new RequestBeans();
+
+	private ListView lvdsdiemban;
+	private Button btncapnhat, btnhuy;
+	private EditText edtngayscan;
+
+
+
+	private ArrayList<ArrayList<ActionRecordBean>> lstActionRecordBeans = new ArrayList<ArrayList<ActionRecordBean>>();
+	private AdapterUpdateImageProfile adapterUpdateImageProfile = null;
+
+	private ActionRecordBean actionRecordBeanMain = new ActionRecordBean();
+
+	private HashMap<String, ActionRecordBean> actionHashMap = new HashMap<String, ActionRecordBean>();
+	private ArrayList<ActionRecordBean> arrActionRecordBeans = new ArrayList<ActionRecordBean>();
+	
+	
+	private LinearLayout mLnUploadImage;
+	private ImageView image;
+	// private List<ImageView> mListIv = new ArrayList<ImageView>();
+	private List<ImageObj> mListIvO = new ArrayList<ImageObj>();
+	private List<File> mListFile = new ArrayList<File>();
+	private List<FileObj> mListFileObj = new ArrayList<FileObj>();
+	private int mIdImageClick;
+	private String mCodeSpinner;
+	private String sourceTypeId;
+	private String mGroupId;
+	private List<String> mListIdSpinner = new ArrayList<String>();
+	protected int mSpinnerClick;
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+
+
+
+		View mView = inflater.inflate(R.layout.layout_upload_image, container,
+				false);
+		unitView(mView);
+		return mView;
+	}
+
+	private void unitView(View mView) {
+
+		Bundle mBundle = getArguments();
+		if (mBundle != null) {
+			try {
+				requestBeans = (RequestBeans) mBundle
+						.getSerializable("RequestBeanKey");
+			} catch (Exception e) {
+				e.toString();
+			}
+		}
+
+		mLnUploadImage = (LinearLayout) mView.findViewById(R.id.lnUploadImage);
+		edtngayscan = (EditText) mView.findViewById(R.id.edtngayscan);
+
+		lvdsdiemban = (ListView) mView.findViewById(R.id.lvdsdiemban);
+		btncapnhat = (Button) mView.findViewById(R.id.btncapnhat);
+		btnhuy = (Button) mView.findViewById(R.id.btnhuy);
+		btncapnhat.setOnClickListener(this);
+		btnhuy.setOnClickListener(this);
+
+		if (CommonActivity.isNetworkConnected(getActivity())) {
+
+			GetListImageProfileAsyn getListImageProfileAsyn = new GetListImageProfileAsyn(
+					getActivity());
+			getListImageProfileAsyn.execute(requestBeans.getActionProfileId());
+
+		} else {
+			CommonActivity.createAlertDialog(getActivity(),
+					getString(R.string.errorNetwork),
+					getString(R.string.app_name)).show();
+		}
+
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		addActionBar();
+	}
+
+	
+
+	@SuppressWarnings("static-access")
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		Log.d("TAG 9", "requestCode : " + requestCode);
+		if (resultCode == getActivity().RESULT_OK) {
+			switch (requestCode) {
+
+			case 1010:
+				Uri selectedImageUri = null;
+				if (data != null) {
+					// Bundle bundle = data.getExtras();
+					selectedImageUri = data.getData();
+				}
+
+				String path = getPath(selectedImageUri, getActivity());
+
+				String currentFileName = path.substring(0,
+						path.lastIndexOf("/"));
+
+				MediaScannerConnection.scanFile(getActivity(),
+						new String[] { currentFileName },
+						new String[] { "image/jpeg" }, null);
+
+				cropImageFromUri(path);
+
+				break;
+			case CHANNEL_UPDATE_IMAGE.PICK_FROM_CAMERA:
+
+				cropImageFromUri(mCaptureNewUri.getPath());
+
+				break;
+
+			default:
+				break;
+			}
+		}
+	}
+
+	private Bitmap decodeFile(String path) {
+		try {
+			File f = new File(path);
+			// Decode image size
+			BitmapFactory.Options o = new BitmapFactory.Options();
+			o.inJustDecodeBounds = true;
+			BitmapFactory.decodeStream(new FileInputStream(f), null, o);
+
+			// The new size we want to scale to
+			final int REQUIRED_SIZE = Constant.REQUEST_MAX_SIZE_IMAGE;
+
+			// Find the correct scale value. It should be the power of 2.
+			int scale = 1;
+			while (o.outWidth / scale / 2 >= REQUIRED_SIZE
+					&& o.outHeight / scale / 2 >= REQUIRED_SIZE) {
+				scale *= 2;
+			}
+
+			// Decode with inSampleSize
+			BitmapFactory.Options o2 = new BitmapFactory.Options();
+			o2.inSampleSize = scale;
+			return BitmapFactory.decodeStream(new FileInputStream(f), null, o2);
+		} catch (FileNotFoundException e) {
+		}
+		return null;
+	}
+
+	private void cropImageFromUri(String pathData) {
+
+
+		if (pathData != null) {
+			BitmapFactory.Options btmapOptions = new BitmapFactory.Options();
+			btmapOptions.inSampleSize = 8;
+			Bitmap bmpResize = decodeFile(pathData);
+
+			if (bmpResize != null) {
+				File file = bitmap2File(bmpResize);
+				// Drawable drawable = Drawable.createFromPath(f.getPath());
+				Drawable drawable = new BitmapDrawable(getResources(), bmpResize);
+				for (int i = 0; i < mListIvO.size(); i++) {
+					if (mIdImageClick == i) {
+						if (drawable != null) {
+							mListIvO.get(i).setSetIm(true);
+							mListIvO.get(i).getImage()
+									.setBackgroundDrawable(drawable);
+						} else {
+							mListIvO.get(i).setSetIm(false);
+							mListIvO.get(i).getImage()
+									.setBackgroundResource(R.drawable.logo_vt);
+						}
+					}
+				}
+			}
+		} else {
+
+		}
+	}
+
+	private void createSpinnerUploadImage(
+			ArrayList<ArrayList<ActionRecordBean>> arrayOfArrayList) {
+		int size = arrayOfArrayList.size();
+
+		int h = (int) getResources().getDimension(R.dimen.height_imv);
+		int w = (int) getResources().getDimension(R.dimen.width_imv);
+
+		for (int i = 0; i < size; i++) {
+			final ArrayList<ActionRecordBean> arrayListRecord = arrayOfArrayList
+					.get(i);
+			if (arrayListRecord.size() > 0) {
+
+				// for (int k = 0; k < arrayListRecord.size(); k++) {
+
+
+				// tao spinner
+				LinearLayout lnUpload = new LinearLayout(
+						getActivity());
+				lnUpload.setOrientation(LinearLayout.HORIZONTAL);
+
+				final Spinner spinner = new Spinner(getActivity());
+				// RecordPrepaid recordPrepaid = arrayListRecord.get(k);
+				int idSp = i;
+
+				Log.d("TAG 9", "idSp : " + idSp);
+				spinner.setId(idSp);
+				UploadImageHSAdapter adapter = new UploadImageHSAdapter(
+						arrayListRecord, getActivity());
+				spinner.setAdapter(adapter);
+				final ImageView image = new ImageView(getActivity());
+				LinearLayout.LayoutParams layoutParamsIv = new LinearLayout.LayoutParams(
+						w, h);
+				image.setId(idSp);
+				image.setBackgroundResource(R.drawable.logo_vt);
+				// mListIv.add(image);
+				ImageObj imageObj = new ImageObj(false, image);
+				mListIvO.add(imageObj);
+
+				LinearLayout.LayoutParams layoutSpinner = new LinearLayout.LayoutParams(
+						0, LinearLayout.LayoutParams.MATCH_PARENT, 70);
+				lnUpload.addView(spinner, layoutSpinner);
+				lnUpload.addView(image, layoutParamsIv);
+
+				LinearLayout.LayoutParams layoutLnUpload = new LinearLayout.LayoutParams(
+						LinearLayout.LayoutParams.MATCH_PARENT, h);
+				layoutLnUpload.setMargins(20, 10, 10, 20);
+				mLnUploadImage.addView(lnUpload, layoutLnUpload);
+
+				image.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View arg0) {
+
+
+						mIdImageClick = image.getId();
+
+						Log.d("TAG 9", "idImage : " + mIdImageClick);
+
+						dialogUploadImage(mIdImageClick);
+					}
+				});
+				spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+					@Override
+					public void onItemSelected(AdapterView<?> arg0, View arg1,
+							int position, long arg3) {
+						mSpinnerClick = position;
+						int idSpinner = spinner.getId();
+						mCodeSpinner = arrayListRecord.get(position).getRecordCode();
+						mGroupId = arrayListRecord.get(position).getGroupId();
+						sourceTypeId = arrayListRecord.get(position).getSourceRecordTypeId();
+						actionRecordBeanMain = arrayListRecord.get(position);
+						for (int j = 0; j < mListIdSpinner.size(); j++) {
+							if (idSpinner == j) {
+								mListIdSpinner.remove(j);
+							}
+						}
+						mListIdSpinner.add(mGroupId);
+						
+
+					}
+
+					@Override
+					public void onNothingSelected(AdapterView<?> arg0) {
+
+					}
+				});
+				// }
+			} 
+		}
+		
+	}
+	
+	private AlertDialog alert;
+
+	protected void dialogUploadImage(final int idImageClick) {
+		final CharSequence[] items = { getString(R.string.new_upload),
+				getString(R.string.browser) };// getString(R.string.browser)
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		builder.setTitle(getString(R.string.choose_type_upload));
+		builder.setItems(items, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int position) {
+				// Do something with the selection
+				switch (position) {
+				case 0:
+					// chup anh moi
+					takeCapture();
+					break;
+				case 1:
+					// chon anh da co
+					selectFromGallery(idImageClick);
+					break;
+
+				default:
+					break;
+				}
+				alert.dismiss();
+			}
+		});
+		alert = builder.create();
+		alert.show();
+	}
+
+	private void takeCapture() {
+		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+		String file = (Environment.getExternalStorageDirectory()) + "/" + requestBeans.getAccount().replace("_", "$")
+				+ "_" + mCodeSpinner + "-" + System.currentTimeMillis()
+				+ ".jpg";
+		File newfile = new File(file);
+		if (newfile.exists()) {
+
+			// xoa anh cu
+			newfile.delete();
+			try {
+				newfile.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			// dat ten khac
+		} else {
+			try {
+				newfile.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		mCaptureNewUri = Uri.fromFile(newfile);
+		// put vao extras
+		intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT,
+				mCaptureNewUri);
+		try {
+			intent.putExtra("return-data", true);
+
+			startActivityForResult(intent,
+					CHANNEL_UPDATE_IMAGE.PICK_FROM_CAMERA);
+		} catch (ActivityNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void selectFromGallery(int idImage) {
+
+		Intent intent = new Intent(Intent.ACTION_PICK,
+				android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+		intent.setType("image/*");
+		startActivityForResult(Intent.createChooser(intent, "Select Picture"),
+				1010);
+
+	}
+	private File bitmap2File(Bitmap bitmap) {
+
+		File pathEV = new File(Environment.getExternalStorageDirectory()
+				+ "/VT_UploadImage");
+
+		String path = pathEV + "/"
+				+ requestBeans.getAccount().replace("_", "$") + "_"
+				+ mCodeSpinner + "-"
+				+ System.currentTimeMillis() + ".jpg";
+		File f = new File(path);
+
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
+		// bitmap.compress(Bitmap.CompressFormat.PNG, 0 /* ignored for PNG */,
+		// bos);
+		byte[] bitmapdata = bos.toByteArray();
+
+		// write the bytes in file
+		FileOutputStream fos;
+		try {
+			f.createNewFile();
+			fos = new FileOutputStream(f);
+			fos.write(bitmapdata);
+			fos.flush();
+			fos.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// copyFile(f);
+		String nameImage = requestBeans.getAccount().replace("_", "$") + "_"
+				+ mCodeSpinner;
+		for (ActionRecordBean acRecordBean : lstActionRecordBeans.get(Integer.parseInt(mGroupId))) {
+		if (acRecordBean.getRecordCode().equalsIgnoreCase(
+				actionRecordBeanMain.getRecordCode())) {
+			acRecordBean.setImageName(nameImage);
+			acRecordBean.setBmpImage(bitmap);
+			acRecordBean.setFile(f);
+
+			actionHashMap.put(acRecordBean.getSourceRecordTypeId(), acRecordBean);
+
+		}
+
+	}
+		
+	
+		
+
+		return f;
+	}
+
+	OnClickListener moveLogInAct = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			Intent intent = new Intent(getActivity(), LoginActivity.class);
+			startActivity(intent);
+			getActivity().finish();
+			MainActivity.getInstance().finish();
+
+		}
+	};
+
+	private class GetListImageProfileAsyn extends
+			AsyncTask<String, Void, ArrayList<ArrayList<ActionRecordBean>>> {
+
+		private Context context = null;
+		XmlDomParse parse = new XmlDomParse();
+		String errorCode = "";
+		String description = "";
+		ProgressDialog progress;
+
+		public GetListImageProfileAsyn(Context context) {
+			this.context = context;
+			this.progress = new ProgressDialog(this.context);
+			// check font
+			this.progress.setCancelable(false);
+			this.progress.setMessage(context.getResources().getString(
+					R.string.waitting));
+			if (!this.progress.isShowing()) {
+				this.progress.show();
+			}
+		}
+
+		@Override
+		protected ArrayList<ArrayList<ActionRecordBean>> doInBackground(String... arg0) {
+			return getLstObjectImageProfile(arg0[0]);
+		}
+
+		@Override
+		protected void onPostExecute(ArrayList<ArrayList<ActionRecordBean>> result) {
+			progress.dismiss();
+			if ("0".equalsIgnoreCase(errorCode)) {
+
+				if (result != null && result.size() > 0) {
+					lstActionRecordBeans = result;
+					createSpinnerUploadImage(result);
+				} else {
+
+					CommonActivity.createAlertDialog(getActivity(),
+							getString(R.string.checklayimageprofile),
+							getString(R.string.app_name)).show();
+
+				}
+
+			} else {
+				if (errorCode.equals(Constant.INVALID_TOKEN2)) {
+
+					Dialog dialog = CommonActivity
+							.createAlertDialog(
+									getActivity(),
+									description,
+									context.getResources().getString(
+											R.string.app_name), moveLogInAct);
+					dialog.show();
+				} else {
+					if (description == null || description.isEmpty()) {
+						description = context.getString(R.string.checkdes);
+					}
+					Dialog dialog = CommonActivity.createAlertDialog(
+							getActivity(), description, getResources()
+									.getString(R.string.app_name));
+					dialog.show();
+
+				}
+			}
+		}
+
+		private ArrayList<ArrayList<ActionRecordBean>> getLstObjectImageProfile(
+				String actionProfileId) {
+			String original = "";
+			ArrayList<ArrayList<ActionRecordBean>> lsActionRecordBeans = new ArrayList<ArrayList<ActionRecordBean>>();
+			ArrayList<ActionRecordBean> arrRecordBeans = new ArrayList<ActionRecordBean>();
+		
+			
+			try {
+				
+				for (int i = 0; i < 50; i++) {
+					ArrayList<ActionRecordBean> arrayList = new ArrayList<ActionRecordBean>();
+					lsActionRecordBeans.add(arrayList);
+				}
+				
+				BCCSGateway input = new BCCSGateway();
+				input.addValidateGateway("username", Constant.BCCSGW_USER);
+				input.addValidateGateway("password", Constant.BCCSGW_PASS);
+				input.addValidateGateway("wscode",
+						"pos2_getListActionRecordByActionProfileId");
+				StringBuilder rawData = new StringBuilder();
+				rawData.append("<ws:getListActionRecordByActionProfileId>");
+				rawData.append("<qlhsInput>");
+				rawData.append("<token>" + Session.token);
+				rawData.append("</token>");
+				rawData.append("<actionProfileId>" + actionProfileId);
+				rawData.append("</actionProfileId>");
+				rawData.append("</qlhsInput>");
+				rawData.append("</ws:getListActionRecordByActionProfileId>");
+				String envelope = input.buildInputGatewayWithRawData(rawData
+						.toString());
+				Log.d("Send evelop", envelope);
+				Log.i("LOG", Constant.BCCS_GW_URL);
+				String response = input.sendRequest(envelope,
+						Constant.BCCS_GW_URL, getActivity(),
+						"pos2_getListActionRecordByActionProfileId");
+				Log.i("Responseeeeeeeeee", response);
+				CommonOutput output = input.parseGWResponse(response);
+
+				original = output.getOriginal();
+				Log.d("originalllllllll", original);
+
+				// parse xml
+				Document doc = parse.getDomElement(original);
+				NodeList nl = doc.getElementsByTagName("return");
+				NodeList nodechild = null;
+				for (int i = 0; i < nl.getLength(); i++) {
+					Element e2 = (Element) nl.item(i);
+					errorCode = parse.getValue(e2, "errorCode");
+					Log.d("errorCode", errorCode);
+					description = parse.getValue(e2, "description");
+					Log.d("description", description);
+					nodechild = e2.getElementsByTagName("lstActionRecords");
+					for (int k = 0; k < nodechild.getLength(); k++) {
+						Element e1 = (Element) nodechild.item(k);
+						ActionRecordBean actionRecordBean = new ActionRecordBean();
+						String recordCode = parse.getValue(e1, "recordCode");
+						actionRecordBean.setRecordCode(recordCode);
+
+						String recordName = parse.getValue(e1, "recordName");
+						actionRecordBean.setRecordName(recordName);
+
+						String recordTypeId = parse
+								.getValue(e1, "recordTypeId");
+						actionRecordBean.setRecordTypeId(recordTypeId);
+
+						String reqScan = parse.getValue(e1, "reqScan");
+						actionRecordBean.setReqScan(reqScan);
+
+						String sourceRecordTypeId = parse.getValue(e1,
+								"sourceRecordTypeId");
+						actionRecordBean
+								.setSourceRecordTypeId(sourceRecordTypeId);
+
+						
+						arrRecordBeans.add(actionRecordBean);
+
+					}
+				}
+				if (arrRecordBeans != null
+						&& !arrRecordBeans.isEmpty()) {
+					int groupId = -1;
+					HashMap<String, String> map = new HashMap<String, String>();
+					for (ActionRecordBean bean : arrRecordBeans) {
+
+						if (map.get(bean.getSourceRecordTypeId()) == null) {
+
+							groupId++;
+							bean.setGroupId(groupId + "");
+							map.put(bean.getSourceRecordTypeId(), groupId + "");
+						} else {
+							bean.setGroupId(map.get(bean.getSourceRecordTypeId()));
+						}
+					}
+				}
+				
+				
+				if (arrRecordBeans != null
+						&& !arrRecordBeans.isEmpty()) {
+					for (ActionRecordBean beansa : arrRecordBeans) {
+						int groupId = Integer.parseInt(beansa.getGroupId());
+						lsActionRecordBeans.get(groupId).add(beansa);
+					}
+				}
+				
+			
+				
+//				int sourceRecordTyid = Integer.parseInt(sourceRecordTypeId);
+//				
+//				lsActionRecordBeans.get(sourceRecordTyid).add(actionRecordBean);
+				
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return lsActionRecordBeans;
+		}
+
+	}
+
+	private void addActionBar() {
+		ActionBar mActionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+		mActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		mActionBar.setCustomView(R.layout.layout_actionbar_channel);
+		LinearLayout relaBackHome = (LinearLayout) mActionBar.getCustomView()
+				.findViewById(R.id.relaBackHome);
+		relaBackHome.setOnClickListener(this);
+		Button btnHome = (Button) mActionBar.getCustomView().findViewById(
+				R.id.btnHome);
+		btnHome.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				CommonActivity.callphone(getActivity(), Constant.phoneNumber);
+			}
+		});
+		TextView txtNameActionBar = (TextView) mActionBar.getCustomView()
+				.findViewById(R.id.txtNameActionbar);
+		TextView txtAddressActionBar = (TextView) mActionBar.getCustomView()
+				.findViewById(R.id.txtAddressActionbar);
+		txtAddressActionBar.setVisibility(View.GONE);
+		txtNameActionBar.setText(getResources().getString(
+				R.string.ds_select_image));
+	}
+
+	public File zipFileImage(List<ActionRecordBean> _files, String zipFileName) {
+		File zipfile = new File(zipFileName);
+
+		try {
+			BufferedInputStream origin = null;
+			ZipOutputStream out = new ZipOutputStream(new FileOutputStream(
+					zipfile));
+			byte data[] = new byte[1024];
+
+			for (int i = 0; i < _files.size(); i++) {
+				Log.v("Compress", "Adding: " + _files.get(i));
+				String path = _files.get(i).getFile().getPath();
+				FileInputStream fi = new FileInputStream(path);
+				origin = new BufferedInputStream(fi, 1024);
+
+				ZipEntry entry = new ZipEntry(path.substring(path
+						.lastIndexOf("/") + 1));
+				out.putNextEntry(entry);
+				int count;
+
+				while ((count = origin.read(data, 0, 1024)) != -1) {
+					out.write(data, 0, count);
+				}
+				origin.close();
+			}
+
+			out.close();
+			return zipfile;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+		}
+		return null;
+	}
+
+	public String getPath(Uri contentUri, Context context) {
+		Cursor cursor = null;
+		try {
+			String[] proj = { MediaStore.Images.Media.DATA };
+			cursor = context.getContentResolver().query(contentUri, proj, null,
+					null, null);
+			int column_index = cursor
+					.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+			cursor.moveToFirst();
+			return cursor.getString(column_index);
+		} finally {
+			if (cursor != null) {
+				cursor.close();
+			}
+		}
+	}
+
+	private void getListFile(String resEntity) {
+		String file[] = resEntity.split(";");
+		if (mListFileString.size() > 0) {
+			mListFileString.clear();
+		}
+		for (int i = 0; i < file.length; i++) {
+			mListFileString.add(file[i]);
+		}
+	}
+
+	// upload file
+	ContentBody cbFile = null;
+
+	private String uploadFile(File file) {
+
+		try {
+			HttpClient httpclient = new DefaultHttpClient();
+			httpclient.getParams().setParameter(
+					CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
+
+			HttpPost httppost = new HttpPost(Constant.LINK_WS_UPLOAD_IMAGE);
+
+			MultipartEntity mpEntity = new MultipartEntity();
+			ContentBody token = new StringBody(Session.token);
+			ContentBody uploadType = new StringBody("3");
+			if (file != null) {
+				cbFile = new FileBody(file);
+			}
+			Log.i("10", "call upload file");
+			mpEntity.addPart("token", token);
+			mpEntity.addPart("file", cbFile);
+			mpEntity.addPart("uploadType", uploadType);
+
+			httppost.setEntity(mpEntity);
+
+			System.out
+					.println("executing request " + httppost.getRequestLine());
+			HttpResponse response = httpclient.execute(httppost);
+			HttpEntity resEntity = response.getEntity();
+
+			System.out.println(response.getStatusLine());
+			// 08-24 14:36:11.693: I/System.out(27433): HTTP/1.1 200 OK
+			if (resEntity != null) {
+				// Log.e("TAG9", EntityUtils.toString(resEntity));
+				getListFile(EntityUtils.toString(resEntity));
+				resEntity.consumeContent();
+			}
+
+			httpclient.getConnectionManager().shutdown();
+			return Constant.SUCCESS_CODE;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return Constant.ERROR_CODE;
+		}
+	}
+
+	// private void getListFile(String resEntity) {
+	// String file[] = resEntity.split(";");
+	// if (mListFileString.size() > 0) {
+	// mListFileString.clear();
+	// }
+	// for (int i = 0; i < file.length; i++) {
+	// mListFileString.add(file[i]);
+	// }
+	// }
+
+	OnClickListener onBackrequest = new OnClickListener() {
+
+		@Override
+		public void onClick(View arg0) {
+			if (FragmentManageRequest.fragInstance != null) {
+				if (FragmentManageRequest.fragInstance.arrRequestBeans != null
+						&& !FragmentManageRequest.fragInstance.arrRequestBeans
+								.isEmpty()) {
+					for (RequestBeans reBeans : FragmentManageRequest.fragInstance.arrRequestBeans) {
+						if (requestBeans.getIdRequest().equalsIgnoreCase(
+								reBeans.getIdRequest())) {
+							reBeans.setActionProfileStatus("1");
+							reBeans.setActionProfileId(requestBeans
+									.getActionProfileId());
+							break;
+						}
+					}
+					FragmentManageRequest.fragInstance.adaRequestAdapter = new GetListRequestAdapter(
+							FragmentManageRequest.fragInstance.arrRequestBeans,
+							FragmentManageRequest.fragInstance.getActivity(),
+							FragmentManageRequest.fragInstance);
+					FragmentManageRequest.fragInstance.lvRequest
+							.setAdapter(FragmentManageRequest.fragInstance.adaRequestAdapter);
+					FragmentManageRequest.fragInstance.adaRequestAdapter
+							.notifyDataSetChanged();
+					getActivity().onBackPressed();
+				}
+			}
+
+		}
+	};
+
+	private class AsynUploadImageProfile extends
+			AsyncTask<String, Void, String> {
+		private Context context = null;
+		XmlDomParse parse = new XmlDomParse();
+		String errorCode = "";
+		String description = "";
+		ProgressDialog progress;
+
+		public AsynUploadImageProfile(Context context) {
+			this.context = context;
+			this.progress = new ProgressDialog(this.context);
+			// check font
+			this.progress.setCancelable(false);
+			this.progress.setMessage(context.getResources().getString(
+					R.string.waitting));
+			if (!this.progress.isShowing()) {
+				this.progress.show();
+			}
+		}
+
+		@Override
+		protected String doInBackground(String... arg0) {
+			return uploadImageProfile(arg0[0], arg0[1]);
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			progress.dismiss();
+
+			if ("0".equalsIgnoreCase(errorCode)) {
+
+				CommonActivity.createAlertDialog(getActivity(),
+						getString(R.string.capnhathososucces),
+						getString(R.string.app_name), onBackrequest).show();
+
+			} else {
+				if (errorCode.equals(Constant.INVALID_TOKEN2)) {
+
+					Dialog dialog = CommonActivity
+							.createAlertDialog(
+									getActivity(),
+									description,
+									context.getResources().getString(
+											R.string.app_name), moveLogInAct);
+					dialog.show();
+				} else {
+					if (description == null && description.isEmpty()) {
+						description = context.getString(R.string.checkdes);
+					}
+					Dialog dialog = CommonActivity.createAlertDialog(
+							getActivity(), description, getResources()
+									.getString(R.string.app_name));
+					dialog.show();
+
+				}
+			}
+		}
+
+		private String uploadImageProfile(String actionProfileId,
+				String startDateScan) {
+			String original = "";
+			try {
+				BCCSGateway input = new BCCSGateway();
+				input.addValidateGateway("username", Constant.BCCSGW_USER);
+				input.addValidateGateway("password", Constant.BCCSGW_PASS);
+				input.addValidateGateway("wscode", "pos2_updateActionProfile");
+				StringBuilder rawData = new StringBuilder();
+				rawData.append("<ws:updateActionProfile>");
+				rawData.append("<qlhsInput>");
+				rawData.append("<token>" + Session.token);
+				rawData.append("</token>");
+				for (int i = 0; i < mListFileString.size(); i++) {
+					rawData.append("<lstFileName>" + mListFileString.get(i)
+							+ "</lstFileName>");
+				}
+				rawData.append("<actionProfileId>" + actionProfileId);
+				rawData.append("</actionProfileId>");
+				rawData.append("<scanDatetime>" + startDateScan);
+				rawData.append("</scanDatetime>");
+				rawData.append("</qlhsInput>");
+				rawData.append("</ws:updateActionProfile>");
+
+				String envelope = input.buildInputGatewayWithRawData(rawData
+						.toString());
+				Log.d("Send evelop", envelope);
+				Log.i("LOG", Constant.BCCS_GW_URL);
+				String response = input.sendRequest(envelope,
+						Constant.BCCS_GW_URL, getActivity(),
+						"pos2_updateActionProfile");
+				Log.i("Responseeeeeeeeee", response);
+				CommonOutput output = input.parseGWResponse(response);
+
+				original = output.getOriginal();
+				Log.d("originalllllllll", original);
+
+				// parse xml
+				Document doc = parse.getDomElement(original);
+				NodeList nl = doc.getElementsByTagName("return");
+				for (int i = 0; i < nl.getLength(); i++) {
+					Element e2 = (Element) nl.item(i);
+					errorCode = parse.getValue(e2, "errorCode");
+					Log.d("errorCode", errorCode);
+					description = parse.getValue(e2, "description");
+					Log.d("description", description);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return errorCode;
+		}
+	}
+
+	// ================== asyntask upload image ========================
+	private class AsynUpLoadImage extends AsyncTask<Void, Void, String> {
+
+		private Context context = null;
+		ProgressDialog progress;
+
+		public AsynUpLoadImage(Context context) {
+			this.context = context;
+			this.progress = new ProgressDialog(this.context);
+			// check font
+			this.progress.setCancelable(false);
+			this.progress.setMessage(context.getResources().getString(
+					R.string.waitting));
+			this.progress.show();
+		}
+
+		@Override
+		protected String doInBackground(Void... arg0) {
+			File fileZip;
+
+			// zip folder VTUploadImage
+			Log.e("AAAAAAAAAAA", "BBBBBBBBBBBBBBb");
+			File folder = new File(Constant.MBCCS_TEMP_FOLDER);
+			if (!folder.exists()) {
+				folder.mkdir();
+			}
+			mPathFileZ = Constant.MBCCS_TEMP_FOLDER + "/BSS_UploadImage"
+					+ "QLHS" + System.currentTimeMillis() + ".zip";
+
+			ArrayList<ActionRecordBean> lstBeans = new ArrayList<ActionRecordBean>();
+			if(actionHashMap != null && !actionHashMap.isEmpty()){
+				
+				lstBeans.addAll(actionHashMap.values());
+			}
+			
+			fileZip = zipFileImage(lstBeans, mPathFileZ);
+			String resultUploadIm = "";
+
+			boolean isNetwork = CommonActivity
+					.isNetworkConnected(getActivity());
+			if (isNetwork) {
+				resultUploadIm = uploadFile(fileZip);
+			} else {
+			}
+
+			if (fileZip != null) {
+				fileZip.delete();
+			}
+
+			return resultUploadIm;
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			progress.dismiss();
+			if (Constant.SUCCESS_CODE.equalsIgnoreCase(result)) {
+
+				boolean isNetwork = CommonActivity
+						.isNetworkConnected(getActivity());
+				if (isNetwork) {
+					AsynUploadImageProfile asynUploadImageProfile = new AsynUploadImageProfile(
+							getActivity());
+					asynUploadImageProfile.execute(
+							requestBeans.getActionProfileId(), edtngayscan
+									.getText().toString().trim());
+				}
+
+			} else {
+				CommonActivity.createAlertDialog(getActivity(),
+						getResources().getString(R.string.upload_image_fail),
+						getResources().getString(R.string.app_name)).show();
+			}
+		}
+
+	}
+
+
+	@Override
+	public void onClick(View arg0) {
+		switch (arg0.getId()) {
+
+		case R.id.btncapnhat:
+
+			if (CommonActivity.isNetworkConnected(getActivity())) {
+
+
+//				Boolean imageOK = true;
+//				for (ActionRecordBean bean : lstActionRecordBeans) {
+//					if (actionHashMap.get(bean.getSourceRecordTypeId()) == null) {
+//						imageOK = false;
+//						break;
+//					}
+//				}
+
+				if (actionHashMap.size() == lstActionRecordBeans.size()) {
+					CommonActivity.createDialog(getActivity(),
+							getString(R.string.confirmcapnhat),
+							getString(R.string.app_name),
+							getString(R.string.ok), getString(R.string.cancel),
+							confirmupLoadClick, null).show();
+				} else {
+					CommonActivity.createAlertDialog(getActivity(),
+							getString(R.string.checkthieuanhhoso),
+							getString(R.string.app_name)).show();
+				}
+			}
+
+			break;
+		case R.id.relaBackHome:
+			getActivity().onBackPressed();
+			break;
+		case R.id.btnhuy:
+			getActivity().onBackPressed();
+			break;
+		default:
+			break;
+		}
+
+	}
+
+	OnClickListener confirmupLoadClick = new OnClickListener() {
+
+		@Override
+		public void onClick(View arg0) {
+			AsynUpLoadImage upLoadImageAsyn = new AsynUpLoadImage(getActivity());
+			Log.e("test", "sssssssssssssss");
+			upLoadImageAsyn.execute();
+			Log.e("test", "yyyyyyyyyyyyyyyy");
+		}
+	};
+
+//	@Override
+//	public void onChangeImageProfile(ActionRecordBean actionRecordBean,
+//			int possition) {
+//		actionRecordBeanMain = actionRecordBean;
+//		dialogUploadImage(actionRecordBean, possition);
+//
+//	}
+
+}

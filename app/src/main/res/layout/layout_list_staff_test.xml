@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	
+	<com.viettel.maps.MapView
+		xmlns:vtmap="http://schemas.android.com/apk/lib/com.viettel.maps"
+		android:id="@+id/idMapViewStaff"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		vtmap:appKey="670e813ba8994d376f69289f235fd4c4"
+		vtmap:gpsControlEnabled="true"
+		vtmap:scaleControlEnabled="true"
+		vtmap:zoomControlEnabled="true" />
+</RelativeLayout>
