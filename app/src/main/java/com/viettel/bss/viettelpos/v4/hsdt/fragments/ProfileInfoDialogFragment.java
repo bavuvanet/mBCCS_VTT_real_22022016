@@ -122,10 +122,6 @@ public class ProfileInfoDialogFragment extends DialogFragment {
     private boolean isOmni;
     private boolean initFlag;
 
-    //[BaVV] Add 'Task - Ho so dau noi' Start
-    List<ArrayList<RecordPrepaid>> recordPrepaidArrayListBackup = new ArrayList<ArrayList<RecordPrepaid>>();
-    //[BaVV] Add 'Task - Ho so dau noi' End
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
