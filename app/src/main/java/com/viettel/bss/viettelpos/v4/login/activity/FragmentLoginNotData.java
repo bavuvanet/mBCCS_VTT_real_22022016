@@ -17,7 +17,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,6 +29,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -93,6 +96,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import tourguide.tourguide.Overlay;
+import tourguide.tourguide.Pointer;
+import tourguide.tourguide.ToolTip;
+import tourguide.tourguide.TourGuide;
 
 
 @SuppressLint("NewApi")
@@ -147,6 +154,15 @@ public class FragmentLoginNotData extends Fragment implements
     LinearLayout lnChannelManager;
     DatabaseService databaseService;
 
+    //[BaVV] Add Tooltip Start
+    public TourGuide mTutorialHandler;
+    public TourGuide mTutorialHandler2;
+    @BindView(R.id.imvAddTemp)
+    ImageView imvAddTemp;
+    @BindView(R.id.imvSkipGuide)
+    ImageView imvSkipGuide;
+    //[BaVV] Add Tooltip End
+
     @Override
     public void onAttach(Activity activity) {
         Log.d("TAG", "onAttach FragmentLoginNotData");
@@ -178,6 +194,14 @@ public class FragmentLoginNotData extends Fragment implements
         return mView;
     }
 
+    //[BaVV] Add Tooltip Start
+    public void cleanTourGuide() {
+        if(null != mTutorialHandler) {
+            mTutorialHandler.cleanUp();
+        }
+    }
+    //[BaVV] Add Tooltip End
+
     private void initMenuActionMain() {
 
         try {
@@ -195,6 +219,32 @@ public class FragmentLoginNotData extends Fragment implements
 
                 fabActionMenu.setVisibility(View.VISIBLE);
                 fabActionMenu.removeAllMenuButtons();
+
+                //[BaVV] Add Tooltip Start
+
+                ToolTip toolTip = new ToolTip()
+                        .setTitle("")
+                        .setDescription("Bấm chọn để hiển thị các chức năng mới sử dụng")
+                        .setGravity(Gravity.TOP);
+
+                mTutorialHandler = TourGuide.init(getActivity()).with(TourGuide.Technique.Click)
+                        .motionType(TourGuide.MotionType.AllowAll)
+//                        .setPointer(new Pointer())
+                        .setToolTip(toolTip)
+                        .setOverlay(new Overlay().disableClick(false))
+                        .playOn(imvAddTemp);
+
+                fabActionMenu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+                    @Override
+                    public void onMenuToggle(boolean opened) {
+                        if(null != mTutorialHandler) {
+                            mTutorialHandler.cleanUp();
+                        }
+                        ((MainActivity) getActivity()).cleanTourGuide();
+                    }
+                });
+
+                //[BaVV] Add Tooltip End
 
                 for (final MenuAction menuAction : lstMenuAction) {
 
@@ -340,6 +390,28 @@ public class FragmentLoginNotData extends Fragment implements
             }
         });
 
+        //[BaVV] Add Tooltip Start
+
+        ToolTip toolTip2 = new ToolTip()
+                .setTitle("")
+                .setDescription("KHÔNG HIỆN LẠI LẦN SAU")
+                .setGravity(Gravity.TOP)
+                .setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mTutorialHandler2.cleanUp();
+                        CommonActivity.createDialog(getActivity(),
+                                R.string.confirm_repeat_tooltip, R.string.title_tooltip,
+                                R.string.cancel, R.string.ok, null, null).show();
+                    }
+                });
+
+        mTutorialHandler2 = TourGuide.init(getActivity()).with(TourGuide.Technique.Click)
+                .motionType(TourGuide.MotionType.AllowAll)
+                .setToolTip(toolTip2)
+                .playOn(imvSkipGuide);
+
+        //[BaVV] Add Tooltip End
 
         lvNewFeed = (ListView) v.findViewById(R.id.lvNewFeed);
         btnChannelAction = (Button) v.findViewById(R.id.btnGoHome);

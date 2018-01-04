@@ -173,15 +173,29 @@
             </ListView>
         </android.support.v4.widget.SwipeRefreshLayout>
 
+        <ImageView
+            android:id="@+id/imvSkipGuide"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/imvAddTemp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_alignRight="@+id/fabActionMenu"
+            android:layout_alignBottom="@+id/fabActionMenu"
+            android:layout_alignParentRight="true"/>
+
         <com.github.clans.fab.FloatingActionMenu
             android:id="@+id/fabActionMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
             android:layout_marginBottom="10dp"
             fab:fab_colorNormal="#0F97D6"
             fab:menu_colorNormal="@color/colorPrimary"
@@ -189,6 +203,7 @@
             fab:menu_colorRipple="@color/colorPrimary"
             fab:menu_icon="@drawable/fab_add"
             fab:menu_shadowColor="#66000000"/>
+
     </RelativeLayout>
 
     <LinearLayout

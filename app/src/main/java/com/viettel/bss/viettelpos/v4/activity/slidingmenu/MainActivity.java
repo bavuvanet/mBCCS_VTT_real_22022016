@@ -10,14 +10,19 @@ import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.DragEvent;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.viettel.bccs2.viettelpos.v2.connecttionMobile.activity.FragmentChangeSim;
@@ -66,17 +71,24 @@ import com.viettel.savelog.SaveLog;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.lang.reflect.Field;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import tourguide.tourguide.Overlay;
+import tourguide.tourguide.Pointer;
+import tourguide.tourguide.ToolTip;
+import tourguide.tourguide.TourGuide;
 
 public class MainActivity extends GPSTracker implements NavigationView.OnNavigationItemSelectedListener {
     private final String TAG = "MainActivity";
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.imvTemp)
+    ImageView imvTemp;
     @BindView(R.id.nav_view)
     NavigationView navigationView;
     @BindView(R.id.drawer_layout)
@@ -89,7 +101,13 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
     public static MainActivity getInstance() {
         return instance;
     }
+
     private Object lock = new Object();
+
+    //[BaVV] Add Tooltip Start
+    public TourGuide mTutorialHandler;
+    public TourGuide mTutorialHandler2;
+    //[BaVV] Add Tooltip End
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,13 +124,49 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //[BaVV] Edit Tooltip Start
         toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+            @Override
+            public void onDrawerStateChanged(int newState) {
+                cleanTourGuide();
+            }
+        };
+        //[BaVV] Edit Tooltip End
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
         showDialogNewVertion();
+
+        //[BaVV] Add Tooltip Start
+        View button = navigationButtonView(toolbar);
+        if(null != button) {
+            ToolTip toolTip = new ToolTip()
+                    .setTitle("")
+                    .setDescription("Bấm chọn để hiển thị danh mục")
+                    .setGravity(Gravity.BOTTOM);
+
+            mTutorialHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
+                    .motionType(TourGuide.MotionType.AllowAll)
+//                .setPointer(new Pointer())
+                    .setToolTip(toolTip)
+                    .setOverlay(new Overlay().disableClick(false))
+                    .playOn(button);
+        }
+
+        ToolTip toolTip2 = new ToolTip()
+                .setTitle("")
+                .setDescription("Bấm chọn để gọi tổng đài hỗ trợ")
+                .setGravity(Gravity.BOTTOM);
+
+        mTutorialHandler2 = TourGuide.init(this).with(TourGuide.Technique.Click)
+                .motionType(TourGuide.MotionType.AllowAll)
+//                .setPointer(new Pointer())
+                .setToolTip(toolTip2)
+                .setOverlay(new Overlay().disableClick(false))
+                .playOn(imvTemp);
+        //[BaVV] Add Tooltip End
 
         if (savedInstanceState == null) {
             ReplaceFragment.replaceFragmentFromMain(this, new FragmentLoginNotData(), true);
@@ -137,10 +191,10 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
 
     private void initNavigation() {
         View navView = navigationView.getHeaderView(0);
-        if(!CommonActivity.isNullOrEmpty(Session.userName)) {
+        if (!CommonActivity.isNullOrEmpty(Session.userName)) {
             ((TextView) navView.findViewById(R.id.tvStaffCode)).setText(Session.userName);
         }
-        if(!CommonActivity.isNullOrEmpty(Session.loginUser)) {
+        if (!CommonActivity.isNullOrEmpty(Session.loginUser)) {
             if (CommonActivity.isNullOrEmpty(Session.loginUser.getName())
                     || CommonActivity.isNullOrEmpty(Session.loginUser.getStaffId())) {
                 CommonActivity.createAlertDialog(this, R.string.sync_data_error, R.string.app_name).show();
@@ -220,14 +274,33 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         menuCreateOption = menu;
+
         return true;
     }
+
+    //[BaVV] Add Tooltip Start
+    public View navigationButtonView(Toolbar toolbar) {
+        try {
+            Field field = Toolbar.class.getDeclaredField("mNavButtonView");
+            field.setAccessible(true);
+            View navigationView = (View) field.get(toolbar);
+            return navigationView;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    //[BaVV] Add Tooltip End
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.d(TAG, "onOptionsItemSelected");
         int id = item.getItemId();
         switch (id) {
             case R.id.btnHome:
+                //[BaVV] Add Tooltip Start
+                cleanTourGuide();
+                //[BaVV] Add Tooltip End
                 CommonActivity.callphone(this, Constant.phoneNumber);
                 return true;
             case R.id.btnListOrGridView:
@@ -701,4 +774,20 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
         }
 
     }
+
+    //[BaVV] Add Tooltip Start
+    public void cleanTourGuide() {
+        if(null != mTutorialHandler) {
+            mTutorialHandler.cleanUp();
+        }
+        if(null != mTutorialHandler2) {
+            mTutorialHandler2.cleanUp();
+        }
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.frame_container);
+        if (fragment instanceof FragmentLoginNotData) {
+            ((FragmentLoginNotData) fragment).cleanTourGuide();
+        }
+    }
+    //[BaVV] Add Tooltip End
 }

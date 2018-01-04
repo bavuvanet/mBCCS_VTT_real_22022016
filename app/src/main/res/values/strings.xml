@@ -4594,5 +4594,7 @@
     <string name="count_order">Số yêu cầu được chọn: %s</string>
     <string name="order_over_exits">Yêu cầu %1$s thực hiện %2$s trên cùng số thuê bao %3$s, chỉ được chọn 1 trong số các yêu cầu này để thực hiện</string>
 
+    <string name="title_tooltip">Tooltip</string>
+    <string name="confirm_repeat_tooltip">Bạn có muốn nhắc lại hướng dẫn không?</string>
 </resources>
 
