@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -25,6 +26,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
@@ -51,6 +54,7 @@ import com.viettel.bss.viettelpos.v4.commons.DateTimeUtils;
 import com.viettel.bss.viettelpos.v4.commons.Define;
 import com.viettel.bss.viettelpos.v4.commons.FragmentUtils;
 import com.viettel.bss.viettelpos.v4.commons.OnPostExecuteListener;
+import com.viettel.bss.viettelpos.v4.commons.PreferenceUtils;
 import com.viettel.bss.viettelpos.v4.commons.ReplaceFragment;
 import com.viettel.bss.viettelpos.v4.commons.Session;
 import com.viettel.bss.viettelpos.v4.commons.SurveySubmit;
@@ -96,8 +100,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import tourguide.tourguide.ChainTourGuide;
 import tourguide.tourguide.Overlay;
 import tourguide.tourguide.Pointer;
+import tourguide.tourguide.Sequence;
 import tourguide.tourguide.ToolTip;
 import tourguide.tourguide.TourGuide;
 
@@ -155,12 +161,9 @@ public class FragmentLoginNotData extends Fragment implements
     DatabaseService databaseService;
 
     //[BaVV] Add Tooltip Start
-    public TourGuide mTutorialHandler;
-    public TourGuide mTutorialHandler2;
     @BindView(R.id.imvAddTemp)
     ImageView imvAddTemp;
-    @BindView(R.id.imvSkipGuide)
-    ImageView imvSkipGuide;
+    private Animation mEnterAnimation, mExitAnimation;
     //[BaVV] Add Tooltip End
 
     @Override
@@ -194,13 +197,6 @@ public class FragmentLoginNotData extends Fragment implements
         return mView;
     }
 
-    //[BaVV] Add Tooltip Start
-    public void cleanTourGuide() {
-        if(null != mTutorialHandler) {
-            mTutorialHandler.cleanUp();
-        }
-    }
-    //[BaVV] Add Tooltip End
 
     private void initMenuActionMain() {
 
@@ -219,32 +215,6 @@ public class FragmentLoginNotData extends Fragment implements
 
                 fabActionMenu.setVisibility(View.VISIBLE);
                 fabActionMenu.removeAllMenuButtons();
-
-                //[BaVV] Add Tooltip Start
-
-                ToolTip toolTip = new ToolTip()
-                        .setTitle("")
-                        .setDescription("Bấm chọn để hiển thị các chức năng mới sử dụng")
-                        .setGravity(Gravity.TOP);
-
-                mTutorialHandler = TourGuide.init(getActivity()).with(TourGuide.Technique.Click)
-                        .motionType(TourGuide.MotionType.AllowAll)
-//                        .setPointer(new Pointer())
-                        .setToolTip(toolTip)
-                        .setOverlay(new Overlay().disableClick(false))
-                        .playOn(imvAddTemp);
-
-                fabActionMenu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
-                    @Override
-                    public void onMenuToggle(boolean opened) {
-                        if(null != mTutorialHandler) {
-                            mTutorialHandler.cleanUp();
-                        }
-                        ((MainActivity) getActivity()).cleanTourGuide();
-                    }
-                });
-
-                //[BaVV] Add Tooltip End
 
                 for (final MenuAction menuAction : lstMenuAction) {
 
@@ -282,6 +252,91 @@ public class FragmentLoginNotData extends Fragment implements
                 }
 
             }
+
+            //[BaVV] Add Tooltip Start
+            if(!PreferenceUtils.isTooltipTutorial(getContext())) {
+
+                ((MainActivity) getActivity()).lockDrawer();
+
+                /* setup enter and exit animation */
+                mEnterAnimation = new AlphaAnimation(0f, 1f);
+                mEnterAnimation.setDuration(600);
+                mEnterAnimation.setFillAfter(true);
+
+                mExitAnimation = new AlphaAnimation(1f, 0f);
+                mExitAnimation.setDuration(600);
+                mExitAnimation.setFillAfter(true);
+
+                ChainTourGuide tourGuide1 = ChainTourGuide.init(getActivity())
+                        .setToolTip(new ToolTip()
+                                .setCustomView((ViewGroup) getCustomTooltip("Bấm chọn để hiển thị danh mục"))
+                                .setShadow(false)
+                                .setGravity(Gravity.BOTTOM)
+                        )
+                        .setOverlay(new Overlay()
+                                .setBackgroundColor(Color.parseColor("#cc000000"))
+                                .setEnterAnimation(mEnterAnimation)
+                                .setExitAnimation(mExitAnimation)
+                        )
+                        // note that there is no Overlay here, so the default one will be used
+                        .playLater(((MainActivity) getActivity()).navigationButtonView());
+
+                ChainTourGuide tourGuide2 = ChainTourGuide.init(getActivity())
+                        .setToolTip(new ToolTip()
+                                .setCustomView((ViewGroup) getCustomTooltip("Bấm chọn để gọi tổng đài hỗ trợ"))
+                                .setShadow(false)
+                                .setGravity(Gravity.BOTTOM)
+                        )
+                        .setOverlay(new Overlay()
+                                .setBackgroundColor(Color.parseColor("#cc000000"))
+                                .setEnterAnimation(mEnterAnimation)
+                                .setExitAnimation(mExitAnimation)
+                        )
+                        .playLater(((MainActivity) getActivity()).getImvTemp());
+
+                Sequence.SequenceBuilder sequenceBuilder = new Sequence.SequenceBuilder()
+                        .setDefaultOverlay(new Overlay()
+                                .setEnterAnimation(mEnterAnimation)
+                                .setExitAnimation(mExitAnimation)
+                        )
+                        .setDefaultPointer(null)
+                        .setContinueMethod(Sequence.ContinueMethod.Overlay);
+
+                if (!CommonActivity.isNullOrEmptyArray(lstMenuAction)) {
+                    ChainTourGuide tourGuide3 = ChainTourGuide.init(getActivity())
+                            .setToolTip(new ToolTip()
+                                    .setCustomView((ViewGroup) getCustomTooltip("Bấm chọn để hiển thị các chức năng mới sử dụng"))
+                                    .setShadow(false)
+                                    .setGravity(Gravity.TOP)
+                            )
+                            .setOverlay(new Overlay()
+                                    .setBackgroundColor(Color.parseColor("#cc000000"))
+                                    .setEnterAnimation(mEnterAnimation)
+                                    .setExitAnimation(mExitAnimation)
+                            )
+                            .playLater(imvAddTemp);
+
+                    fabActionMenu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+                        @Override
+                        public void onMenuToggle(boolean opened) {
+                            if(null != ((MainActivity) getActivity()).getChainTourGuide()) ((MainActivity) getActivity()).getChainTourGuide().next();
+                            ((MainActivity) getActivity()).cleanTourGuide();
+                            ((MainActivity) getActivity()).setTooltipDone(true);
+                            PreferenceUtils.saveTooltipTutorial(getContext());
+                        }
+                    });
+                    sequenceBuilder.add(tourGuide1, tourGuide2, tourGuide3);
+                } else {
+                    sequenceBuilder.add(tourGuide1, tourGuide2);
+                }
+
+                Sequence sequence = sequenceBuilder.build();
+
+                ((MainActivity) getActivity()).getChainTourGuide().playInSequence(sequence);
+
+                ((MainActivity) getActivity()).setSequence(sequence);
+            }
+            //[BaVV] Add Tooltip End
         } catch (Exception ex){
             Log.d(TAG, "Error", ex);
         }
@@ -389,29 +444,6 @@ public class FragmentLoginNotData extends Fragment implements
 
             }
         });
-
-        //[BaVV] Add Tooltip Start
-
-        ToolTip toolTip2 = new ToolTip()
-                .setTitle("")
-                .setDescription("KHÔNG HIỆN LẠI LẦN SAU")
-                .setGravity(Gravity.TOP)
-                .setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mTutorialHandler2.cleanUp();
-                        CommonActivity.createDialog(getActivity(),
-                                R.string.confirm_repeat_tooltip, R.string.title_tooltip,
-                                R.string.cancel, R.string.ok, null, null).show();
-                    }
-                });
-
-        mTutorialHandler2 = TourGuide.init(getActivity()).with(TourGuide.Technique.Click)
-                .motionType(TourGuide.MotionType.AllowAll)
-                .setToolTip(toolTip2)
-                .playOn(imvSkipGuide);
-
-        //[BaVV] Add Tooltip End
 
         lvNewFeed = (ListView) v.findViewById(R.id.lvNewFeed);
         btnChannelAction = (Button) v.findViewById(R.id.btnGoHome);
@@ -556,6 +588,17 @@ public class FragmentLoginNotData extends Fragment implements
 
 //        initMenuActionMain();
 
+    }
+
+    private View getCustomTooltip(String description) {
+        View v; // Creating an instance for View Object
+        LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        v = inflater.inflate(R.layout.layout_tooltip_custom, null);
+
+        TextView tvTitle = (TextView) v.findViewById(R.id.description);
+        tvTitle.setText(description);
+
+        return v;
     }
 
     private void addManagerList() {

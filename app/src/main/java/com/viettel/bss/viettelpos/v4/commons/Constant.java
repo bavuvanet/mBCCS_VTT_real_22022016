@@ -30,6 +30,10 @@ public class Constant {
     public static final String SIGNATURE_STAFF_SAVE = "signature_staff";
     public static final String SIGNATURE_STAFF_EXISTS = "signature_exits";
 
+    //[BaVV] Add Tooltip Start
+    public static final String PREF_TOOLTIP_TUTORIAL = "tooltip_tutorial";
+    //[BaVV] Add Tooltip End
+
     // image ext
     public static final String IMG_EXT_PNG = "png";
     public static final String IMG_EXT_JPG = "jpg";
@@ -89,7 +93,7 @@ public class Constant {
     public static final Boolean addInfo = true;
 
     static {
-		int version_type = BEFORE_UPCODE_VERSION;
+		int version_type = TEST_VERSION;
         if (version_type == REAL_VERSION) {
 //            BCCS_GW_URL_TEST_BCCS2 = "http://10.60.7.126:8115/"
 //                    + "BCCSGatewayWS/BCCSGatewayWS?wsdl";

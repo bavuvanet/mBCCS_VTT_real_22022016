@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -40,6 +41,7 @@ import com.viettel.bss.viettelpos.v4.commons.CommonActivity;
 import com.viettel.bss.viettelpos.v4.commons.Constant;
 import com.viettel.bss.viettelpos.v4.commons.Define;
 import com.viettel.bss.viettelpos.v4.commons.GPSTracker;
+import com.viettel.bss.viettelpos.v4.commons.PreferenceUtils;
 import com.viettel.bss.viettelpos.v4.commons.ReplaceFragment;
 import com.viettel.bss.viettelpos.v4.commons.Session;
 import com.viettel.bss.viettelpos.v4.connecttionMobile.activity.FragmentConnectionMobileNew;
@@ -77,8 +79,11 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import tourguide.tourguide.ChainTourGuide;
 import tourguide.tourguide.Overlay;
 import tourguide.tourguide.Pointer;
+import tourguide.tourguide.Sequence;
 import tourguide.tourguide.ToolTip;
 import tourguide.tourguide.TourGuide;
 
@@ -87,8 +92,6 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.imvTemp)
-    ImageView imvTemp;
     @BindView(R.id.nav_view)
     NavigationView navigationView;
     @BindView(R.id.drawer_layout)
@@ -105,8 +108,40 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
     private Object lock = new Object();
 
     //[BaVV] Add Tooltip Start
-    public TourGuide mTutorialHandler;
-    public TourGuide mTutorialHandler2;
+    @BindView(R.id.imvTempLeft)
+    ImageView imvTempLeft;
+
+    @BindView(R.id.imvTemp)
+    ImageView imvTemp;
+
+    public ChainTourGuide chainTourGuide = ChainTourGuide.init(this);
+    private Sequence sequence;
+
+    private boolean isTooltipDone = false;
+
+    public ImageView getImvTemp() {
+        return imvTemp;
+    }
+
+    public void setSequence(Sequence sequence) {
+        this.sequence = sequence;
+    }
+
+    public Sequence getSequence() {
+        return sequence;
+    }
+
+    public ChainTourGuide getChainTourGuide() {
+        return chainTourGuide;
+    }
+
+    public boolean isTooltipDone() {
+        return isTooltipDone;
+    }
+
+    public void setTooltipDone(boolean tooltipDone) {
+        isTooltipDone = tooltipDone;
+    }
     //[BaVV] Add Tooltip End
 
     @Override
@@ -129,7 +164,8 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
             @Override
             public void onDrawerStateChanged(int newState) {
-                cleanTourGuide();
+
+                checkTooltipDone();
             }
         };
         //[BaVV] Edit Tooltip End
@@ -140,33 +176,9 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
         showDialogNewVertion();
 
         //[BaVV] Add Tooltip Start
-        View button = navigationButtonView(toolbar);
-        if(null != button) {
-            ToolTip toolTip = new ToolTip()
-                    .setTitle("")
-                    .setDescription("Bấm chọn để hiển thị danh mục")
-                    .setGravity(Gravity.BOTTOM);
-
-            mTutorialHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
-                    .motionType(TourGuide.MotionType.AllowAll)
-//                .setPointer(new Pointer())
-                    .setToolTip(toolTip)
-                    .setOverlay(new Overlay().disableClick(false))
-                    .playOn(button);
+        if(!PreferenceUtils.isTooltipTutorial(getApplicationContext())) {
+            imvTempLeft.setVisibility(View.VISIBLE);
         }
-
-        ToolTip toolTip2 = new ToolTip()
-                .setTitle("")
-                .setDescription("Bấm chọn để gọi tổng đài hỗ trợ")
-                .setGravity(Gravity.BOTTOM);
-
-        mTutorialHandler2 = TourGuide.init(this).with(TourGuide.Technique.Click)
-                .motionType(TourGuide.MotionType.AllowAll)
-//                .setPointer(new Pointer())
-                .setToolTip(toolTip2)
-                .setOverlay(new Overlay().disableClick(false))
-                .playOn(imvTemp);
-        //[BaVV] Add Tooltip End
 
         if (savedInstanceState == null) {
             ReplaceFragment.replaceFragmentFromMain(this, new FragmentLoginNotData(), true);
@@ -279,7 +291,12 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
     }
 
     //[BaVV] Add Tooltip Start
-    public View navigationButtonView(Toolbar toolbar) {
+    @OnClick(R.id.imvTempLeft)
+    void clickImvTempLeft() {
+
+        if(!checkTooltipDone()) imvTempLeft.setVisibility(View.GONE);
+    }
+    public View navigationButtonView() {
         try {
             Field field = Toolbar.class.getDeclaredField("mNavButtonView");
             field.setAccessible(true);
@@ -299,9 +316,8 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
         switch (id) {
             case R.id.btnHome:
                 //[BaVV] Add Tooltip Start
-                cleanTourGuide();
+                if(checkTooltipDone()) CommonActivity.callphone(this, Constant.phoneNumber);
                 //[BaVV] Add Tooltip End
-                CommonActivity.callphone(this, Constant.phoneNumber);
                 return true;
             case R.id.btnListOrGridView:
                 EventBus.getDefault().post(new BaseMsg());
@@ -777,17 +793,31 @@ public class MainActivity extends GPSTracker implements NavigationView.OnNavigat
 
     //[BaVV] Add Tooltip Start
     public void cleanTourGuide() {
-        if(null != mTutorialHandler) {
-            mTutorialHandler.cleanUp();
-        }
-        if(null != mTutorialHandler2) {
-            mTutorialHandler2.cleanUp();
+        unlockDrawer();
+    }
+
+    public  void lockDrawer() {
+        if(null != drawer) drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+    }
+
+    public void unlockDrawer() {
+        if(null != drawer) drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+    }
+
+    boolean checkTooltipDone() {
+        if(!PreferenceUtils.isTooltipTutorial(getApplicationContext())) return true;
+
+        try {
+            if(!isTooltipDone()) {
+                if(null != chainTourGuide) chainTourGuide.next();
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.frame_container);
-        if (fragment instanceof FragmentLoginNotData) {
-            ((FragmentLoginNotData) fragment).cleanTourGuide();
-        }
+        cleanTourGuide();
+        return true;
     }
     //[BaVV] Add Tooltip End
 }

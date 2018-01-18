@@ -59,4 +59,20 @@ public class PreferenceUtils {
 
         return ((null != privateKey) && (null != publicKey));
     }
+
+	//[BaVV] Add Tooltip Start
+	public static boolean isTooltipTutorial(Context context) {
+		SharedPreferences sharedPreferences = context.getSharedPreferences(
+				Constant.SHARE_PREFERENCES_FILE, context.MODE_PRIVATE);
+		return sharedPreferences.getBoolean(Constant.PREF_TOOLTIP_TUTORIAL, false);
+	}
+
+	public static void saveTooltipTutorial(Context context) {
+		SharedPreferences sharedPreferences = context.getSharedPreferences(
+				Constant.SHARE_PREFERENCES_FILE, context.MODE_PRIVATE);
+		SharedPreferences.Editor edit = sharedPreferences.edit();
+		edit.putBoolean(Constant.PREF_TOOLTIP_TUTORIAL, true);
+		edit.commit();
+	}
+	//[BaVV] Add Tooltip End
 }

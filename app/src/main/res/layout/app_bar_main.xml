@@ -25,6 +25,14 @@
                 app:titleTextAppearance="@style/Toolbar.TitleText" />
 
             <ImageView
+                android:id="@+id/imvTempLeft"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
                 android:id="@+id/imvTemp"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
